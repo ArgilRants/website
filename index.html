@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
+
+    <title>Home</title>
+</head>
+<body class=""></body>
+
+    <div id="container" class="">
+        <div class="themebuttondiv" id="themebuttondiv">
+            <span id="sideline">select theme -></span>
+            <button class="btn-toggle" id="themebutton"></button>
+        </div>
+
+        <div class="themebuttondivmobilewide" style="display: none;" id="themebuttondivmobilewide">
+            <button class="btnmobilewide-toggle" id="themebutton"></button>
+        </div>
+
+        <div class="title">
+            <a href="./index.html" onclick="buttonClick(this)" id="titleLink">
+                <span id="titleA">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI" class="titleTilt">I</span><span id="titleL">L</span>
+            </a>
+        </div>
+        <div class="subtitleMain" id="subtitleMain">TEST</div>
+        <br>
+
+        
+        
+        <!-- IMPORTANT BRAND NEW INFO SECTION - This one is setup for youtube upload -->
+            <table id="tabletop" style="display: none;">
+                
+                <tbody>
+                    <tr>
+                        <td id="important">
+                            <marquee id="important" scrollamount="8" hspace="5px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci itaque, cupiditate quaerat facere.<sup>™</sup></marquee>
+                            <div class="box" id="importantbox">
+                                <h2>Can Fields of Mistria be the next best farming-sim? <span id="newbadge">NEW UPLOAD</span></h2>
+                                <div id="ytembed">
+                                    <!-- EMBED YT VID HERE -->
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit 
+                                    Corporis repellat unde libero velit ex modi, voluptate temporibus aliquam fugiat, 
+                                    cumque odit consequuntur perspiciatis excepturi? Odio ipsam obcaecati quibusdam? 
+                                    Assumenda, perferendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Nisi praesentium aliquam eos commodi nesciunt incidunt ex consequuntur, aut inventore vero.
+                                    Officiis voluptate esse repudiandae laudantium eligendi. Vero eaque beatae soluta. <br><br></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <!-- END OF IMPORTANT BRAND NEW INFO SECTION!! -->
+
+
+        <table id="tabletop">
+            <tbody>
+                <tr>
+                    <td id="important">
+                        <marquee id="important" scrollamount="6" hspace="5px" onmouseover="marqueeStop(this)" onmouseout="this.start()">version 1.0 of the new website! With themes, scrolling text, random gifs, slogan and more! It's finally <sub>mostly</sub> done. Check out the changelog and also click those darn social links. Lots of new projects coming very soon. Including a Satisfactory mod, a Minecraft settings mod and lots LOTS more!</marquee>
+                        <div class="box" id="importantbox">
+                            <h2><span id="h2icon">⭐</span> <span id="importanth2">NEW WEBSITE!! finally ...</span> <span id="newbadge">UPDATE!</span></h2>
+                            <h3 id="subtitle">Updated to 1.0 on October 18<sup>th</sup> | 2024</h3>
+                            <p>
+                                Welcome to my new website. It's finished!! <span id="sideline">← its a constant WIP</span> 
+                                <br>
+                                Release 1.0 for <a href="./changelog.html#desktop">Desktop</a> & Beta 0.1 for <a href="./changelog.html#mobile">mobile</a> are here!
+                                <br>
+                                This has taken so long I started working on this in July <span id="sideline">its october now</span>
+                                <br>
+                                <sub>im not slow i just got distracted... a lot</sub>
+                                <br>
+                                <br>
+                                I'll be putting projects, random other stuff, links to stuff, random gifs, and a lot of hidden hover effects alllll over the place. <span id="sideline">← hover over the star!</span>
+                                <br>
+                                Tons of new projects coming soon so check them out when they arrive very soon!
+                                <br>
+                                <br>
+                                <a href="./changelog.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon">☴</span> Change Log</a> <span id="sideline">← whoa check THAT out!! bros actually changing those logs!</span>
+                                
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+
+        <table>
+            <tbody>
+                <tr>    
+                    
+
+
+
+                    <td id="main">
+                        
+                        <div class="box" id="mainbox">
+                            <h2 id="welcome"><span id="h2icon">☺</span> WELCOME TO ARGIL<span id="dotdev">.DEV</span><span id="dotdots">RANTS</span></h2>
+                            <img src="./img/5200Trans.png" alt="" id="logo">
+                            <p id="mainp">
+                                Hiya! I'm Liam <sup>(he/him)</sup>,I go by Argil or ArgilRants online, and i'm your resident technology bastard. This is my <i>silly</i> little website, where I document my nonsense, random projects and more.
+                                I'm a programmer, that typically doesn't do frontend. I haven't made much public stuff <sub>yet</sub> but I am working on lots of stuff that you'll eventually see here. <sup></sup>
+                                
+                            
+                            </p>
+                                <span>Some things about me:</span>
+                                <ul>
+                                    <li>I live in the <span id="UK">UK</span> <span id="sideline">☹</span></li>
+                                    <li>I'm <span id="age"></span> <span style="font-size: .85em;">(July 29 2005)</span> <span id="sideline">← ewww leo</span></li>
+                                    <li>I've been programming since I was like 9.<span id="sideline">← nerd emoji</span></li>
+                                    <li>My favorite show is How to Get Away with Murder</li>
+                                    <li>I have over 600 Spotify playlists.</li>
+                                </ul>
+
+                            
+                        </div>
+
+                        <marquee scrollamount="12" hspace="10px" id="scrollingTextHome" onmouseover="marqueeStop(this)" onmouseout="this.start()">
+
+                            welcome to argil.dev, i dont really know why im making this other than having a place for all my silly little projects to reside.
+                            it was fun to make... kinda.
+                            and i get to <span id="censored">shit</span>post in html format! 
+                            and have a place for all of my links to be in one place that isnt a ..carrd.
+                            i hate carrds so much.
+                            im kinda obsessed with hypixel build battle at the moment, i might make a build battle mod? 
+                            oh yeah new projects and stuff below this, you probably dont even care :/
+                            will i optimize this website to work on mobile? nah. <span id="censored">fuck</span> you mobile users.
+                            also atm im so sleepy. like SO sleepy, its kinda awkward and weird.
+                            i can't wait to drink dr pepper, jarvis play the dr pepper godzilla gif.
+                            send gifs to me please! my twitter dms are <b>OPEN</b> for gifs.
+                            if there is a song that is like around 90 seconds long i will be obsessed with it for at least a month minimum.
+                            follow my spotify please i want to feel cool.
+                            i want to make a mc modpack really bad.
+                            wait nvm, cancel the modpack, i want to make a stardew mod... omg i really should. brb!!
+                            im gay! if that wasnt obvious by the fav song choices on the left then maybe you should adjust your gaydar.
+                            i should start tweeting so i can like embed my timeline, i dont tweet enough on main.
+                            i still want to make a how to get away with murder (tv-show) video essay so BAD but im so eh :/
+                            hi im the british lady that hates time, <span id="censored">fuck</span>ing clock destroyer - trixie mattel.
+                            im a mountain biking vampire witch from the future! <span id="censored">fuck</span> my pussy with a rake mom - katya.
+                            shes at the gay pride parade.
+                            in skerbie we trust!!!
+                            my favourite type of pokemon is freedom! 
+                            
+
+                            
+                            
+                        </marquee>
+                        
+                        
+                        <div class="box" id="comingsoonBox">
+                            <div class="comingsoonText" style="display: block">
+                                <p>COMING SOON</p>
+                            </div>
+                            <div class="comingsoon">
+                                <h2><span id="h2icon">⏼</span> Satisfactory Even More Finishes Mod <span id="newbadge">NEW</span></h2>
+                                <img src="./img/morefinisheslogo.png" alt="" id="left" style="width: 100px;">
+                                <p>
+                                    <div id="badges">
+                                        <div id="sfbadge">Mod</div>
+                                        <br><br>
+                                        <div id="infobadge">1.0+</div> 
+                                    </div>
+                                    I added more <a href="https://satisfactory.wiki.gg/wiki/Customizer#Finishes">finishes</a> to the color gun! Including different aged oxidized copper finishes, a SAM finish, and many more!! 
+                                    <br>
+                                    Will be updated for the foreseeable furture.
+                                    <br>
+                                    <a href="https://modrinth.com/resourcepack/clay-golem-totem/versions" class="ficsitDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a> <span id="sideline">← from Ficsit.app</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box" id="comingsoonBox">
+                            <div class="comingsoonText" style="display: block">
+                                <p>COMING SOON</p>
+                            </div>
+                            <div class="comingsoon">
+                                <h2><span id="h2icon">⛏</span> EvenMoreBinds Mod <span id="newbadge">NEW</span></h2>
+                                <img src="./img/COMINGSOON.png" alt="" id="left" style="width: 100px;">
+                                <p>
+                                    <div id="badges">
+                                        <div id="mcbadge">Mod</div>
+                                        <br><br>
+                                        <div id="infobadge">1.21+</div> 
+                                    </div>
+                                        EvenMoreBinds is a mod that allows for customizable keybindings to settings such as View Distance values, change F3 key, and much much more!!
+                                    <br>
+                                    <a href="https://modrinth.com/resourcepack/clay-golem-totem/versions" class="button" onclick="buttonClick(this)"><span class="buttonIcon">✎</span> Learn more</a>
+                                    <a href="https://modrinth.com/resourcepack/clay-golem-totem/versions" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a> <span id="sideline">← from Modrinth.com</span>
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h2><span id="h2icon">⛏</span> Clay Golem Totem Pack <span id="newbadge">NEW</span></h2>
+                            <img src="./img/claygolemtotem.gif" alt="" id="left" style="width: 100px;">
+                            <p>
+                                <div id="badges">
+                                    <div id="mcbadge">Resource Pack</div>
+                                    <br><br>
+                                    <div id="infobadge">1.14+</div> 
+                                </div>
+                                I made the Totem of Undying look like my pfp which is a clay golem, as well as making the confetti
+                                effect look like clay balls, because ... <sub>balls</sub>
+                                <br>
+
+                                <a href="https://modrinth.com/resourcepack/clay-golem-totem/versions" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a> <span id="sideline">← from Modrinth.com</span>
+                            </p>
+                        </div>
+
+
+
+
+                        
+
+                    </td>
+
+                    <td id="menu">
+                        <div class="box">
+                            
+                            <h2><span id="h2icon">⚡︎</span> LINKS</h2>
+                            <div style="text-indent: 3px; margin-top: -15px;">
+                                <br>
+                                <a class="navlink" href="./">⌂ Home</a>
+                                <br>
+                                <a class="navlink" href="./coming-soon.html">⌛ Coming Soon</a>
+                                <br>
+                                <a class="navlink" href="./credits.html">❤ Credits</a>
+                                <br>
+                                <a class="navlink" href="./changelog.html">☴ Change Log</a>
+                                <br>
+                                <a class="navlink" href="https://github.com/ArgilDevs/website">☄ Source</a>
+                            </div>
+                            <h3 id="subtitle">opens in new tab:</h3>
+                            <div class="socials" style="text-indent: 3px; margin-top: -15px;">
+                                <br>
+                                <a class="navlink" id="spotify" href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe" target="_blank">♫ Spotify</a>
+                                <br>
+                                <a class="navlink" id="twitter" href="https://x.com/ArgilRants" target="_blank">✎ Twitter</a> 
+                                <br>
+                                <a class="navlink" id="instagram" href="https://www.instagram.com/argilrants/" target="_blank">★ Instagram</a>
+                                <br>
+                                <a class="navlink" id="github" href="https://github.com/ArgilRants" target="_blank"> ⏻ Github</a>
+                                <br>
+                                <a class="navlink" id="modrinth" href="https://modrinth.com/user/ArgilRants" target="_blank">⛏ Modrinth</a>
+                                <br>
+                                <a class="navlink" id="steam" href="https://steamcommunity.com/id/argilrants/" target="_blank">♠ Steam</a>
+                                <br>
+                                <a class="navlink" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A" target="_blank"> ▶ Youtube</a> 
+                                <br>
+                                <a class="navlink" id="letterboxd" href="https://boxd.it/aSTvn" target="_blank">⚡︎ Letterboxd</a>
+                                <br>
+                                <a class="navlink" id="twitch" href="https://www.twitch.tv/argilrants" target="_blank"> ⏏ Twitch</a>
+                            </div>
+
+
+                            
+
+                        </div>
+
+                        <div id="badgeRoll">
+                            <marquee behavior="" direction="right" onmouseover="marqueeStop(this)" onmouseout="this.start()">
+                                <a href="https://badge.les.bi"><img title="gay-7" style="image-rendering: pixelated;" src="https://badge.les.bi/88x31/gay-7/outset.png"></a>
+                                <a href="https://hillhouse.neocities.org/journal/notes/palestine"><img style="image-rendering: pixelated;" src="./img/badges/bufreepalestine.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/88by31.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/firefox4.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/7zip.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/bestlandscape.gif"></a>
+                                
+                            </marquee>
+                            <marquee behavior="" direction="left" onmouseover="marqueeStop(this)" onmouseout="this.start()">
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/ilovehorror.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/keep.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/powered.gif"></a>
+                                <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/cd_rom.gif"></a>
+                                <a href="https://anlucas.neocities.org/88x31Buttons"><img style="image-rendering: pixelated;" src="./img/badges/getacomp.jpg"></a>
+                                <a href="https://vilgacx.github.io/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/html_learn_it_today.gif"></a>
+                            </marquee>
+                        </div>
+
+                        <div class="box" id="firefoxBox" style="display: none;" >
+                            <h2><span id="h2icon">⌘</span> Use Firefox</h2>
+                            <a href="https://www.mozilla.org/firefox/" target="_blank" onclick="chromeHideFirefoxBox()">
+                                <img src="./img/downloadFirefoxNow.png" width="100%" style="border: none !important; border-radius: 10px; margin-left: 2px;">
+                            </a>
+                            <br>
+                            <span id="sideline">Credit: <a href="./credits.html#Soko">Soko</a> <br></span>
+                        </div>
+
+                        <!-- <div class="box" id="listening" style="visibility: hidden; margin: 0; height: 0; padding: 0;">
+
+                            <h3 id="listeningtitle"><span id="pulse"></span> Listening to:</h3>
+
+                            <div id="musicbox">
+                                <a href="" id="songlink" target="_blank">
+                                    <img id="albumart" src="./img/musicload.png">
+                                    <div id="songspan">
+                                        <span id="nowplaying">songnameheres</span>
+                                    </div>
+                                    <div id="artistspan">
+                                        <span id="nowPlayingArtist">artisthere.gov</span>
+                                    </div>
+                                </a>
+                            </div> 
+
+                        </div> -->
+
+                        <div class="box" id="scnd">
+                            <h2><span id="h2icon">♬</span> Fav Songs</h2>
+                            <a href="https://open.spotify.com/playlist/6aXJUsJAV4gWKpm89wAsf5?si=fa1dcb811a8043c2" class="button" style="color: #1ed760" onclick="buttonClick(this)"><span class="buttonIcon">♪</span> Playlist</a> <span id="sideline">← WOO!</span>
+                        </div>
+
+                        <div class="box" id="gifBox" onclick="getRandomImage()" style="cursor: pointer;">
+                            <h2><span id="h2icon">☽</span> Some Gifs</h2>
+                            <div style="position: absolute !important; transform: translate(145px, -22px) rotate(30deg); ">
+                                <span id="sideline">click!</span>
+                            </div>
+                            <div id="randGif"></div>
+                            
+                        </div>
+                        
+                        
+
+                        
+
+                        <div class="box">
+                            <div style="text-align: center;">
+                                <h2 id="onlineCheckLoading">am i online?</h2>
+                                <h2 id="onlineCheck" class=""></h2>
+                                <h3 id="lastLoggedOff" style="margin-bottom: 2px !important;"></h3>
+                                <div id="playing">
+                                    <h3 id="subtitle" style="font-style: normal;">and i'm playing:</h3>
+                                    <hr>
+                                    <a href="" id="gameLink" target="_blank">
+                                        <img id="gameArt" src="./img/musicload.png">
+                                        <div id="playingInfo">
+                                            <div id="gameName"></div>
+                                            <br>
+                                            <div id="weekHrInfo">
+                                                <span id="twoWeekHrs"></span> hrs
+                                                <br>
+                                                past two weeks
+                                                <br><br>
+                                            </div>
+                                            <div id="onRecordHrInfo">
+                                                <span id="onRecordHrs"></span> hrs 
+                                                <br>
+                                                on record
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </a>
+                                    
+                                    
+                                </div>
+                                
+
+                            </div>
+                        </div>
+
+
+                        <div class="box" id="scnd">
+                            <div id="drop1">
+                                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(1)"></button>
+                                <h2><span id="h2icon">±</span> My Setup</h2>
+                                <h3 id="subtitle">links and stuff!</h3>
+                                <div id="dropdown" class="dropdownContent">
+                                    <h3 style="margin-bottom: -5px;">Desk stuff:</h3>
+                                    <div id="indent">
+                                        <p id="setuplinks">
+                                            Mouse:
+                                            <br>
+                                            <a href="https://www.razer.com/gb-en/gaming-mice/razer-deathadder-v3-pro">Deathadder V3 Pro</a>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            Keyboard(s) <span id="sideline">← Linear!</span>
+                                            <br>
+                                            <a href="https://www.keychron.com/products/keychron-q3-pro-qmk-via-wireless-custom-mechanical-keyboard?variant=40469135261785">Keychron Q3 Pro</a>
+                                            <br>
+                                            <a href="https://www.corsair.com/us/en/p/keyboards/ch-9000220-na/corsair-gaming-k95-rgb-mechanical-gaming-keyboard-cherry-mx-red-ch-9000220-na?srsltid=AfmBOopDHqE5ZfpFKsqa0uX2O-9hzHzOxqBwWsYJ2YK8JJDtRqWXtzl0" style="text-decoration: line-through;">Corsair K95 RGB</a>  <span id="sideline">← rip</span>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            Headphone(s)
+                                            <br>
+                                            <a href="https://drop.com/buy/massdrop-sennheiser-hd6xx">Drop & Sennheiser HD6xx</a>
+                                            <br>
+                                            <a href="https://www.sony.co.uk/electronics/headband-headphones/wh-1000xm5">Sony WH-1000XM5</a>
+                                            <br>
+                                            <a href="https://support.apple.com/en-gb/111861">Airpods Pro 1 [2019]</a>
+                                            <br>
+                                            <a href="https://europe.beyerdynamic.com/dt-990-pro.html" style="text-decoration: line-through;">DT 990 Pro</a> <span id="sideline">← rip</span>
+                                        </p>
+                                        
+                                        <p id="setuplinks">
+                                            Audio Monitors
+                                            <br>
+                                            <a href="https://www.presonus.com/en-US/monitors/media-reference-monitors/eris-series/2777500103.html?srsltid=AfmBOopg_gTTj8zXexNMzTEyArjoE_kwZtPvivQgguoMd4DEl-76UqnF">PreSonus Eris E4.5</a>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            Audio Interface
+                                            <br>
+                                            <a href="https://www.behringer.com/product.html?modelCode=P0BJZ">Behringer UMC202HD</a>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            Microphone 
+                                            <br>
+                                            <a href="https://rode.com/en/microphones/broadcast/procaster">RØDE Procaster</a>
+                                            <br>
+                                            <span id="sideline"><span id="censored">fuck</span> the sm7b!</span>
+                                        </p>
+                                    </div>
+                                    <h3 style="margin-bottom: -5px;">Other stuff:</h3>
+                                    <div id="indent">
+                                        <p id="setuplinks">
+                                            Phone
+                                            <br>
+                                            <a href="https://www.apple.com/uk/iphone-16-pro/">iPhone 16 Pro [Desert]</a>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            <b>The</b> Prized iPad
+                                            <br>
+                                            <a href="https://www.apple.com/uk/shop/buy-ipad/ipad-mini">iPad Mini 6th gen [2021]</a>
+                                        </p>
+
+                                        <p id="setuplinks">
+                                            Handheld
+                                            <br>
+                                            <a href="https://store.steampowered.com/steamdeck">Steam Deck OLED</a>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        
+
+                        
+                        
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+        <br>
+        <br>
+    
+</div>
+
+
+
+
+
+<!-- EASTER EGG STUFF -->
+
+
+
+
+<!-- confetti effect!! -->
+
+
+<div class="confettidiv" id="confettiId">
+    <img class="confetti" src="./img/confetti.gif" alt="" srcset="">
+</div>  
+
+
+<!-- MOBILE AND SMALL <900px displays and such -->
+
+
+
+<div class="mobile">
+    <div class="themebuttondivmobile" id="themebuttondivmobile">
+        <button class="btnmobile-toggle" id="themebutton"></button>
+    </div>
+    <div class="title"><a href="./index.html">ARGIL</a></div>
+    <div class="subtitleMain" id="subtitleMainMobile">beta mobile version 0.1!</div>
+    
+
+    <br><br>
+
+    <div class="box" id="importantbox">
+        <h2><span id="h2icon">⭐</span> NEW WEBSITE <span id="h2icon">⭐</span></h2>
+        <p>
+            this site isnt fully supported for mobile, yet. <br> so for now here is a beta version. <br> 
+            <a href="./changelog.html#mobile" class="button"><span id="buttonIcon">☴</span> Change Log</a>
+        </p>
+    </div>
+
+    <div class="box">
+                            
+        <h2><span id="h2icon">⚡︎</span> LINKS</h2>
+        <span id="sideline">opens in current tab</span>
+        <div class="socials">
+            <a class="button" id="spotify" href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe">♫ Spotify</a>
+            <br>
+            <a class="button" id="twitter" href="https://x.com/ArgilRants">✎ Twitter</a> 
+            <br>
+            <div class="button" id="instabtnmobile">
+                <a class="" id="instagram" href="https://www.instagram.com/argilrants/">★ Instagram</a>
+            </div>
+            <br>
+            <a class="button" id="github" href="https://github.com/ArgilRants"> ⏻ Github</a>
+            <br>
+            <a class="button" id="modrinth" href="https://modrinth.com/user/ArgilRants">⛏ Modrinth</a>
+            <br>
+            <a class="button" id="steam" href="https://steamcommunity.com/id/argilrants/">♠ Steam</a>
+            <br>
+            <a class="button" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A"> ▶ Youtube</a> 
+            <br>
+            <a class="button" id="letterboxd" href="https://boxd.it/aSTvn">⚡︎ Letterboxd</a>
+            <br>
+            <a class="button" id="twitch" href="https://www.twitch.tv/argilrants"> ⏏ Twitch</a>
+
+
+            
+        </div>
+
+    </div>
+
+
+    <div class="box">
+        <div id="drop2">
+            <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(2)"></button>
+            <h2><span id="h2icon">±</span> My Setup</h2>
+            <h3 id="subtitle">links and stuff!</h3>
+            <div id="dropdown" class="dropdownContent">
+                <h3 style="margin-bottom: -5px;">Desk stuff:</h3>
+                <div id="indent">
+                    <p id="setuplinks">
+                        Mouse:
+                        <br>
+                        <a href="https://www.razer.com/gb-en/gaming-mice/razer-deathadder-v3-pro">Deathadder V3 Pro</a>
+                    </p>
+
+                    <p id="setuplinks">
+                        Keyboard(s) <span id="sideline">← Linear!</span>
+                        <br>
+                        <a href="https://www.keychron.com/products/keychron-q3-pro-qmk-via-wireless-custom-mechanical-keyboard?variant=40469135261785">Keychron Q3 Pro</a>
+                        <br>
+                        <a href="https://www.corsair.com/us/en/p/keyboards/ch-9000220-na/corsair-gaming-k95-rgb-mechanical-gaming-keyboard-cherry-mx-red-ch-9000220-na?srsltid=AfmBOopDHqE5ZfpFKsqa0uX2O-9hzHzOxqBwWsYJ2YK8JJDtRqWXtzl0" style="text-decoration: line-through;">Corsair K95 RGB</a>  <span id="sideline">← rip</span>
+                    </p>
+
+                    <p id="setuplinks">
+                        Headphone(s)
+                        <br>
+                        <a href="https://drop.com/buy/massdrop-sennheiser-hd6xx">Drop & Sennheiser HD6xx</a>
+                        <br>
+                        <a href="https://www.sony.co.uk/electronics/headband-headphones/wh-1000xm5">Sony WH-1000XM5</a>
+                        <br>
+                        <a href="https://support.apple.com/en-gb/111861">Airpods Pro 1 [2019]</a>
+                        <br>
+                        <a href="https://europe.beyerdynamic.com/dt-990-pro.html" style="text-decoration: line-through;">DT 990 Pro</a> <span id="sideline">← rip</span>
+                    </p>
+                    
+                    <p id="setuplinks">
+                        Audio Monitors
+                        <br>
+                        <a href="https://www.presonus.com/en-US/monitors/media-reference-monitors/eris-series/2777500103.html?srsltid=AfmBOopg_gTTj8zXexNMzTEyArjoE_kwZtPvivQgguoMd4DEl-76UqnF">PreSonus Eris E4.5</a>
+                    </p>
+
+                    <p id="setuplinks">
+                        Audio Interface
+                        <br>
+                        <a href="https://www.behringer.com/product.html?modelCode=P0BJZ">Behringer UMC202HD</a>
+                    </p>
+
+                    <p id="setuplinks">
+                        Microphone 
+                        <br>
+                        <a href="https://rode.com/en/microphones/broadcast/procaster">RØDE Procaster</a>
+                        <br>
+                        <span id="sideline"><span id="censored">fuck</span> the sm7b!</span>
+                    </p>
+                </div>
+                <h3 style="margin-bottom: -5px;">Other stuff:</h3>
+                <div id="indent">
+                    <p id="setuplinks">
+                        Phone
+                        <br>
+                        <a href="https://www.apple.com/uk/iphone-16-pro/">iPhone 16 Pro [Desert]</a>
+                    </p>
+
+                    <p id="setuplinks">
+                        <b>The</b> Prized iPad
+                        <br>
+                        <a href="https://www.apple.com/uk/shop/buy-ipad/ipad-mini">iPad Mini 6th gen [2021]</a>
+                    </p>
+
+                    <p id="setuplinks">
+                        Handheld
+                        <br>
+                        <a href="https://store.steampowered.com/steamdeck">Steam Deck OLED</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    
+    
+
+
+</div>
+
+
+<div class="tmcontianer">
+    <div class="box">
+            <h2><span id="h2icon">⭐</span> RESIZE OR ZOOM OUT!!! <span id="h2icon">⭐</span>
+            <br>
+            <span id="sideline">NOW!! I SAID NOW!!!</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+<!-- <script src="./js/main.js"></script> -->
+<script src="./js/randomgif.js"></script>
+<script src="./js/subtitle.js"></script>
+<script src="./js/theme.js"></script>
+<script src="./js/age.js"></script>
+<script src="./js/dateEvents.js"></script>
+<script src="./js/dropdowns.js"></script>
+<script src="./js/onlinecheck.js"></script>
+</body>
+</html>
