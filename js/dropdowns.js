@@ -1,7 +1,4 @@
 
-
-
-
 function dropdown(x) {
     if(window.matchMedia("(pointer: coarse)").matches) {
         dropdownRun(x);
@@ -15,18 +12,21 @@ function dropdown(x) {
     }
 }
 
-
-
 function dropdownRun(x){
     var dropdownBtn = document.querySelector("div#drop"+x+" #dropdownBtnId");
-    console.log(dropdownBtn);
-    console.log(x);
     var dropdownVar = document.querySelector("div#drop"+x+" #dropdown");
     console.log(dropdownVar);
-    dropdownVar.classList.toggle("showDropdown");
-    dropdownBtn.classList.toggle("dropdownBtnTextUp");
-}
+    if (dropdownVar.classList.contains("showDropdown")){
+        dropdownVar.className = "dropdownContent";
+        dropdownBtn.className = "dropdownBtn dropdownBtnText";
 
+    } else {
+        dropdownVar.className = "";
+        dropdownVar.className = "dropdownContent showDropdown";
+        dropdownBtn.className = "dropdownBtn dropdownBtnTextUp";
+
+    }
+}
 
 // remove dropdowns on click just in case
 // window.onclick = function(event) {

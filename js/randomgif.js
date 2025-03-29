@@ -10,11 +10,14 @@ ImageArray[7] = '8.gif';
 ImageArray[8] = '9.gif';
 ImageArray[9] = '10.gif';
 ImageArray[10] = '11.gif';
+ImageArray[11] = '12.gif';
+ImageArray[12] = '13.gif';
+ImageArray[13] = '14.gif';
+ImageArray[14] = '15.gif';
+ImageArray[15] = '16.gif';
 
 let maxnumber = ImageArray.length
-
 const gif = document.getElementById("randGif");
-
 
 function getRandomImage() {
     var sound = new Audio('./audio/randgif.wav');
@@ -34,12 +37,10 @@ function getRandomImage() {
     gif.innerHTML = ('<img src="' + './img/randomgifs/' + img + '" width="100%" id="randGifSrc">');
 }
 
-
 function onLoadGif() {
     var num = Math.floor( Math.random() * 11);
     var img = ImageArray[num];
     document.getElementById("randGif").innerHTML = ('<img src="' + './img/randomgifs/' + img + '" width="100%" id="randGifSrc">')
 }
-
 
 window.onload = onLoadGif();

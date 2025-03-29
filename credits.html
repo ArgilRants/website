@@ -2,27 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/atKeyframes.css">
+    <meta name="description" content="@ArgilRants website, hosting projects, social links and more">
+    <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
+    <meta name="author" content="ArgilRants">
+    <meta property="og:image" content="https://argil.dev/img/ogimage.png">
+    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
 
     <link rel="icon" type="image/x-icon" href="./img/icon.ico">
 
     <title>credits.html</title>
 </head>
 <body class="">
-    <div class="mobile">
-        <div class="themebuttondivmobile">
-            <button class="btnmobile-toggle" id="themebutton"></button>
-        </div>
-        <div class="title"><a href="./index.html">ARGIL</a></div>
-        <div class="subtitleMain" id="subtitleMainMobile">/pages/credits.html</div>
+    <div class="themebuttondivmobile" style="display: none;" id="themebuttondivmobile">
+        <button class="btnmobile-toggle" id="themebutton"></button>
     </div>
     <div id="basicpage">
-
         <div class="basicpagetop">
-            <div class="themebuttondiv">
+            <div class="themebuttondiv" id="themebuttondiv">
                 <span id="sideline">select theme -></span>
-                <button class="btn-toggle" id="themebutton"></button>
+                <div class="select" style="display: inline-block;">
+                    <select id="themeSelect" onchange="themeSelect()" onclick="clickSound()" required>
+                        <option value="auto">Auto </option>
+                        <option value="dark">☽ </option>
+                        <option value="light">☀ </option>
+                        <option value="valentine">❤ </option>
+                        <option value="halloween">☠ </option>
+                        <option value="holidays">❄ </option>
+                        <option value="invert">⯪ </option>
+                        <option value="sepia">♬ </option>
+
+                        
+                    </select>
+                </div>
             </div>
             <div class="themebuttondivmobilewide" style="display: none;">
                 <button class="btnmobilewide-toggle" id="themebutton"></button>
@@ -32,23 +47,21 @@
                     <span id="titleA">A</span><span id="titleR">R</span><span id="titleG" class="titleTilt">G</span><span id="titleI">I</span><span id="titleL">L</span>
                 </a>
             </div>
-            <div class="subtitleMain" id="subtitleMain">/pages/credits.html</div>
+            <div class="subtitleMain" id="subtitleMain" onclick="subtitleGenerate()">TEST</div>
         </div>
         <br>
 
-        
-        <hr>
-        
+            
         <br>
         <h2 style="text-align: center; color: var(--title-color);">It's credit time:</h2>
         <br>
         
-        <h3>Font:</h3>
+        <h3>Font</h3>
         <p>Thank you so much to <a href="https://github.com/IdreesInc/">@IdreesInc</a> and all the <a href="https://github.com/IdreesInc/Monocraft/graphs/contributors">contributors</a> of the <a href="https://github.com/IdreesInc/Monocraft">Monocraft</a> project!</p>
 
         <br>
 
-        <h3>Video/Gif Downloader:</h3>
+        <h3>Video/Gif Downloader</h3>
         <p>Thanks to the devs over at <a href="https://github.com/imputnet">imputnet</a> for their continued support and work on <a href="https://cobalt.tools/">Cobalt</a>, love ya!</p>
 
         <br>
@@ -61,12 +74,73 @@
 
         </p>
 
+        <br> 
+
+        <h3 id="spotifyNowPlaying">Spotify Now Playing API</h3>
+        <p>
+            Thanks to <a href="https://www.javed.dev/">Javed Akhtar</a> for the <a href="https://nowplaying.tinyrobot.co/">Spotify Now Playing API project</a>
+            <br>
+            Check out the <a href="https://github.com/akhtarja/serverless-spotify-now-playing">The github repo</a> and his <a href="https://www.instagram.com/akhtarja" id="instagram">Instagram</a>
+        </p>
+
+        <h3>CRT CSS Filters & Classes</h3>
+        <p>
+            Thanks to <a href="http://aleclownes.com">Alec Lownes</a> for publishing this code!
+            <br>
+            Link to all the code I used is: <a href="http://aleclownes.com/2017/02/01/crt-display.html">here!</a>
+        </p>
+
+        <h3 id="letterboxdAPICredit">Letterboxd Diary API</h3>
+        <p>
+            BIG BIG Thanks to <a href="https://www.timcieplowski.com/">Tim Cieplowski</a> for making this publicly avaliable and with URl params for raw data! Helped a ton!
+            Add your own Letterboxd Diary Embed by going <a href="https://letterboxd-embed.timcieplowski.com/">here</a>, and URL param info is <a href="https://github.com/timciep/letterboxd-diary-embed?tab=readme-ov-file#url-params-for-fetch">here</a>
+        </p>
+
+        <h3 id="insperations">Insperations</h3>
+        <p>
+            Thanks to <a href="https://dimden.dev/">Dimden</a> for having a really cool website!! I took some pretty heavy insperation from them!!
+        </p>
+        <footer id="footer">
+        
+           
+        
+            version: <a href="./changelog.html"><span id="version"></span></a> | <a href="mailto:liam@argil.dev">liam@argil.dev</a>
+
+            
+            <div class="debug" id="footerDebug">
+                <hr>
+                <span class="iconSharp">deployed_code_history</span> Debug options <span class="iconSharp">deployed_code_history</span>
+                <br>
+                Theme:
+                <select id="debugThemeSelect" onchange="debugTheme()" onclick="clickSound()" required>
+                    <option value="auto">Auto </option>
+                    <option value="dark">☽ </option>
+                    <option value="light">☀ </option>
+                    <option value="valentine">❤ </option>
+                    <option value="halloween">☠ </option>
+                    <option value="holidays">❄ </option>
+                    <option value="invert">⯪ </option>
+                    <option value="sepia">♬ </option>
+            
+                </select>
+                | outlines: 
+                <label class="switch">
+                    <input type="checkbox" onclick="outlineToggle()" id="debugOutlineToggleInput">
+                  </label>
+            </div>
+        
+
+        </footer>
+
+
     </div>
 
 
 
 
 
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./js/theme.js"></script>
+<script src="./js/dateEvents.js"></script>
+<script src="./js/subtitle.js"></script>
 </body>
