@@ -19,8 +19,6 @@
 </head>
 <body class=""></body>
 
-    <img id="bg" src="./img/5200Trans.png" hidden>
-
     <div id="container" class="">
         <div class="header">
             <div class="themebuttondiv" id="themebuttondiv">
@@ -183,12 +181,14 @@
                                     <div id="badges">
                                         <div id="mcbadge">Resource Pack</div>
                                         <br><br>
-                                        <div id="infobadge">1.20.4+</div> 
+                                        <div id="infobadge">1.20.3+</div> 
                                     </div>
-                                    EBG has the goal of making Minecraft's GUI even better! With supports for mods, optional settings through <a href="https://modrinth.com/mod/respackopts">Respackopts</a> and more!
+                                    EBG has the goal of making Minecraft's GUI even better! With support for mods, optional settings through <a href="https://modrinth.com/mod/respackopts">Respackopts</a> and more!
                                     <br>
                                     <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a>
                                     <a href="https://modrinth.com/mod/respackopts" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a>
+                                    <a href="./evenbettergui.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Wiki</a>
+                                    
                                 </p>
                             </div>
                         </div>
@@ -830,10 +830,10 @@
 
     <br><br>
 
-    <div class="box" id="importantbox">
-        <h2><span id="h2icon">⭐</span> NEW WEBSITE <span id="h2icon">⭐</span></h2>
+    <div class="box" id="importantbox" style="display: none;">
+        <h2><span id="h2icon">⭐</span> NEW UPDATE <span id="h2icon">⭐</span></h2>
         <p>
-            1.0 Mobile Version is here! Check the change log for more details <br>
+            1.1 Mobile Version is here! Check the change log for more details <br>
             <a href="./changelog.html#mobile" class="button" style="color: var(--default-text-color);"><span id="buttonIcon">☴</span> Change Log</a>
         </p>
     </div>
@@ -845,37 +845,48 @@
     </div>
 
     <div class="box">
-        <div id="drop2">
-            <button class="dropdownBtn dropdownBtnTextUp" id="dropdownBtnId" onclick="dropdown(2)"></button>
-            <h2>LINKS</h2>
-            <h3 id="subtitle">opens in the same tab</h3>
-            <div id="dropdown" class="dropdownContent showDropdown">
-                <div class="socials">
-                    <a class="button" id="spotify" href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe">♫ Spotify</a>
-                    <br>
-                    <a class="button" id="twitter" href="https://x.com/ArgilRants">✎ Twitter ✎</a> 
-                    <br>
-                    <a class="button" id="bluesky" href="https://bsky.app/profile/argil.dev">☀ Bluesky ☀</a>
-                    <br>
-                    <div class="button" id="instabtnmobile">
-                        <a class="" id="instagram" href="https://www.instagram.com/argilrants/">★ Instagram ★</a>
-                    </div>
-                    <br>
-                    <a class="button" id="github" href="https://github.com/ArgilRants">⏻ Github ⏻</a>
-                    <br>
-                    <a class="button" id="modrinth" href="https://modrinth.com/user/ArgilRants">⛏ Modrinth ⛏</a>
-                    <br>
-                    <a class="button" id="steam" href="https://steamcommunity.com/id/argilrants/">♠ Steam ♠</a>
-                    <br>
-                    <div class="button" id="youtubebtnmobile">
-                        <a class="" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">▶ Youtube ▶</a> 
-                    </div>
-                    <br>
-                    <a class="button" id="letterboxd" href="https://boxd.it/aSTvn">⚡︎ Letterboxd ⚡︎</a>
-                    <br>
-                    <a class="button" id="twitch" href="https://www.twitch.tv/argilrants"> ⏏ Twitch ⚡︎</a>
+        <h2>EvenBetterGUI</h2>
+        <h3 id="subtitle">Minecraft 1.20.3+</h3>
+        <p>
+            
+            <img src="./img/evenbettergui/cover_clear.png" alt="" srcset="" width="100%">
 
+            <br>
+            <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a>
+
+            
+
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>LINKS</h2>
+        <h3 id="subtitle">opens in the same tab</h3>
+            <div class="socials">
+                <a class="button" id="spotify" href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe">♫ Spotify</a>
+                <br>
+                <a class="button" id="twitter" href="https://x.com/ArgilRants">✎ Twitter ✎</a> 
+                <br>
+                <a class="button" id="bluesky" href="https://bsky.app/profile/argil.dev">☀ Bluesky ☀</a>
+                <br>
+                <div class="button" id="instabtnmobile">
+                    <a class="" id="instagram" href="https://www.instagram.com/argilrants/">★ Instagram ★</a>
                 </div>
+                <br>
+                <a class="button" id="github" href="https://github.com/ArgilRants">⏻ Github ⏻</a>
+                <br>
+                <a class="button" id="modrinth" href="https://modrinth.com/user/ArgilRants">⛏ Modrinth ⛏</a>
+                <br>
+                <a class="button" id="steam" href="https://steamcommunity.com/id/argilrants/">♠ Steam ♠</a>
+                <br>
+                <div class="button" id="youtubebtnmobile">
+                    <a class="" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">▶ Youtube ▶</a> 
+                </div>
+                <br>
+                <a class="button" id="letterboxd" href="https://boxd.it/aSTvn">⚡︎ Letterboxd ⚡︎</a>
+                <br>
+                <a class="button" id="twitch" href="https://www.twitch.tv/argilrants"> ⏏ Twitch ⚡︎</a>
+
             </div>
         </div>
 

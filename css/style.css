@@ -92,8 +92,8 @@
 
 
 html{
-    --version: "1.1";
-    --mobileVersion: "1.0"
+    --version: "1.2";
+    --mobileVersion: "1.1"
 }
 
 
@@ -372,6 +372,7 @@ select:has(>option[value="auto"]:checked){
 
 
 body {
+    display: block;
     background-color: var(--bg-color);
     font-family: 'monocraft';
     font-optical-sizing: auto;
@@ -381,11 +382,12 @@ body {
     -webkit-font-smoothing: none;
     image-rendering: pixelated;
     overflow-x: hidden;
+    height: 100%;
     font-size: 0.9em;
-    overflow-y: scroll;
     animation: bodyload 1.5s ease-in-out;
     margin-top: 0px;
     filter: none;
+    
 }
 
 
@@ -598,6 +600,13 @@ footer {
 
 .italic{
     font-style: italic;
+}
+
+
+#ebgWiki{
+    /* background-image: url("../img/evenbettergui/cover_blurred.png");
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 
@@ -835,6 +844,29 @@ td {
     unicode-bidi: isolate;
 }
 
+
+
+table#wiki{
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table#wiki td, th {
+    border: 1px solid #eeeeee;
+    text-align: left;
+    padding: 8px;
+}
+
+table#wiki img{
+    max-width: 100%;
+}
+
+#wikiVanillaCollage img{
+    height: 200px;
+    image-rendering: auto !important;
+}
 
 
 .box{
@@ -1355,6 +1387,14 @@ div.box img:hover{
     filter: brightness(110%);
 }
 
+
+.viewerjs img{
+
+}
+
+.viewerjs img:hover{
+    cursor: zoom-in;
+}
 
 div.box img#left{
     float: left;

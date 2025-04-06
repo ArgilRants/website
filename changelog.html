@@ -52,146 +52,16 @@
         <br>
         <div style="text-align: center;">
             <h2>Most Recent Version(s):</h2>
-            <h3 id="subtitle">Last Updated: March 31<sup>st</sup> 2025</h3>
+            <h3 id="subtitle">Last Updated: April 06<sup>th</sup> 2025</h3>
         </div>
 
         <div class="box" id="desktop">
-            <h2 style="color: #22b143;">Version 1.1 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
-            <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
+            <h2 style="color: #22b143;">Version 1.2 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
+            <div id="changeLogDate">April 06<sup>th</sup> | 2025</div>
 
             <h3>New features / Additions:</h3>
             <ul>
-                <li><span class="h3totitleShine" style="font-size: 120%;">Added LIVE SPOTIFY NOW LISTENING BOX!!!</span></li>
-                <ul>
-                    <li>Doesn't show up when i'm not actively listening to a song</li>
-                    <li><a href="./index.html#listening" class="button" id="checkIfListeningButton">Check it out here</a> <span id="sideline"> Click here for an image: <a href="./img/liveListeningBoxView.png">a static image</a></span></li>
-                    <li>Shows album/track art, song name and artist</li>
-                    <ul>
-                        <li>Shows all artists sepeterated by "&" symbols</li>
-                        <li>Removes most featured artists from song names</li>
-                        <li>If song is a remix, shows <i>cool</i> remix effect</li>
-                        <li>If song is a taylors version, abbreviate it to "[TV]" in the song name</li>
-                    </ul>
-                    <li>Updates once every 3 minutes <span id="sideline">if you are clicked into the site</span></li>
-                    <li>Now has a wonderful loading throbber</li>
-                    <ul>
-                        <li>Reloads when updating after 3 mins</li>
-                        <li>Becomes red and crosses out when im no longer listening to a song</li>
-                        <li>Nicely fades out both the throbber and the box</li>
-                    </ul>
-                </ul>
-                <li><span class="h3totitleShine animationReverse" style="font-size: 110%;">Added LIVE LETTERBOXD DIARY BOX!!!</span></li>
-                <ul>
-                    <li><a href="./index.html#letterboxdDiary" class="button">Check it out here</a></li>
-                    <li>Big thanks to <a href="https://www.timcieplowski.com/">Tim Cieplowski</a> for the API I used, find out more <a href="https://letterboxd-embed.timcieplowski.com/">here</a></li>
-                    <li>A scrollable live updating box that displays all of my letterboxd diary entries</li>
-                    <ul>
-                        <li>Limited to 8, just for loading reasons, <span id="sideline">do you need to know what the 9th last movie i watched is?</span></li>
-                    </ul>
-                    <li>Shows rating out of 5 stars</li>
-                    <li>Shows film title, film year, small summary of review and watched date when hovering</li>
-                    <ul>
-                        <li>also functions when using a touch device, it just shows all by default</li>
-                    </ul>
-                    <li>Whole thing is clickable to the link to the review!</li>
-                    <li>Updates once every 30 mins</li>
-                    <li>Now has a wonderful loading throbber</li>
-                    <ul>
-                        <li>Reloads when updating after 30 mins</li>
-                        <li>Has a skeleton on first load too!</li>
-                    </ul>
-                </ul>
-                <li><span class="h3totitleShine" style="font-size: 110%;">Added DROPDOWN THEME SELECTOR</span></li>
-                <ul>
-                    <li>When events like halloween are happening the theme selector will <span style="color: red;">NOT</span> be avaliable.</li>
-                    <li>Added date specific themes to selector</li>
-                    <ul>
-                        <li>Added <b>Valentines</b> theme</li>
-                        <li>Added <b>Halloween</b> theme</li>
-                        <li>Added <b>Holidays</b> theme</li>
-                    </ul>
-                    <li>Added new Effect / Filter based themes, like invert and sepia</li>
-                    <ul>
-                        <li>Affected by your default theme on your device [Dark/Light]
-                        </li>
-                        <li>Sepia has a crt-like color seperation filter and a slow dimming effect</li>
-                    </ul>
-                    <li>Added <b>Auto</b> theme in the selector.</li>
-                    <ul>
-                        <li>This is the default theme for new users</li>
-                        <li>Will change depending on your theme settings on your device</li>
-                    </ul>
-                    <li>Added click sounds to the theme selector</li>
-                    <ul>
-                        <li>There's one <a href="./changelog.html#themeSelectorAutoClickSoundIssue">[known issue]</a> about this</li>
-                    </ul>
-                </ul>
-
-                <li><span class="h3totitleShine animationReverse">Added EvenBetterGUI Resource Pack project</span></li>
-                <ul>
-                    <li><a href="https://modrinth.com/project/ebg">Download @ Modrinth.com</a></li>
-                </ul>
-                <li>Added <a href="https://bsky.app/profile/argil.dev" id="bluesky">Bluesky</a> link <span id="sideline"><- follow me i guess? just incase twitter dies (it probably will)</span></li> 
-                <li>Added <a href="./changelog.html#footer">a footer</a> to all pages!</li>
-                <li>Added more badges in the 88x31 badge section(s)</li>
-                <li>Added more gifs to the randomgif section <span id="sideline"><- go <a href="./index.html#gifBox">here</a> to see them!! </span></li>
-                <li>Added debug settings for me.</li>
-                <ul>
-                    <li>Added debug keybind</li>
-                    <ul>
-                        <li>Toggled via keybind: Ctrl + Shift + L</li>
-                        <li>Shows good looking alert via <a href="https://sweetalert2.github.io/">@sweetalert2</a></li>
-                    </ul>
-                    <li>When debug is enabled date events, like halloween wont occur</li>
-                    <li>When debug is enabled there are debug settings in the footer</li>
-                    <li>Added outline toggle</li>
-                    <li>On home page added "test data" toggle</li>
-                    <ul>
-                        <li>allowing for easier iteration of css on both of the live spotify & online check boxes</li>
-                    </ul>
-                </ul>
-                <li>Added <span class="crt-colorsep">CRT Color Seperation filter effect</span> and even more CRT like effects.</li>
-                <ul>
-                    <li>Thanks to <a href="http://aleclownes.com">Alec Lownes</a> for publishing this code, check out their stuff.</li>
-                    <li>Link to all the code I used is: <a href="http://aleclownes.com/2017/02/01/crt-display.html">here!</a></li>
-                </ul>
-                <li>When clicking on a link to a specific box the box is now visually highlighted.  <br> E.g: <a href="./changelog.html#desktop">click for example</a><span id="sideline"> this will highlight this box</span></li>
-                <li>Added compatability with spotify playlists, cool playlist time :p</li>
-                <ul>
-                    <li><a href="./index.html#favSong" class="button">Check one out here</a></li>
-                    <li>These look and kinda behave like normal Spotify playlists from the desktop library</li>
-                    <li>Added "my best playlist" box</li>
-                    <ul>
-                        <li>Filled with my favourite and proudest created playlits ever</li>
-                        <li><a href="./index.html#bestPlaylists" class="button">Check out my best playlists here</a></li>
-                    </ul>
-                </ul>
-                <li>Added compatability with Google Icons</li>
-                <li>Added the Previous Project box</li>
-                <ul>
-                    <li><a href="./index.html#previousProjects" class="button">Check out previous projects here!!</a></li>
-                    <li>Added <abbr class="clickable" onclick="previousProjectIcon()" style="text-decoration: underline;" title="click to see the effect!">previous "newspaper" like effect</abbr> as an easter egg <span id="sideline">find it hehe</span></li>
-                    <li>Moved Clay Golem Pack to this new scrollable box.</li>
-                    <li>Added hover badges and download button!!</li>
-                    <li>Makes a projects information really easy to digest at a glance <span class="iconSharp">mood</span></li>
-                    <li>Works with mobile devices</li>
-                    <ul>
-                        <li>Shows download and badges at all times <span id="sideline">instead of the default behaviour of hovering</span></li>
-                    </ul>
-                </ul>
-                <li>Randomized what my favourite show/film is in the "about me" section</li>
-                <ul>
-                    <li><a href="./index.html#mainbox" class="button">check it out here</a></li>
-                </ul>
-                <li>Made the subtitle below the big "ARGIL" text at the top of the pages clickable</li>
-                <ul>
-                    <li>When clicked it now changes the subtitle to a new one (reliably)</li>
-                </ul>
-                <li>Added Achievements to the "am i playing [...]" area</li>
-                <ul>
-                    <li>Shows how many achievements ive got and a bar of progress</li>
-                    <li><a href="./img/achievements.png">Example Image</a> <span id="sideline"><- the title of the game was scrolling</span></li>
-                </ul>
+                <li>Added <a href="./evenbettergui.html">EvenBetterGUI Wiki Page</a></li>
             </ul>
 
             <br>
@@ -199,15 +69,7 @@
             <h3>Removed features / Removals:</h3>
 
             <ul>
-                <li>Removed the "for xHrs xMins" text from the online check box</li>
-                <ul>
-                    <li>this was bugged and wasnt working properly, i might fix in a later update</li>
-                </ul>
-                <li>Removed fav song playlist button</li>
-                <ul>
-                    <li>Replaced with the <span class="h3totitleShine">new</span> playlist boxes</li>
-                </ul> 
-                <li>Removed Coming SOON link in the links box <span id="sideline">this was github hotfixed</span></li>
+                <li>N/A</li>
             </ul>
 
             <br>
@@ -215,13 +77,7 @@
             <h3>Work in progress features:</h3>
             <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
             <ul>
-                <li>Add Pepito cat live updating box on the side</li>
-                <li>Add achievement page</li>
-                <ul>
-                    <li>a place to document my achievement hunting</li>
-                    <li>as well as a place to document all my 100%'d lego games</li>
-                    <li>planned release is 1.2 of the site - sometime june/july time</li>
-                </ul>
+                <li>N/A</li>
             </ul>
 
             <br>
@@ -229,9 +85,7 @@
             <h3 id="themeSelectorAutoClickSoundIssue">Known issues:</h3>
             <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
             <ul>
-                <li>On chromium browsers the 88x31 badge scrolling area sometimes resets on first load after a couple seconds</li>
-                <li>Version number in footer cannot be selected, this is known <b>behaviour</b> and wont be fixed.</li>
-                <li>When clicking the theme selector whilst current selected theme is <b>Auto</b> the click sound sometimes doesnt play</li>
+                <li>N/A</li>
             </ul>
 
             <br>
@@ -239,35 +93,7 @@
             <h3>Fixes / Other changes:</h3>
 
             <ul>
-                <li>Optimized the "Am I online?" and Live Spotify playling Javascript.</li>
-                <ul>
-                    <li>This could still be faster it still takes about a second or two</li>
-                    <li>However it is reading through like 1000s of lines of .json so its fine</li>
-                </ul>
-                <li>Updated setup links to actually go to the right places</li>
-                <li>Removed cloudflare analytic beacon.js inject (i dont need analytics for this site) <span id="sideline">this was hotfixed</span></li>
-                <li>Changed the color of the Youtube link to the new color gradient</li>
-                <li>Changed how the home page reacts when you resize it too small or zoom in too far</li>
-                <ul>
-                    <li>Now shows the mobile version of the site with a bright box explaining that the user should zoom out.</li>
-                    <li>The rest of the mobile boxes are darkened during this</li>
-                    <li>The user cannot use the theme button during this, however thats not something im going to care about at all. Just zoom out of resize the window <sub>plz</sub></li>
-                </ul>
-                <li>Themed events, such as Halloween and Holidays all now last at least a week.</li>
-                <li>Changed the title of the home page to: <b>Argil's Kiln</b></li>
-                <li>Moved all keyframe animations to its own css file to make them slightly easier to deal with <sub>lol</sub></li>
-                <ul>
-                    <li>As well as making it so i can easily turn all animations off. So thats nice.</li>
-                    <li>When adding very specific effects like the CRT stuff and others I will use seperate css files so toggles can be made easier further on in the future</li>
-                </ul>
-                <li>Fixed an issue on first load where the theme selector didnt have an icon</li>
-                <li>Fixed the source link sending users to the wrong page. <span id="sideline">fixed in a github hotfix</span></li>
-                <li>Changes to the "Am I online?" section</li>
-                <ul>
-                    <li>Made the "and im playing [...]" game font and image considerably smaller </li>
-                    <li>Made the game name scroll when its too long for the box.</li>
-                    <li>Text is no longer centered and is aligned to the left</li>
-                </ul>
+                <li>N/A</li>
             </ul> 
 
             <br>
@@ -275,16 +101,12 @@
         </div>
 
         <div class="box" id="mobile">
-            <h2 style="color: #22b143;">Version 1.0 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
+            <h2 style="color: #22b143;">Version 1.1 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
             <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
 
             <h3>New features / Additions:</h3>
             <ul>
-                <li><span class="h3totitleShine" style="font-size: 120%;">Small redesign</span></li>
-                <li>Added <a href="https://bsky.app/profile/argil.dev" id="bluesky">Bluesky</a> link</li>
-                <li>Added a footer to all mobile specific pages / verisons of pages</li>
-                <li>Moved all links into a dropdown box (open by default)</li>
-                <li>Added hover effects to links when using a mouse on the mobile site <span id="sideline">(eg, if you zoomed in, use a vertical monitor or use a mouse/trackpad on ipad or other tablets)</span></li>
+                <li>Tiny Download box for EvenBetterGUI</li>
             </ul>
             
             <br>
@@ -292,9 +114,9 @@
             <h3>Removed features / Removals:</h3>
 
             <ul>
-                <li>Removed setup links</li>
+                <li>Dropdown socials box</li>
                 <ul>
-                    <li>These probably wont be added back, they were filler anyway.</li>
+                    <li>Is now just a box</li>
                 </ul>
             </ul>
             
@@ -303,7 +125,7 @@
             <h3>Work in progress features:</h3>
             <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
             <ul>
-                <li>Promotion boxes for Satifactory and Minecraft mod projects</li>
+                <li>N/A</li>
             </ul>
 
             <br>
@@ -312,7 +134,7 @@
             <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
             
             <ul>
-                <li>Double click issues with the dropdown button</li>
+                <li>N/A</li>
             </ul>
 
             <br>
@@ -320,12 +142,7 @@
             <h3 id="mobileFixes">Fixes / Other changes:</h3>
 
             <ul>
-               <li>Fixed an issue where the changelog button was showing as white in light mode.</li>
-               <li>Fixed an issue where the dropdown button would resize on mobile when you pressed it.</li>
-               <li>Possibly fixed an issue where the dropdown button was firing twice, or not at all and playing the sound twice.</li>
-               <li>Changed the color of the Youtube link to the new color gradient</li>
-               <li>Changed how the links look, they now look a lot better.</li>
-               <li>Fixed issues with the theme button when using both touch and mouse controls on the same device</li>
+                <li>N/A</li>
             </ul>
         </div>
 
@@ -334,9 +151,289 @@
 
         <div style="text-align: center;">
             <h2>Older Version(s):</h2>
-            <h3 id="subtitle">Last Updated: October 18<sup>th</sup> 2024</h3>
+            <h3 id="subtitle">Last Updated: April 06<sup>th</sup> 2025</h3>
         </div>
-        
+
+        <div class="box" id="desktop-prev-2">
+            <div id="drop3">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(3)"></button>
+                <h2 style="color: #22b143;">Version 1.1 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
+                    <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
+                <div id="dropdown" class="dropdownContent">
+                    <h3>New features / Additions:</h3>
+                    <ul>
+                        <li><span class="h3totitleShine" style="font-size: 120%;">Added LIVE SPOTIFY NOW LISTENING BOX!!!</span></li>
+                        <ul>
+                            <li>Doesn't show up when i'm not actively listening to a song</li>
+                            <li><a href="./index.html#listening" class="button" id="checkIfListeningButton">Check it out here</a> <span id="sideline"> Click here for an image: <a href="./img/liveListeningBoxView.png">a static image</a></span></li>
+                            <li>Shows album/track art, song name and artist</li>
+                            <ul>
+                                <li>Shows all artists sepeterated by "&" symbols</li>
+                                <li>Removes most featured artists from song names</li>
+                                <li>If song is a remix, shows <i>cool</i> remix effect</li>
+                                <li>If song is a taylors version, abbreviate it to "[TV]" in the song name</li>
+                            </ul>
+                            <li>Updates once every 3 minutes <span id="sideline">if you are clicked into the site</span></li>
+                            <li>Now has a wonderful loading throbber</li>
+                            <ul>
+                                <li>Reloads when updating after 3 mins</li>
+                                <li>Becomes red and crosses out when im no longer listening to a song</li>
+                                <li>Nicely fades out both the throbber and the box</li>
+                            </ul>
+                        </ul>
+                        <li><span class="h3totitleShine animationReverse" style="font-size: 110%;">Added LIVE LETTERBOXD DIARY BOX!!!</span></li>
+                        <ul>
+                            <li><a href="./index.html#letterboxdDiary" class="button">Check it out here</a></li>
+                            <li>Big thanks to <a href="https://www.timcieplowski.com/">Tim Cieplowski</a> for the API I used, find out more <a href="https://letterboxd-embed.timcieplowski.com/">here</a></li>
+                            <li>A scrollable live updating box that displays all of my letterboxd diary entries</li>
+                            <ul>
+                                <li>Limited to 8, just for loading reasons, <span id="sideline">do you need to know what the 9th last movie i watched is?</span></li>
+                            </ul>
+                            <li>Shows rating out of 5 stars</li>
+                            <li>Shows film title, film year, small summary of review and watched date when hovering</li>
+                            <ul>
+                                <li>also functions when using a touch device, it just shows all by default</li>
+                            </ul>
+                            <li>Whole thing is clickable to the link to the review!</li>
+                            <li>Updates once every 30 mins</li>
+                            <li>Now has a wonderful loading throbber</li>
+                            <ul>
+                                <li>Reloads when updating after 30 mins</li>
+                                <li>Has a skeleton on first load too!</li>
+                            </ul>
+                        </ul>
+                        <li><span class="h3totitleShine" style="font-size: 110%;">Added DROPDOWN THEME SELECTOR</span></li>
+                        <ul>
+                            <li>When events like halloween are happening the theme selector will <span style="color: red;">NOT</span> be avaliable.</li>
+                            <li>Added date specific themes to selector</li>
+                            <ul>
+                                <li>Added <b>Valentines</b> theme</li>
+                                <li>Added <b>Halloween</b> theme</li>
+                                <li>Added <b>Holidays</b> theme</li>
+                            </ul>
+                            <li>Added new Effect / Filter based themes, like invert and sepia</li>
+                            <ul>
+                                <li>Affected by your default theme on your device [Dark/Light]
+                                </li>
+                                <li>Sepia has a crt-like color seperation filter and a slow dimming effect</li>
+                            </ul>
+                            <li>Added <b>Auto</b> theme in the selector.</li>
+                            <ul>
+                                <li>This is the default theme for new users</li>
+                                <li>Will change depending on your theme settings on your device</li>
+                            </ul>
+                            <li>Added click sounds to the theme selector</li>
+                            <ul>
+                                <li>There's one <a href="./changelog.html#themeSelectorAutoClickSoundIssue">[known issue]</a> about this</li>
+                            </ul>
+                        </ul>
+
+                        <li><span class="h3totitleShine animationReverse">Added EvenBetterGUI Resource Pack project</span></li>
+                        <ul>
+                            <li><a href="https://modrinth.com/project/ebg">Download @ Modrinth.com</a></li>
+                        </ul>
+                        <li>Added <a href="https://bsky.app/profile/argil.dev" id="bluesky">Bluesky</a> link <span id="sideline"><- follow me i guess? just incase twitter dies (it probably will)</span></li> 
+                        <li>Added <a href="./changelog.html#footer">a footer</a> to all pages!</li>
+                        <li>Added more badges in the 88x31 badge section(s)</li>
+                        <li>Added more gifs to the randomgif section <span id="sideline"><- go <a href="./index.html#gifBox">here</a> to see them!! </span></li>
+                        <li>Added debug settings for me.</li>
+                        <ul>
+                            <li>Added debug keybind</li>
+                            <ul>
+                                <li>Toggled via keybind: Ctrl + Shift + L</li>
+                                <li>Shows good looking alert via <a href="https://sweetalert2.github.io/">@sweetalert2</a></li>
+                            </ul>
+                            <li>When debug is enabled date events, like halloween wont occur</li>
+                            <li>When debug is enabled there are debug settings in the footer</li>
+                            <li>Added outline toggle</li>
+                            <li>On home page added "test data" toggle</li>
+                            <ul>
+                                <li>allowing for easier iteration of css on both of the live spotify & online check boxes</li>
+                            </ul>
+                        </ul>
+                        <li>Added <span class="crt-colorsep">CRT Color Seperation filter effect</span> and even more CRT like effects.</li>
+                        <ul>
+                            <li>Thanks to <a href="http://aleclownes.com">Alec Lownes</a> for publishing this code, check out their stuff.</li>
+                            <li>Link to all the code I used is: <a href="http://aleclownes.com/2017/02/01/crt-display.html">here!</a></li>
+                        </ul>
+                        <li>When clicking on a link to a specific box the box is now visually highlighted.  <br> E.g: <a href="./changelog.html#desktop">click for example</a><span id="sideline"> this will highlight this box</span></li>
+                        <li>Added compatability with spotify playlists, cool playlist time :p</li>
+                        <ul>
+                            <li><a href="./index.html#favSong" class="button">Check one out here</a></li>
+                            <li>These look and kinda behave like normal Spotify playlists from the desktop library</li>
+                            <li>Added "my best playlist" box</li>
+                            <ul>
+                                <li>Filled with my favourite and proudest created playlits ever</li>
+                                <li><a href="./index.html#bestPlaylists" class="button">Check out my best playlists here</a></li>
+                            </ul>
+                        </ul>
+                        <li>Added compatability with Google Icons</li>
+                        <li>Added the Previous Project box</li>
+                        <ul>
+                            <li><a href="./index.html#previousProjects" class="button">Check out previous projects here!!</a></li>
+                            <li>Added <abbr class="clickable" onclick="previousProjectIcon()" style="text-decoration: underline;" title="click to see the effect!">previous "newspaper" like effect</abbr> as an easter egg <span id="sideline">find it hehe</span></li>
+                            <li>Moved Clay Golem Pack to this new scrollable box.</li>
+                            <li>Added hover badges and download button!!</li>
+                            <li>Makes a projects information really easy to digest at a glance <span class="iconSharp">mood</span></li>
+                            <li>Works with mobile devices</li>
+                            <ul>
+                                <li>Shows download and badges at all times <span id="sideline">instead of the default behaviour of hovering</span></li>
+                            </ul>
+                        </ul>
+                        <li>Randomized what my favourite show/film is in the "about me" section</li>
+                        <ul>
+                            <li><a href="./index.html#mainbox" class="button">check it out here</a></li>
+                        </ul>
+                        <li>Made the subtitle below the big "ARGIL" text at the top of the pages clickable</li>
+                        <ul>
+                            <li>When clicked it now changes the subtitle to a new one (reliably)</li>
+                        </ul>
+                        <li>Added Achievements to the "am i playing [...]" area</li>
+                        <ul>
+                            <li>Shows how many achievements ive got and a bar of progress</li>
+                            <li><a href="./img/achievements.png">Example Image</a> <span id="sideline"><- the title of the game was scrolling</span></li>
+                        </ul>
+                    </ul>
+
+                    <br>
+
+                    <h3>Removed features / Removals:</h3>
+
+                    <ul>
+                        <li>Removed the "for xHrs xMins" text from the online check box</li>
+                        <ul>
+                            <li>this was bugged and wasnt working properly, i might fix in a later update</li>
+                        </ul>
+                        <li>Removed fav song playlist button</li>
+                        <ul>
+                            <li>Replaced with the <span class="h3totitleShine">new</span> playlist boxes</li>
+                        </ul> 
+                        <li>Removed Coming SOON link in the links box <span id="sideline">this was github hotfixed</span></li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Work in progress features:</h3>
+                    <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
+                    <ul>
+                        <li>Add Pepito cat live updating box on the side</li>
+                        <li>Add achievement page</li>
+                        <ul>
+                            <li>a place to document my achievement hunting</li>
+                            <li>as well as a place to document all my 100%'d lego games</li>
+                            <li>planned release is 1.2 of the site - sometime june/july time</li>
+                        </ul>
+                    </ul>
+
+                    <br>
+                    
+                    <h3 id="themeSelectorAutoClickSoundIssue">Known issues:</h3>
+                    <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
+                    <ul>
+                        <li>On chromium browsers the 88x31 badge scrolling area sometimes resets on first load after a couple seconds</li>
+                        <li>Version number in footer cannot be selected, this is known <b>behaviour</b> and wont be fixed.</li>
+                        <li>When clicking the theme selector whilst current selected theme is <b>Auto</b> the click sound sometimes doesnt play</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Fixes / Other changes:</h3>
+
+                    <ul>
+                        <li>Optimized the "Am I online?" and Live Spotify playling Javascript.</li>
+                        <ul>
+                            <li>This could still be faster it still takes about a second or two</li>
+                            <li>However it is reading through like 1000s of lines of .json so its fine</li>
+                        </ul>
+                        <li>Updated setup links to actually go to the right places</li>
+                        <li>Removed cloudflare analytic beacon.js inject (i dont need analytics for this site) <span id="sideline">this was hotfixed</span></li>
+                        <li>Changed the color of the Youtube link to the new color gradient</li>
+                        <li>Changed how the home page reacts when you resize it too small or zoom in too far</li>
+                        <ul>
+                            <li>Now shows the mobile version of the site with a bright box explaining that the user should zoom out.</li>
+                            <li>The rest of the mobile boxes are darkened during this</li>
+                            <li>The user cannot use the theme button during this, however thats not something im going to care about at all. Just zoom out of resize the window <sub>plz</sub></li>
+                        </ul>
+                        <li>Themed events, such as Halloween and Holidays all now last at least a week.</li>
+                        <li>Changed the title of the home page to: <b>Argil's Kiln</b></li>
+                        <li>Moved all keyframe animations to its own css file to make them slightly easier to deal with <sub>lol</sub></li>
+                        <ul>
+                            <li>As well as making it so i can easily turn all animations off. So thats nice.</li>
+                            <li>When adding very specific effects like the CRT stuff and others I will use seperate css files so toggles can be made easier further on in the future</li>
+                        </ul>
+                        <li>Fixed an issue on first load where the theme selector didnt have an icon</li>
+                        <li>Fixed the source link sending users to the wrong page. <span id="sideline">fixed in a github hotfix</span></li>
+                        <li>Changes to the "Am I online?" section</li>
+                        <ul>
+                            <li>Made the "and im playing [...]" game font and image considerably smaller </li>
+                            <li>Made the game name scroll when its too long for the box.</li>
+                            <li>Text is no longer centered and is aligned to the left</li>
+                        </ul>
+                    </ul> 
+
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" id="mobile-prev-2">
+            <div id="drop4">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(4)"></button>
+                <h2 style="color: #22b143;">Version 1.0 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
+                    <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
+                <div id="dropdown" class="dropdownContent">
+                    <h3>New features / Additions:</h3>
+                    <ul>
+                        <li><span class="h3totitleShine" style="font-size: 120%;">Small redesign</span></li>
+                        <li>Added <a href="https://bsky.app/profile/argil.dev" id="bluesky">Bluesky</a> link</li>
+                        <li>Added a footer to all mobile specific pages / verisons of pages</li>
+                        <li>Moved all links into a dropdown box (open by default)</li>
+                        <li>Added hover effects to links when using a mouse on the mobile site <span id="sideline">(eg, if you zoomed in, use a vertical monitor or use a mouse/trackpad on ipad or other tablets)</span></li>
+                    </ul>
+                    
+                    <br>
+
+                    <h3>Removed features / Removals:</h3>
+
+                    <ul>
+                        <li>Removed setup links</li>
+                        <ul>
+                            <li>These probably wont be added back, they were filler anyway.</li>
+                        </ul>
+                    </ul>
+                    
+                    <br>
+
+                    <h3>Work in progress features:</h3>
+                    <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
+                    <ul>
+                        <li>Promotion boxes for Satifactory and Minecraft mod projects</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Known issues:</h3>
+                    <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
+                    
+                    <ul>
+                        <li>Double click issues with the dropdown button</li>
+                    </ul>
+
+                    <br>
+
+                    <h3 id="mobileFixes">Fixes / Other changes:</h3>
+
+                    <ul>
+                    <li>Fixed an issue where the changelog button was showing as white in light mode.</li>
+                    <li>Fixed an issue where the dropdown button would resize on mobile when you pressed it.</li>
+                    <li>Possibly fixed an issue where the dropdown button was firing twice, or not at all and playing the sound twice.</li>
+                    <li>Changed the color of the Youtube link to the new color gradient</li>
+                    <li>Changed how the links look, they now look a lot better.</li>
+                    <li>Fixed issues with the theme button when using both touch and mouse controls on the same device</li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
         <div class="box" id="desktop-prev-1">
             <div id="drop1">
                 <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(1)"></button>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/atKeyframes.css">
+    <meta name="description" content="@ArgilRants website, hosting projects, social links and more">
+    <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
+    <meta name="author" content="ArgilRants">
+    <meta property="og:image" content="https://argil.dev/img/ogimage.png">
+    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
+
+    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
+
+    <title>EvenBetterGUI.wiki</title>
+</head>
+<body class="">
+    <div class="themebuttondivmobile" style="display: none;" id="themebuttondivmobile">
+        <button class="btnmobile-toggle" id="themebutton"></button>
+    </div>
+    <div id="basicpage">
+        <div class="basicpagetop">
+            <div class="themebuttondiv" id="themebuttondiv">
+                <span id="sideline">select theme -></span>
+                <div class="select" style="display: inline-block;">
+                    <select id="themeSelect" onchange="themeSelect()" onclick="clickSound()" required>
+                        <option value="auto">Auto </option>
+                        <option value="dark">☽ </option>
+                        <option value="light">☀ </option>
+                        <option value="valentine">❤ </option>
+                        <option value="halloween">☠ </option>
+                        <option value="holidays">❄ </option>
+                        <option value="invert">⯪ </option>
+                        <option value="sepia">♬ </option>
+
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="themebuttondivmobilewide" style="display: none;">
+                <button class="btnmobilewide-toggle" id="themebutton"></button>
+            </div>
+            <div class="title">
+                <a href="./index.html" onclick="buttonClick(this)" id="titleLink">
+                    <span id="titleA" class="titleTilt">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI">I</span><span id="titleL">L</span>
+                </a>
+            </div>
+            <div class="subtitleMain" id="subtitleMain" onclick="subtitleGenerate()">TEST</div>
+        </div>
+        <br>    
+        <div id="gallery"> 
+            <div class="box" id="ebgWiki">
+                <div class="">
+                    <h2><span id="h2icon">⛏</span> EvenBetterGUI Wiki</h2>
+                    <img src="./img/ebg.png" alt="" id="left" style="width: 180px;">
+                    <p>
+                        <div id="badges">
+                            <div id="mcbadge">Resource Pack</div>
+                            <br><br>
+                            <div id="infobadge">1.20.3+</div> 
+                        </div>
+                        Welcome to the EvenBetterGUI Wiki page. This is where you can learn about all customizable options, with many many images to accompany, mod support and future update plans! Updated regularly! <span style="color: red; font-weight: bold;">EBG will not be backported</span>
+                        <br>
+                        <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a><span id="sideline"> ← from Modrinth.com</span>
+                        <br>
+                        <a href="https://modrinth.com/mod/respackopts" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a><span id="sideline"> ← from Modrinth.com</span>
+                        <br>
+                        <a href="./evenbettergui.html#changelog" class="button" onclick="buttonClick(this)"><span class="buttonIcon">→</span> Change Log</a><span id="sideline"> ← from just below here and included in the .zip!</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="box" id="vanilla">
+                <div id="drop1">
+                    <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(1)"></button>
+                    <h2>EvenBetterGUI Vanilla</h2>
+                    <h3 id="subtitle">For Minecraft 1.20.3 - 1.21.5 [click the arrow on the right to learn more]</h3>
+                    <h3 id="subtitle"></h3>
+                    <p>
+                        When I was creating this pack I had the goal of making Minecraft's GUI even better, so when tackling vanilla I make the gui slightly darker, the edges rounder and added clearer lines between the rows. As well as this I also extended the 1.20.3+ button outline to all buttons in the game, including selecting enchantments and banner patterns.
+
+                        <br><br>
+                        <img src="./img/evenbettergui/cover_clear.png" width="100%" alt="collage of all the different gui menus in vanilla minecraft with EBG turned on">
+                    </p>
+                    <div id="dropdown" class="dropdownContent">
+                        <div id="wikiVanillaCollage">
+                            <img src="./img/evenbettergui/vanilla/inv.png" alt="">
+                            <img src="./img/evenbettergui/vanilla/largechest.png" alt="">
+                            <img src="./img/evenbettergui/vanilla/survivalhud.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            
+            
+            <div class="box" id="respackopts">
+                <div id="drop2">
+                    <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(2)"></button>
+                    <h2>EvenBetterGUI's Options</h2>
+                    <h3>(Achieved via <a href="https://modrinth.com/mod/respackopts">Respackopts</a>)</h3>
+                    <h3 id="subtitle">[click the arrow on the right to learn more <span style="color: red;">WARNING VERY LONG</span>]</h3>
+                    
+                    <p>
+                        When I was browsing for how to do options / addons for resource packs I came across <a href="https://modrinth.com/mod/respackopts">respackopts</a> and it was the dream, it has all the positives of a system like <a href="vanillatweaks.net">Vanilla Tweaks</a> without most of the drawbacks, so I ran with it. The options avaliable give you over 3 million combination possibilities! Check out all the options below (Press the dropdown button)
+
+                        <img src="./img/evenbettergui/respackopts/respackeduphud.png" width="100%">
+                    </p>
+                    <div id="dropdown" class="dropdownContent">
+
+                        <h3>Theme Options</h3>
+                        <h3 id="subtitle">Change the colors of the hotbar, highlight color and more!</h3>
+                        <table id="wiki">
+                            <tr>
+                                <th>Option Title</th>
+                                <th>Options</th>
+                            </tr>
+                            <tr>
+                                <td><span style="text-decoration: line-through;">GUI Color</span></td>
+                                <td>Coming soon! (Gui color options should come out this summer)</td>
+                            </tr>
+                            <tr>
+                                <td>Hotbar Color</td>
+                                <td>
+                                    Lightish [Default], Dark, Oled [Very Dark], Light
+                                    <br><img src="./img/evenbettergui/respackopts/hotbarcoloroled.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Highlight Color</td>
+                                <td>
+                                    Green [Default], Lime, Aqua [Light Blue], Dark Aqua [Cyan], Blue, Magenta, Purple, White, Grey, Oled [Very Dark], Red, Gold, Yellow, Rainbow [Animated], Rainbow [Still], Amethyst [Animated]
+                                    <br><img src="./img/evenbettergui/respackopts/highlightcolorgold.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tooltip Background Color</td>
+                                <td>
+                                    Dark [Default], Oled [Very Dark], Light, Lightish, Clear
+                                    <br><img src="./img/evenbettergui/respackopts/tooltipwitholeddefault.png" alt="">
+                                </td>
+                            </tr>
+                          </table>
+
+
+                        <h3>Style Options</h3>
+                        <h3 id="subtitle">Change the style of the slot highlight, add custom textured enchanted books <span style="color: red;">[1.21.5+ only]</span> and more!</h3>
+                        <table id="wiki">
+                            <tr>
+                                <th>Option Title</th>
+                                <th>Options</th>
+                            </tr>
+                            <tr>
+                                <td>Custom Enchantment Glint</td>
+                                <td>True [Default], False</td>
+                            </tr>
+                            <tr>
+                                <td>Hotbar-Style GUI Highlight <span style="color: red;">[1.21.4+]</span></td>
+                                <td>
+                                    False [Default], True
+                                    <br><img src="./img/evenbettergui/respackopts/highlightSlot.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Colored Fish Buckets <span style="color: red;">[1.21.5+]</span></td>
+                                <td>
+                                    False [Default], True
+                                    <br><img src="./img/evenbettergui/respackopts/coloredfishbuckets.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Clearer Enchanted Books <span style="color: red;">[1.21.5+]</span></td>
+                                <td>
+                                    False [Default], True
+                                    <br><img src="./img/evenbettergui/customEnchantbooksCropped.gif" alt="">
+                                </td>
+                            </tr>
+                          </table>
+
+                        <h3>EvenBetterHUD Options</h3>
+                        <h3 id="subtitle">Change hud elements like the hunger bar, hearts and more!</h3>
+                        <table id="wiki">
+                            <tr>
+                                <th>Option Title</th>
+                                <th>Options</th>
+                            </tr>
+                            <tr>
+                                <td>Armor Icons</td>
+                                <td>
+                                    Iron [Deafult], Iron [Enchanted], Gold, Gold [Enchanted], Diamond, Diamond [Enchanted], Netherite, Netherite [Enchanted], Chainmail, Chainmail [Enchanted], Leather, Leather [Enchanted]
+                                    <br><img src="./img/evenbettergui/respackopts/armoricons.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pride Hearts</td>
+                                <td>
+                                    Off [Default], Progress, Lesbian, Gay, Bisexual, Transgender, Intersex, Asexual, Aromantic, Aromantic & Asexual
+                                    <br><img src="./img/evenbettergui/respackopts/pridehearts.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Crosshair</td>
+                                <td>
+                                    Smallish [Default], Smaller, Dot, Circle, Circle & Dot, Square, Square & Dot, Angled, Heart, Arrow, Vanilla
+                                    <br><img src="./img/evenbettergui/respackopts/crosshair.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hunger Bar</td>
+                                <td>
+                                    Glow Berries [Default], Sweet Berries, Cookies, Cakes, Apples, Golden Apples, God Apples [Animated], Tropical Fish, Clay Balls
+                                    <br><img src="./img/evenbettergui/respackopts/hungerbar.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rainbow XP Bar</td>
+                                <td>
+                                    False [Default], True
+                                    <br><img src="./img/evenbettergui/respackopts/rainbowxp.png" alt="">
+                                </td>
+                            </tr>
+                          </table>
+
+                        <h3>Mods & Misc Options</h3>
+                        <h3 id="subtitle">Toggle mod support and miscellaneous options!</h3>
+                        <table id="wiki">
+                            <tr>
+                                <th>Option Title</th>
+                                <th>Options</th>
+                            </tr>
+                            <tr>
+                                <td>OptiGUI Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>ModMenu Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Axiom Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Flashback Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>AppleSkin Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Simple Voice Chat Support</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Shulker Box GUIs</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Ender Chest GUIs</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Chest GUIs</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Barrel GUIs</td>
+                                <td>True [Deafult], False</td>
+                            </tr>
+                          </table>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" id="optigui">
+                <div id="drop5">
+                    <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(5)"></button>
+                    <h2>EvenBetterGUI Mod Support</h2>
+                    <h3 id="subtitle">EBG supports mods like Simple Voice Chat, Axiom, AppleSkin and more</h3>
+                    <div id="dropdown" class="dropdownContent">
+                        <b>Tested and working:</b>
+                        <ul>
+                            <li><a href="https://modrepo.de/minecraft/voicechat/downloads">Simple Voice Chat</a></li>
+                            <li><a href="https://modrinth.com/mod/axiom">Axiom</a></li>
+                            <li><a href="https://modrinth.com/mod/flashback">Flashback</a></li>
+                            <li><a href="https://modrinth.com/mod/appleskin">AppleSkin</a></li>
+                            <li><a href="https://modrinth.com/mod/modmenu">ModMenu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="box" id="optigui">
+                <div id="drop4">
+                    <h2>EvenBetterGUI OptiGUI Support</h2>
+                    <h3 id="subtitle">EBG supports optigui allowing for custom icons that resemble their blocks in the top right</h3>
+                    <p>
+                        <img src="./img/evenbettergui/optigui.png" width="100%" alt="collage of all the optigui screens">
+                    </p>
+                        
+                    </div>
+                </div>
+            </div>  
+
+
+            <div class="box" id="changelog">
+                <div id="drop3">
+                    <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(3)"></button>
+                    <h2>EvenBetterGUI's Changelog</h2>
+                    <h3>Current Version: 1.2.0  </h3>
+                    <h3 id="subtitle">For Minecraft 1.20.3 - 1.21.5</h3>
+                    <h3 id="subtitle">06/04/2025</h3>
+                    <p>
+                        click dropdown button for changelog
+                    </p>
+                    <div id="dropdown" class="dropdownContent">
+                        <p>
+                            <p>EvenBetterGUI Version 1.2.0 - for 1.20.3-1.21.5 [01/04/2025]
+                                <br>
+                                Description: A smaller release focused more on bug fixing, fixing issues around Respackopts, added a custom enchantment glint.
+                                <br>
+                                Detailed change log for version 1.2.0: 
+                                <br>
+                                [Additions]</p>
+                                <ul>
+                                <li>Added custom enchantment glint for icons and entities</li>
+                                </ul>
+                                <p>[Removals]</p>
+                                <ul>
+                                <li>Removed enchanted armor toggle option in respackopts<ul>
+                                <li>Now is embedded in the armor selector to make the hud page less cluttered</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                <p>[Fixes]</p>
+                                <ul>
+                                <li>Due to the pack format change in v1.1.0. 1.20.3 is supported and I forgot about that<ul>
+                                <li>1.20.3 is now the lowest supported version and is shown in pack description</li>
+                                <li>I will NOT be making a backport to earlier versions of the game EVER.</li>
+                                </ul>
+                                </li>
+                                <li>Fixed some wrong translations in the respackopts [mod] config screen<ul>
+                                <li>Added rainbow xp tooltip</li>
+                                <li>Turned some things from singular to plural</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                <p>[Previous Versions]</p>
+                                <p>  [Last Previous Version: 1.1.0]</p>
+                                <p>[v1.0.1 - 02/04/2025]
+                                Detailed change log for version 1.1.0: 
+                                [Additions]</p>
+                                <ul>
+                                <li>Added 5 new hunger varients<ul>
+                                <li>Added Apple, Golden Apple, Enchanted Golden Apple, Tropical Fish and Clay Balls to the hunger bar selector through Respackopts [Mod]</li>
+                                <li>All also have AppleSkin support</li>
+                                </ul>
+                                </li>
+                                <li>Added colored fish buckets for Axolotls and Tropical fish, for 1.21.5 as it uses new features and needs Respackopts [Mod] so you can enable it<ul>
+                                <li>Doesn&#39;t support baby axolotls, small or large cod and salmon (yet)</li>
+                                </ul>
+                                </li>
+                                <li>Added jump bar when using horses, donkeys, mules, camels. (Oops just forgot about this I guess)</li>
+                                <li>Added custom enchantment book textures required you to be in 1.21.5 and needs Respackopts [Mod] so you can enable it<ul>
+                                <li>Adds 42 unique textures for each enchantment (6 are animated!)</li>
+                                </ul>
+                                </li>
+                                <li>Added social reporting screen textures (another oopsie)</li>
+                                </ul>
+                                <p>[Removals]</p>
+                                <ul>
+                                <li>Removed styled hotbar selectors [instead im focusing on adding more highlight colors in a future update]</li>
+                                </ul>
+                                <p>[Fixes]</p>
+                                <ul>
+                                <li>Fixed heart textures<ul>
+                                <li>Frozen hearts, extra hearts, and vehicle hearts.</li>
+                                </ul>
+                                </li>
+                                <li>Fixed respackopts.json5 having incorrect entry names that were not in camelCase <ul>
+                                <li>This should help solve some unexpected issues</li>
+                                </ul>
+                                </li>
+                                <li>Pack format change: 29 -&gt; 22<ul>
+                                <li>This allows people using 1.20.4 to apply the pack without that annoying &quot;this is for older/newer version&quot; screen</li>
+                                <li>This was a mistake that I missed before full release</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                <p>[v1.0.1 - 30/03/2025]
+                                Detailed change log for version 1.0.1: 
+                                [Fixes]</p>
+                                <ul>
+                                <li>Removed/Fixed the text in the Respackopts [Mod] config screen saying that you should reload if the settings don&#39;t apply correctly. <ul>
+                                <li>Instead if you experience that problem please make an issue with your mod list at <a href="https://github.com/ArgilRants/EvenBetterGUI/issues">https://github.com/ArgilRants/EvenBetterGUI/issues</a></li>
+                                <li>If you are using ModernFix [Mod] please disable <code>mixin.perf.dedicated_reload_executor</code> in the config</li>
+                                </ul>
+                                </li>
+                                <li>Changed the subtitles in the option catagories to be more similar!</li>
+                                <li>Fixed some mistakes in the tooltips and option names!</li>
+                                </ul>
+                                <p>[v1.0.0 - 29/03/2025]
+                                Detailed change log for version 1.0.0: 
+                                [Vanilla Changes]</p>
+                                <ul>
+                                <li>Changed all vanilla GUI textures &amp; sprites<ul>
+                                <li>Added options for hotbar theme colors through Respackopts [Mod]</li>
+                                <li>Added options for highlight colors (Hotbar selector and more) through Respackopts [Mod]</li>
+                                <li>Added options for tooltip background through Respackopts [Mod]</li>
+                                <li>Added Hotbar-style gui slot highlight option for 1.21.4+ clients only through Respackopts [Mod]</li>
+                                <li>Added styled hotbar selector options through Respackopts [Mod]</li>
+                                <li>Added EvenBetterHud with options through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                <p>[Mod Changes]</p>
+                                <ul>
+                                <li><p>OptiGUI [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for OptiGUI support through Respackopts [Mod]</li>
+                                <li>Added custom shulker box GUIs<ul>
+                                <li>Added toggle for custom shulker box GUIs through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                <li>Added custom ender chest GUI<ul>
+                                <li>Added toggle for custom ender chest GUI through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                <li>Added custom barrel GUI<ul>
+                                <li>Added toggle for custom barrel GUI through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                </li>
+                                <li><p>ModMenu [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for ModMenu support through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                <li><p>Axiom [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for Axiom support through Respackopts [Mod]</li>
+                                <li>Supports new Axiom features like the color picker and gradient helper</li>
+                                </ul>
+                                </li>
+                                <li><p>Flashback [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for Flashback support through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                <li><p>AppleSkin [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for AppleSkin support through Respackopts [Mod]</li>
+                                <li>Supports all different selected food types for the hunger bar</li>
+                                </ul>
+                                </li>
+                                <li><p>Simple Voice Chat [Mod] support</p>
+                                <ul>
+                                <li>Added toggle for Simple Voice Chat support through Respackopts [Mod]</li>
+                                </ul>
+                                </li>
+                                </ul>
+
+                        </p>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <footer id="footer">
+        
+           
+        
+            version: <a href="./changelog.html"><span id="version"></span></a> | <a href="mailto:liam@argil.dev">liam@argil.dev</a>
+
+            
+            <div class="debug" id="footerDebug">
+                <hr>
+                <span class="iconSharp">deployed_code_history</span> Debug options <span class="iconSharp">deployed_code_history</span>
+                <br>
+                Theme:
+                <select id="debugThemeSelect" onchange="debugTheme()" onclick="clickSound()" required>
+                    <option value="auto">Auto </option>
+                    <option value="dark">☽ </option>
+                    <option value="light">☀ </option>
+                    <option value="valentine">❤ </option>
+                    <option value="halloween">☠ </option>
+                    <option value="holidays">❄ </option>
+                    <option value="invert">⯪ </option>
+                    <option value="sepia">♬ </option>
+            
+                </select>
+                | outlines: 
+                <label class="switch">
+                    <input type="checkbox" onclick="outlineToggle()" id="debugOutlineToggleInput">
+                  </label>
+            </div>
+        
+
+        </footer>
+
+
+    </div>
+
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/theme.js"></script>
+<script src="./js/dateEvents.js"></script>
+<script src="./js/subtitle.js"></script>
+<script src="./js/dropdowns.js"></script>
+</body>
