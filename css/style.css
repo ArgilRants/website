@@ -2235,6 +2235,15 @@ h2.previousProjectTitle{
     animation: bounce .8s infinite;
 }
 
+.modrinthDownload:hover .buttonIcon {
+    animation: bounce .8s infinite;
+}
+
+.modrinthDownload:hover .buttonIcon.sidewaysBounce{
+    animation: sidewaysBounce .8s infinite !important;
+}
+
+
 .ficsitDownload:hover .downloadIcon{
     animation: bounce .8s infinite;
 }

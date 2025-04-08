@@ -54,7 +54,7 @@
             <div class="box" id="ebgWiki">
                 <div class="">
                     <h2><span id="h2icon">⛏</span> EvenBetterGUI Wiki</h2>
-                    <img src="./img/ebg.png" alt="" id="left" style="width: 180px;">
+                    <img src="./img/ebg.png" alt="" id="left" style="width: 230px;">
                     <p>
                         <div id="badges">
                             <div id="mcbadge">Resource Pack</div>
@@ -65,9 +65,11 @@
                         <br>
                         <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a><span id="sideline"> ← from Modrinth.com</span>
                         <br>
-                        <a href="https://modrinth.com/mod/respackopts" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a><span id="sideline"> ← from Modrinth.com</span>
+                        <a href="https://modrinth.com/mod/respackopts" class="modrinthDownload" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a><span id="sideline"> ← from Modrinth.com</span>
                         <br>
                         <a href="./evenbettergui.html#changelog" class="button" onclick="buttonClick(this)"><span class="buttonIcon">→</span> Change Log</a><span id="sideline"> ← from just below here and included in the .zip!</span>
+                        <br>
+                        <a href="https://github.com/ArgilRants/EvenBetterGUI" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Source</a><span id="sideline"> ← from github.com</span>
                     </p>
                 </div>
             </div>
@@ -103,7 +105,7 @@
                     <h3 id="subtitle">[click the arrow on the right to learn more <span style="color: red;">WARNING VERY LONG</span>]</h3>
                     
                     <p>
-                        When I was browsing for how to do options / addons for resource packs I came across <a href="https://modrinth.com/mod/respackopts">respackopts</a> and it was the dream, it has all the positives of a system like <a href="https://vanillatweaks.net">Vanilla Tweaks</a> without most of the drawbacks, so I ran with it. The options avaliable give you over 3 million combination possibilities! Check out all the options below (Press the dropdown button)
+                        When I was browsing for how to do options / addons for resource packs I came across <a href="https://modrinth.com/mod/respackopts">respackopts</a> and it was the dream, it has all the positives of a system like <a href="vanillatweaks.net">Vanilla Tweaks</a> without most of the drawbacks, so I ran with it. The options avaliable give you over 3 million combination possibilities! Check out all the options below (Press the dropdown button)
 
                         <img src="./img/evenbettergui/respackopts/respackeduphud.png" width="100%">
                     </p>
@@ -145,7 +147,7 @@
 
 
                         <h3>Style Options</h3>
-                        <h3 id="subtitle">Change the style of the slot highlight, add custom textured enchanted books <span style="color: red;">[1.21.5+ only]</span> and more!</h3>
+                        <h3 id="subtitle">Change the style of the slot highlight, toggle the enchantment glint and more!</h3>
                         <table id="wiki">
                             <tr>
                                 <th>Option Title</th>
@@ -153,6 +155,10 @@
                             </tr>
                             <tr>
                                 <td>Custom Enchantment Glint</td>
+                                <td>True [Default], False</td>
+                            </tr>
+                            <tr>
+                                <td>Updated Potion/Beacon Effect Textures</td>
                                 <td>True [Default], False</td>
                             </tr>
                             <tr>
@@ -173,7 +179,7 @@
                                 <td>Clearer Enchanted Books <span style="color: red;">[1.21.5+]</span></td>
                                 <td>
                                     False [Default], True
-                                    <br><img src="./img/evenbettergui/customEnchantbooksCropped.gif" alt="">
+                                    <br><img src="./img/evenbettergui/enchantBooksUpdatedTwo.gif" alt="">
                                 </td>
                             </tr>
                           </table>
@@ -209,7 +215,7 @@
                             <tr>
                                 <td>Hunger Bar</td>
                                 <td>
-                                    Glow Berries [Default], Sweet Berries, Cookies, Cakes, Apples, Golden Apples, God Apples [Animated], Tropical Fish, Clay Balls
+                                    Glow Berries [Default], Sweet Berries, Cookies, Cakes, Apples, Golden Apples, God Apples [Animated], Tropical Fish, Steaks, Cooked Muttons, Cooked Porkchops, Cooked Cods, Cooked Salmons, Pumpkin Pies, Bananas, Clay Balls
                                     <br><img src="./img/evenbettergui/respackopts/hungerbar.png" alt="">
                                 </td>
                             </tr>
@@ -310,15 +316,89 @@
                 <div id="drop3">
                     <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(3)"></button>
                     <h2>EvenBetterGUI's Changelog</h2>
-                    <h3>Current Version: 1.2.0  </h3>
+                    <h3>Current Version: 1.3.0  </h3>
                     <h3 id="subtitle">For Minecraft 1.20.3 - 1.21.5</h3>
-                    <h3 id="subtitle">06/04/2025</h3>
-                    <p>
+                    <h3 id="subtitle">08/04/2025</h3>
+                    <p id="changelogDropdownText" style="display: block;">
                         click dropdown button for changelog
                     </p>
                     <div id="dropdown" class="dropdownContent">
-                        <br> 
-                        <h2>V1.2.0</h3>
+                        <br>
+                        <h2>V1.3.0</h2>
+                        <h3 id="subtitle">08/04/2025</h3>
+                        Description: Cooked foods; added cooked meats to the hunder bar options. Added potion/beacon status effect icons and more!
+                        
+                        <h3>Additions</h3>
+                        <ul>
+                            <li>Added 7 new varients to the hunger bar options!!</li>
+                            <ul>
+                                <li>Added Steak, Cooked Mutton, Cooked Porkchop, Cooked Cod, Cooked Salmon, Pumpkin pie and Bananas to the hunger bar options through respackopts [mod]!!!</li>
+                            </ul>
+                            <li>Updated clearer enchanted book textures and animations</li>
+                            <ul>
+                                <li>Now are more defined and clear as well as all the animations are much faster and more often</li>
+                                <table id="wiki">
+                                    <tr>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/evenbettergui/customEnchantbooksCropped.gif" alt=""></td>
+                                        <td><img src="./img/evenbettergui/enchantBooksUpdatedTwo.gif" alt=""></td>
+                                    </tr>
+                                </table>
+                            </ul>
+                            <li>Added potion/beacon status effect textures.</li>
+                            <ul>
+                                <li>Not all are added newer textures like the ones added in 1.21 are not updated, yet.</li>
+                            </ul>
+                            <li>Updated Wither heart textures to be considerably more clear!</li>
+                            <ul>
+                                <table id="wiki">
+                                    <tr>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/evenbettergui/beforeAfter/1.3.0/witherHearts/before.png" alt="" width="100px"></td>
+                                        <td><img src="./img/evenbettergui/beforeAfter/1.3.0/witherHearts/after.png" alt="" width="100px"></td>
+
+                                    </tr>
+                                </table>
+                            </ul>
+                            <li>Updated Smithing table texture </li>
+                            <ul>
+                                <li>The hammer is now considerably darker and more like the one on the side of the block texture</li>
+                                <table id="wiki">
+                                    <tr>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/evenbettergui/beforeAfter/1.3.0/smithingTableHammer/before.png" alt="" width="100px"></td>
+                                        <td><img src="./img/evenbettergui/beforeAfter/1.3.0/smithingTableHammer/after.png" alt="" width="100px"></td>
+
+                                    </tr>
+                                </table>
+                            </ul>
+                           
+                        </ul>
+                        <h3>Removals</h3>
+                        <ul>
+                            <li>N/A</li>
+                        </ul>
+                        <h3>Fixes</h3>
+                        <ul>
+                            <li>Fixed changelog.txt (Now actually says the right date and versions everywhere whoops)</li>
+                            <li>Fixed some clearer enchanted book textures</li>
+                            <li>Pack format default is now set to 22, the min exclusive was set to 22 before but the default wasn't.</li>
+                            <li>Fixed some weird wording in the respackopts config screen</li>
+                        </ul>
+
+                        <br>
+                        <hr>
+                        <h2>Previous Versions:</h2>
+                        <h3>V1.2.0</h3>
                         <h3 id="subtitle">06/04/2025</h3>
                         <h3>Additions</h3>
                         <ul>
@@ -345,9 +425,8 @@
                             </ul>
                         </ul>
 
-
                         <br>
-                        <h2>Previous Versions:</h2>
+                        <hr>
                         <h3>V1.1.0</h3>
                         <h3 id="subtitle">02/04/2025</h3>
                         <h3>Additions</h3>
@@ -390,6 +469,7 @@
                         </ul>
 
                         <br>
+                        <hr>
                         <h3>V1.0.1</h3>
                         <h3 id="subtitle">30/03/2025</h3>
                         <h3>Fixes</h3>
@@ -404,6 +484,7 @@
                         </ul>
 
                         <br>
+                        <hr>
                         <h3>V1.0.0</h3>
                         <h3 id="subtitle">29/03/2025</h3>
                         <h3>Additions</h3>

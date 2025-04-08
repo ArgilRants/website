@@ -1,3 +1,5 @@
+const changelogDropdownText = document.getElementById("changelogDropdownText")
+
 
 function dropdown(x) {
     if(window.matchMedia("(pointer: coarse)").matches) {
@@ -15,16 +17,30 @@ function dropdown(x) {
 function dropdownRun(x){
     var dropdownBtn = document.querySelector("div#drop"+x+" #dropdownBtnId");
     var dropdownVar = document.querySelector("div#drop"+x+" #dropdown");
-    console.log(dropdownVar);
     if (dropdownVar.classList.contains("showDropdown")){
         dropdownVar.className = "dropdownContent";
         dropdownBtn.className = "dropdownBtn dropdownBtnText";
+
+        if (changelogDropdownText == null){
+ 
+        } else {
+            if (changelogDropdownText.style.display = "none"){
+                changelogDropdownText.style.display = "block";
+            }
+        }
 
     } else {
         dropdownVar.className = "";
         dropdownVar.className = "dropdownContent showDropdown";
         dropdownBtn.className = "dropdownBtn dropdownBtnTextUp";
 
+        if (changelogDropdownText == null){
+ 
+        } else {
+            if (changelogDropdownText.style.display = "block"){
+                changelogDropdownText.style.display = "none";
+            }
+        }
     }
 }
 
