@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/atKeyframes.css">
+    <meta name="description" content="@ArgilRants website, hosting projects, social links and more">
+    <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
+    <meta name="author" content="ArgilRants">
+    <meta property="og:image" content="https://argil.dev/img/ogimage.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <title>achievements.html</title>
+</head>
+<body class="">
+    <div class="themebuttondivmobile" style="display: none;" id="themebuttondivmobile">
+        <button class="btnmobile-toggle" id="themebutton"></button>
+    </div>
+    <div id="basicpage" style="display: none;">
+        <div class="basicpagetop">
+
+            <div class="fontbuttondiv" id="fontbuttondiv">
+                <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
+                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
+                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+            </div>
+
+            <div class="themebuttondiv" id="themebuttondiv">
+                <span id="sideline">select theme -></span>
+                <div class="select" style="display: inline-block;">
+                    <select id="themeSelect" onchange="themeSelect()" onclick="clickSound()" required>
+                        <option value="auto">Auto </option>
+                        <option value="dark">☽ </option>
+                        <option value="light">☀ </option>
+                        <option value="valentine">❤ </option>
+                        <option value="halloween">☠ </option>
+                        <option value="holidays">❄ </option>
+                        <option value="invert">⯪ </option>
+                        <option value="sepia">♬ </option>
+
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="themebuttondivmobilewide" style="display: none;">
+                <button class="btnmobilewide-toggle" id="themebutton"></button>
+            </div>
+            <div class="title">
+                <a href="./index.html" onclick="buttonClick(this)" id="titleLink">
+                    <span id="titleA" class="titleTilt">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI">I</span><span id="titleL">L</span>
+                </a>
+            </div>
+            <div class="subtitleMain" id="subtitleMain" onclick="subtitleGenerate()">TEST</div>
+        </div>
+        <br>
+
+        <div class="box" id="achievementOverviewBox">
+                <h2 id="achievementOverviewH2"><span id="h2icon">☰</span> Achievement Overview</h2>
+                <h3 id="subtitle">A quick overview of my achievements on steam</h3>
+                <div id="onlineGame">
+                </div>
+                <div class="sidewaysOverview" id="overviewText">
+                    Overview of all my games
+                </div>
+                <div id="achievementOverview">
+                    <div class="box" id="achievementOverviewBoxes">
+                        <p id="achievementOverviewAchievements">x / y</p>
+                        <h2 id="sideline">achievements</h2>
+                    </div>
+                    <a href="https://steamcommunity.com/id/argilrants/games/?tab=perfect" class="linkBox">
+                        <div class="box" id="achievementOverviewBoxes">
+                            <p id="achievementOverviewPerfectGames">??</p>
+                            <h2 id="sideline" class="achievementOverviewSideline">Perfect games</h2>
+                        </div>
+                    </a>
+                    <a href="https://steamcommunity.com/id/argilrants/games/?tab=all&sort=achievements" class="linkBox">
+                        <div class="box" id="achievementOverviewBoxes">
+                            <p id="achievementOverviewPercentageAvg">??%</p>
+                            <h2 id="sideline" class="achievementOverviewSideline">Avg. completion</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="box" style="display: none;">
+                    <h3 id="subtitle">Not an #ad just a suggestion</h3>
+                    <p style="font-size: .8em;">
+                        Use <a href="https://steamdb.info/extension/">SteamDB's Extension</a> as it makes stats and store pages on Steam considerably more detailed
+                    </p>
+                </div>
+        </div>
+
+        <div class="box" id="perfectGamesBox">
+            <div id="drop1">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(1)"></button>
+                <h2 id="perfectGamesH2"><span id='h2icon'>★</span> Perfect Games</h2>
+                <h3 id="subtitle">100% completed all achievements | [most played first] | [dropdown for more]</h3>
+                <div id="perfectGames">
+
+                </div>
+                <div id="dropdown" class="dropdownContent">
+                    <div id="perfectGamesDropped">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" id="inProgressBox">
+            <div id="drop2">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(2)"></button>
+                <h2 id="inProgressH2"><span id='h2icon'>☆</span> In Progress</h2>
+                <h3 id="subtitle">Games i've started getting achievements for | [highest % first] | [dropdown for more]</h3>
+                <div id="inProgress">
+
+                </div>
+                <div id="dropdown" class="dropdownContent">
+                    <div id="inProgressDropped">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" id="gamesBox">
+            <div id="drop3">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(3)"></button>
+                <h2 id="gamesH2"><span id='h2icon'>❌</span> Not Started</h2>
+                <h3 id="subtitle">Games I haven't started getting achievements for yet (might never) | [click dropdown]</h3>
+                <div id="dropdown" class="dropdownContent">
+                    <div id="games">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            version: <a href="./changelog.html"><span id="version"></span></a> | <a href="mailto:liam@argil.dev">liam@argil.dev</a>
+            <div class="debug" id="footerDebug">
+                <hr>
+                <span class="iconSharp">deployed_code_history</span> Debug options <span class="iconSharp">deployed_code_history</span>
+                <br>
+                Theme:
+                <select id="debugThemeSelect" onchange="debugTheme()" onclick="clickSound()" required>
+                    <option value="auto">Auto </option>
+                    <option value="dark">☽ </option>
+                    <option value="light">☀ </option>
+                    <option value="valentine">❤ </option>
+                    <option value="halloween">☠ </option>
+                    <option value="holidays">❄ </option>
+                    <option value="invert">⯪ </option>
+                    <option value="sepia">♬ </option>
+            
+                </select>
+                | outlines: 
+                <label class="switch">
+                    <input type="checkbox" onclick="outlineToggle()" id="debugOutlineToggleInput">
+                  </label>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <div id="achievementLoading">
+        <p class="iconRounded" id="achievementLoadingIcon">progress_activity</p>
+    </div>
+
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/theme.js"></script>
+<script src="./js/dateEvents.js"></script>
+<script src="./js/subtitle.js"></script>
+<script src="./js/dropdowns.js"></script>
+<script src="./js/achievements.js" type="module"></script>
+<script type="module">
+    import { animate } from './js/anime.esm.js';
+</script>
+<script type="module" src="./js/animation.js"></script>
+</body>

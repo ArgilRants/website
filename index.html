@@ -10,17 +10,29 @@
     <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels, minecraft, resourcepacks, mods, modding, mod">
     <meta name="author" content="ArgilRants">
     <meta property="og:image" content="https://argil.dev/img/ogimage.png">
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
 
     <title>Argil's Kiln</title>
 
     <link rel="stylesheet" href="./css/scanlines.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 </head>
 <body class=""></body>
 
     <div id="container" class="">
         <div class="header">
+
+            <div class="fontbuttondiv" id="fontbuttondiv">
+                <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
+                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
+                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+            </div>
+
             <div class="themebuttondiv" id="themebuttondiv">
                 <span id="sideline">select theme -></span>
                 <div class="select" style="display: inline-block;">
@@ -43,8 +55,7 @@
             </div>
 
             <div class="title">
-                <a href="./index.html" onclick="buttonClick(this)" id="titleLink"><span id="titleA">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI" class="titleTilt">I</span><span id="titleL">L</span>
-                </a>
+                <a href="./index.html" onclick="buttonClick(this)" id="titleLink"><span id="titleA">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI" class="titleTilt">I</span><span id="titleL">L</span></a>
             </div>
             <div class="subtitleMain" id="subtitleMain" onclick="subtitleGenerate()">TEST</div>
         </div> 
@@ -78,24 +89,24 @@
         <!-- END OF IMPORTANT BRAND NEW INFO SECTION!! -->
 
 
-        <table id="tabletop" style="display: none;">
+        <table id="tabletop" style="display: block;">
             <tbody>
                 <tr>
                     <td id="important">
-                        <marquee id="important" scrollamount="6" hspace="5px" onmouseover="marqueeStop(this)" onmouseout="this.start()">Version 1.1 of the site is out. With many changes such as: new theme selector on desktop allowing you to select from 6 different themes! Added new badge scrolling sections on the side, new links, updated Youtube colors, more gifs, more subtitles and so SO much more. Check it all out below here silly.</marquee>
+                        <marquee id="important" scrollamount="6" hspace="5px" onmouseover="marqueeStop(this)" onmouseout="this.start()">NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE NEW ACHIEVEMENT PAGE </marquee>
                         <div class="box" id="importantbox">
-                            <h2><span id="h2icon">⭐</span> <span id="importanth2">NEW UPDATE!! finally ...</span> <span id="newbadge">UPDATE</span></h2>
-                            <h3 id="subtitle">Updated to 1.1 on March 31<sup>st</sup> | 2025</h3>
+                            <h2><span id="h2icon">⭐</span> <span id="importanth2">NEW ACHIEVEMENT PAGE</span> <span id="subtitle">..and more</span> <span id="newbadge">UPDATE</span></h2>
+                            <h3 id="subtitle">Updated to 1.3 on June 09<sup>th</sup> | 2025</h3>
                             <p>
-                                An update, with lots of fixes, and content. It's finally out! <span id="sideline" style="font-style: italic;">yippie!!</span>
+                                New <a href="https://steamcommunity.com/id/argilrants/" id="steam">Steam</a> <a href="./achievements.html">achievement page</a> !! Displays tons of achievement data!
                                 <br>
-                                Release 1.1 for <a href="./changelog.html#desktop">Desktop</a> & Release 1.0 for <a href="./changelog.html#mobile">mobile</a> are finally here!
+                                New easter eggs, qol features and draggable boxes (ctrl + shift + u)
                                 <br>
-                                I have been distracted ... <sub>playing too much overwatch :/</sub>
+                                Better logic for the "am i online?" box. And a new live updating <a href="./index.html#internationalSpaceStation">ISS box</a>
                                 <br>
-                                But the update is out finally. New theme selector, new themes, new projects, tons and tons of small changes and additions, new live updating spotify box, new look for online updating box, playlists, previous projects added and live updating letterboxd box, and SOOO sooo much!!
+                                <a href="./achievements.html" class="button" onclick="buttonClick(this)" id="steam"><span class="">⭐</span> Achievements</a> <span id="sideline">← wayyy too much work</span>
                                 <br>
-                                <a href="./changelog.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon">☴</span> Change Log</a> <span id="sideline">← so many changes my god</span>
+                                <a href="./changelog.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon">☴</span> Change Log</a> <span id="sideline">← check out the rest of the new changes here</span>
                                 
                             </p>
                         </div>
@@ -117,7 +128,7 @@
                         
                         <div class="box" id="mainbox">
                             <h2 id="welcome"><span id="h2icon">☺</span> WELCOME TO ARGIL<span id="dotdev">.DEV</span><span id="dotdots">RANTS</span></h2>
-                            <img src="./img/5200Trans.png" alt="" id="logo">
+                            <img src="./img/profilePictures/3200x3200_background.png" alt="" id="logo">
                             <p id="mainp">
                                 Hiya! I'm Liam <sup>(he/him)</sup>,I go by Argil or ArgilRants online, and i'm your resident technology bastard. This is my <i>silly</i> little website, where I document my nonsense, random projects and more.
                                 I'm a programmer, that typically doesn't do frontend. I haven't made much public stuff <sub>yet</sub> but I am working on lots of stuff that you'll eventually see here. <sup></sup>
@@ -130,8 +141,8 @@
                                     <li>I live in the <span id="UK">UK</span> <span id="sideline">☹</span></li>
                                     <li>I'm <span id="age"></span> <span style="font-size: .85em;">(July 29 2005)</span> <span id="sideline">← ewww leo</span></li>
                                     <li>I've been programming since I was like 9.<span id="sideline">← nerd emoji</span></li>
-                                    <li>My favorite show is <span id="favShow"></span></li>
-                                    <li>My favourite film is <span id="favFilm"></span></li>
+                                    <li>My favorite show is <span id="favShow" onclick="favShowFunc()"></span></li>
+                                    <li>My favourite film is <span id="favFilm" onclick="favFilmFunc()"></span></li>
                                     <li>I have over 600 <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov/playlists" id="spotify">Spotify playlists.</a> <span id="sideline">← only shows public ones</span></li>
                                 </ul>
 
@@ -155,18 +166,26 @@
                             follow my spotify please i want to feel cool.
                             i want to make a mc modpack really bad.
                             wait nvm, cancel the modpack, i want to make a stardew mod... omg i really should. brb!!
-                            im gay! if that wasnt obvious by the fav song choices on the left then maybe you should adjust your gaydar.
+                            im bi!! if you couldnt tell by the obsession with either old ass artists or katy perry, then adjust that gaydar!!
                             i should start tweeting so i can like embed my timeline, i dont tweet enough on main.
                             i still want to make a how to get away with murder (tv-show) video essay so BAD but im so eh :/
                             hi im the british lady that hates time, <span id="censored">fuck</span>ing clock destroyer - trixie mattel.
                             im a mountain biking vampire witch from the future! <span id="censored">fuck</span> my pussy with a rake mom - katya.
                             shes at the gay pride parade.
                             in skerbie we trust!!!
-                            my favourite type of pokemon is freedom! 
+                            my favorite type of pokemon is freedom! 
                             thank the lord for color-mix() my saviour
                             omg is that an iggy ref???
+                            download my minecraft gui pack please!!
+                            check out my achievements on argil.dev/achievements
+                            probably developing something right now as you read this                             
+                            do you think i like scrolling text?
+                            what are your thoughts on the political climate
+                            how much javascript do you want good sir!!
+                            "Programming is not remembering exact words or syntax: it is breaking down a problem, working out how to solve it, and then fixing all the inevitable bugs in your solution." - Tom Scott, 2018
+                            Two Directions - "go both ways"
                             
-                            
+
 
                             
                             
@@ -175,7 +194,7 @@
 
                         <div class="box" id="EvenBetterGUI">
                             <div class="">
-                                <h2><span id="h2icon">⛏</span> EvenBetterGUI <span id="newbadge">NEW</span></h2>
+                                <h2><span id="h2icon">⛏</span> EvenBetterGUI <span id="newbadge">NEW UPDATE</span></h2>
                                 <img src="./img/ebg.png" alt="" id="left" style="width: 100px;">
                                 <p>
                                     <div id="badges">
@@ -186,7 +205,6 @@
                                     EBG has the goal of making Minecraft's GUI even better! With support for mods, optional settings through <a href="https://modrinth.com/mod/respackopts">Respackopts</a> and more!
                                     <br>
                                     <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a>
-                                    <a href="https://modrinth.com/mod/respackopts" class="modrinthDownload" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a>
                                     <a href="./evenbettergui.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Wiki</a>
                                     <a href="https://github.com/ArgilRants/EvenBetterGUI" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Source</a>
                                     
@@ -205,7 +223,7 @@
                                     <div id="badges">
                                         <div id="sfbadge">Mod</div>
                                         <br><br>
-                                        <div id="infobadge">1.0+</div> 
+                                        <div id="infobadge">1.1+</div> 
                                     </div>
                                     I added more <a href="https://satisfactory.wiki.gg/wiki/Customizer#Finishes">finishes</a> to the color gun! Including different aged oxidized copper finishes, a SAM finish, and many more!! 
                                     <br>
@@ -227,7 +245,7 @@
                                     <div id="badges">
                                         <div id="mcbadge">Mod</div>
                                         <br><br>
-                                        <div id="infobadge">1.21+</div> 
+                                        <div id="infobadge">?.??+</div> 
                                     </div>
                                         EvenMoreBinds is a mod that allows for customizable keybindings to settings such as View Distance values, change F3 key, and much much more!!
                                     <br>
@@ -262,164 +280,24 @@
                         </div>
 
                         <div class="box" id="bestPlaylists">
-                                <h2><span id="h2icon">±</span> My Best Playlists <span id="iconBadge"><span class="iconSharp">mouse</span></span></h2>
+                                <h2><span id="h2icon">±</span> My Best Playlists <span id="iconBadge" onclick="fullHeight('playlists')"><span class="iconSharp">mouse</span></span></h2>
                                 <h3 id="subtitle">all links open in a new tab | [pro tip: scroll]</h3>
-                                    <div class="playlists" id="">
-
-                                        <a href="https://open.spotify.com/playlist/2icqUWKP0oawWKfZgBzIlO?si=028c5676f18d47cb" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/the best cover art.jpg" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">the BEST cover art</marquee>
-                                                <p class="playlistDescription">An extensive updating playlist filled with the <b>BEST</b> cover art.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/5OG98tYyMIN9lvupvIl32S?si=42c49f8b2e14461e" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/my personal s tier katy songs.png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">my personal s tier <span class="katyPerry animationReverse">katy</span> songs</marquee>
-                                                <p class="playlistDescription">My favourite <span class="katyPerry">Katy Perry</span> songs. I love <span class="katyPerry animationReverse">katy</span> so much</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/62sDOWwfhDyA3Xl0CFQDWQ?si=7ac4da214a2e43aa" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/bad songs, but like they still serve a little.png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">bad songs, but like they still serve a little</marquee>
-                                                <p class="playlistDescription">Songs I think are cringe / bad but serve.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/4DfSHhpcbr08wwpV36FFCw?si=084cf7406c9247c8" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/my personal s tier gaga songs.jpg" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">my personal s tier gaga songs</marquee>
-                                                <p class="playlistDescription">My favourite Gaga songs. Obsessed with "Disease"</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/5UzTTzBsusy5c1mfo4OHg7?si=5a3243d751fc4028" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/who up gooning they rock .png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">who up gooning they rock</marquee>
-                                                <p class="playlistDescription">uhhh not Meeeee..  How 'bout yall?  nvm forget i asked </p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/39T7ZdXL7cZq34hhU3Bm3W?si=e37781b0d1a84d85" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/songs i think john kramer would enjoy if he was a 2020s catboy.png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">songs i think john kramer would enjoy if he was a 2020s catboy</marquee>
-                                                <p class="playlistDescription">catboy kramer be like: do yo-uwu wanna play a game</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/3W5wwYCPcvTmOqfIowjVIA?si=c09ce9c5a05545b6" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/The Top Missy Songs Ranked by Me.png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">The Top Missy Songs Ranked by Me</marquee>
-                                                <p class="playlistDescription">Top 5 songs ranked by me by studio albums by year</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/6QVZfdwMMiwr5M5CRsDKBK?si=3cfe6cb95d9d4645" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/The Top Taylor Swift Songs Ranked by Me.png" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">The Top Taylor Swift Songs Ranked by Me</marquee>
-                                                <p class="playlistDescription">Top 5 songs ranked by me by studio albums by year</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/0mQRv0EBHtLNULoqApdQ9y?si=30ee793d576341d0" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/welcome to story mountain.webp" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">welcome to story mountain</marquee>
-                                                <p class="playlistDescription">One of the very few ordered playlist that aren't rankings</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="https://open.spotify.com/playlist/294wQVW0DpdHY0MpF7gdaw?si=fc874484f7524c08" class="linkWrapper" target="_blank" id="playlistLink">
-                                            <div class="playlist">
-                                                <div class="playlistImgWrapper">
-                                                    <img src="./img/playlistCovers/The Top Nickelback Songs Ranked by Me.jpg" class="playlistImg">
-                                                    <div class="playlistPlayIcon">
-                                                        <div class="playlistPlayIconBackground" onclick="playlistPlayIcon(this)">▶</div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <marquee class="playlistTitle" scrollamount="6" hspace="-10px" onmouseover="marqueeStop(this)" onmouseout="this.start()">The Top Nickelback Songs Ranked by Me</marquee>
-                                                <p class="playlistDescription">Top 5 songs ranked by me by studio albums by year</p>
-                                            </div>
-                                        </a>
+                                    <div class="playlists" id="playlistsID">
 
                                     </div>
                         </div>
 
                         <div class="box" id="previousProjects">
-                            <h2><span id="previousProjectH2Icon" onclick="previousProjectIcon()" class="clickable">⏪</span> Previous Projects <span id="iconBadge"><span class="iconSharp">mouse</span></span></h2>
+                            <h2><span id="previousProjectH2Icon" onclick="previousProjectIcon()" class="clickable">⏪</span> Previous Projects <span id="iconBadge" onclick="fullHeight('previousProjectAreaID')"><span class="iconSharp">mouse</span></span></h2>
                             <h3 id="subtitle">[more coming later on]</h3>
-                            <div class="previousProjectArea" style="scrollbar-width: none;">
+                            <div class="previousProjectArea" style="scrollbar-width: none;" id="previousProjectAreaID">
 
                                 <a class="linkWrapper" target="" id="previousProjectLink" onclick="return false;" style="display: none;">
                                     <div class="previousProject">
                                         <div class="previousProjectImgWrapper">
                                             <img src="./img/COMINGSOON.png" class="previousProjectImg">
                                             <div class="previousProjectButtons">
-                                                    <div class="previousProjectDownload" onclick="window.location='https://modrinth.com/resourcepack/clay-golem-totem/versions';" >Download</div>
+                                                    <div class="previousProjectDownload" onclick="window.location='https://modrinth.com/resourcepack/clay-golem-totem/versions;'" >Download</div>
                                                     <div id="badges">
                                                         <div id="newbadge">NEW</div> 
                                                         <div id="infobadge">Extension</div>
@@ -463,9 +341,13 @@
                                 <br>
                                 <a class="navlink" href="./">⌂ Home</a>
                                 <br>
+                                <a class="navlink" href="./achievements.html">⭐ Achievements<span id='sideline' class='subtitleNew'>⏺</span></a>
+                                <br>
                                 <a class="navlink" href="./credits.html">❤ Credits</a>
                                 <br>
                                 <a class="navlink" href="./changelog.html">☴ Change Log</a>
+                                <br>
+                                <a class="navlink" href="./evenbettergui.html">⛏ <abbr title="EvenBetterGUI">EBG</abbr> Wiki<span id='sideline' class='subtitleNew'>⏺</span></a>
                                 <br>
                                 <a class="navlink" href="https://github.com/ArgilRants/website">☄ Source</a>
                             </div>
@@ -484,6 +366,8 @@
                                 <br>
                                 <a class="navlink" id="modrinth" href="https://modrinth.com/user/ArgilRants" target="_blank">⛏ Modrinth</a>
                                 <br>
+                                <a class="navlink" id="curseforge" href="https://www.curseforge.com/members/argilrants/projects" target="_blank">⛏ Curseforge</a>
+                                <br>
                                 <a class="navlink" id="steam" href="https://steamcommunity.com/id/argilrants/" target="_blank">♠ Steam</a>
                                 <br>
                                 <a class="navlink" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A" target="_blank"> ▶ Youtube</a> 
@@ -500,7 +384,7 @@
 
                         <div id="badgeRoll">
                             <marquee scrollamount="10" hspace="-5px" direction="left" onmouseover="marqueeStop(this)" onmouseout="this.start()" behavior="">
-                                <a href="https://badge.les.bi"><img title="gay-7" style="image-rendering: pixelated;" src="https://badge.les.bi/88x31/gay-7/outset.png"></a>
+                                <a href="https://badge.les.bi"><img title="bi" style="image-rendering: pixelated;" src="https://badge.les.bi/88x31/bi/outset.png"></a>
                                 <a href="https://hillhouse.neocities.org/journal/notes/palestine"><img style="image-rendering: pixelated;" src="./img/badges/bufreepalestine.gif"></a>
                                 <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/88by31.gif"></a>
                                 <a href="https://cyber.dabamos.de/88x31/"><img style="image-rendering: pixelated;" src="./img/badges/firefox4.gif"></a>
@@ -543,7 +427,7 @@
 
                         </div>
 
-                        <div class="box">
+                        <div class="box" id="onlineCheckBox">
                             <div style="text-align: center; margin-top: 2px;">
                                 <h2 id="onlineCheckLoading">am i online ?</h2>
                                 <h2 id="onlineCheck" class=""></h2>
@@ -580,6 +464,13 @@
                                             </div>
                                         </div>
                                     </a>
+
+                                    <a href="./achievements.html" class="linkBox">
+                                        <div class="box" id="achievementLinkHome">
+                                            ⭐ Achievements ⭐
+                                        </div>
+                                    </a>
+                                    
                                     
                                     
                                 </div>
@@ -634,10 +525,10 @@
 
 
                         <div class="box" id="scnd">
-                                <h2><span id="h2icon">±</span> My setup <span id="mySetupScrollableIcon" style="display: none;"><span id="iconBadge"><span class="iconSharp">mouse</span></span></span></h2>
-                                <span id="mySetupDefaultSubtitle"><h3 id="subtitle">Peripherals & random</h3></span>
+                                <h2 id="setup"><span id="h2icon">±</span> My setup <span id="mySetupScrollableIcon" style="display: block;"><span id="iconBadge" onclick="fullHeight('mySetupScrollableSection')"><span class="iconSharp">mouse</span></span></span></h2>
+                                <span id="mySetupDefaultSubtitle"><h3 id="subtitle">Peripherals & more</h3></span>
                                 <span id="mySetupSecondSubtitle" style="display: none;"><h3 id="subtitle">[scroll below]</h3></span>
-                                <div class="" style="scrollbar-width: none;" id="mySetupScrollableSection">
+                                <div class="scrollable" style="scrollbar-width: none;" id="mySetupScrollableSection">
                                     <h3 style="margin-bottom: -5px;">Desk stuff:</h3>
                                     <div id="indent">
                                         <p id="setuplinks">
@@ -649,7 +540,7 @@
                                         </p>
 
                                         <p id="setuplinks">
-                                            Keyboard(s) <span id="sideline">← Linear!</span>
+                                            Keyboard(s) <span id="sideline">← linear</span>
                                             <br>
                                             <a href="https://www.keychron.com/products/keychron-q3-pro-qmk-via-wireless-custom-mechanical-keyboard?variant=40469135261785">Keychron Q3 Pro</a> <span id="sideline">← green</span>
                                             <br>
@@ -724,6 +615,53 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="box" id="internationalSpaceStation">
+                                <h2 class="textCentered"><span id="h2icon"><span class="iconSharp">satellite_alt</span></span> ISS INFO <span id="h2icon" style="transform: rotate(360deg) scaleX(-1); display: inline-block;"><span class="iconSharp">satellite_alt</span></span></h2>
+                                <h3 id="subtitle" class="textCentered" style="margin: 0 !important;">including urine tank %</h3>
+                                <div id="map">
+
+                                </div>
+                                <h3 class="textCentered" id="subtitle" style="margin-top: 5px;">are they pissin?</h3>
+
+                                <div class="issInfo">
+
+                                    <div>
+                                        <p>Velocity</p>
+                                        <p id="velocity" class="floatRight">28000 km/h</p>
+                                    </div>                                    
+    
+                                    <div>
+                                        <p>Altitude</p>
+                                        <p id="altitude" class="floatRight">433 km</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Urine Tank</p>
+                                        <p id="urine" class="floatRight">30</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Waste Waster</p>
+                                        <p id="wasteWater" class="floatRight">30</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Clean Water</p>
+                                        <p id="cleanWater" class="floatRight">30</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                <!-- <div class="textCentered">
+                                    <a href="./index.html" class="button" style="font-size: .8em;">iss model and info</a>
+                                </div> -->
+
+
+
+                            </div>
+                            
                         
 
                         
@@ -735,12 +673,40 @@
             </tbody>
         </table>
 
+        <div id="aboveTheDiary">
+            <div id="badgeRoll">
+                <marquee scrollamount="15" hspace="-10px" direction="left" onmouseover="marqueeStop(this)" onmouseout="this.start()" behavior="">
+                    <a href="https://capstasher.neocities.org/88x31collection-page1"><img style="image-rendering: pixelated;" src="./img/badges/the-largest-88x31-collection-2.png"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page1"><img style="image-rendering: pixelated;" src="./img/badges/anythingbut.gif"></a>
+
+                    <a href="https://capstasher.neocities.org/88x31collection-page2"><img style="image-rendering: pixelated;" src="./img/badges/bestviewedcomp.gif"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page2"><img style="image-rendering: pixelated;" src="./img/badges/ballbbc3.gif"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page2"><img style="image-rendering: pixelated;" src="./img/badges/but_blinkies.gif"></a>
+                   
+                    <a href="https://capstasher.neocities.org/88x31collection-page3"><img style="image-rendering: pixelated;" src="./img/badges/candybarsnow.gif"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page3"><img style="image-rendering: pixelated;" src="./img/badges/bvwe.gif"></a>
+                    
+                    <a href="https://capstasher.neocities.org/88x31collection-page4"><img style="image-rendering: pixelated;" src="./img/badges/dreamsinthemachine.png"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page4"><img style="image-rendering: pixelated;" src="./img/badges/emulate_now.gif"></a>
+                    
+                    <a href="https://capstasher.neocities.org/88x31collection-page6"><img style="image-rendering: pixelated;" src="./img/badges/hartscorned.gif"></a>
+                    
+                    <a href="https://capstasher.neocities.org/88x31collection-page7"><img style="image-rendering: pixelated;" src="./img/badges/kirbys.gif"></a>
+
+                    <a href="https://capstasher.neocities.org/88x31collection-page8"><img style="image-rendering: pixelated;" src="./img/badges/minecraft.gif"></a>
+                    <a href="https://capstasher.neocities.org/88x31collection-page8"><img style="image-rendering: pixelated;" src="./img/badges/midinote.gif"></a>
+
+                    
+                </marquee>
+            </div>
+        </div>
+
         <table id="tabletop">
             <tbody>
                 <tr>
                     <td id="important">
                         <div class="box" id="letterboxdDiary">
-                            <h2 style="color: #ff8000;"><span id="h2icon">✎</span> Letterboxd Diary Entries <span class="iconRounded" id="letterboxdLoading">progress_activity</span><span id="iconBadge"><span class="iconSharp">mouse</span></span></h2>
+                            <h2 style="color: #ff8000;"><span id="h2icon">✎</span> Letterboxd Diary Entries <span class="iconRounded" id="letterboxdLoading">progress_activity</span><span id="iconBadge" onclick="fullHeight('letterboxdDiaryEntries')"><span class="iconSharp">mouse</span></span></h2>
                             <h3 id="subtitle">updates every <span class="subtitletotitleShine">30 mins</span> | [newest first] | scrollable box</h3>
                             <div class="textCentered" id="letterboxdDiaryEntries" style="scrollbar-width: none;">
                                 <div id="letterboxdDiaryExample1" class="diaryEntry"><a class="filmUrlWrapper" href=""><img class="filmImg" src="./img/skeletonPNG.png"><div class="diaryEntryInfo"><div class="filmTitleAndYear"><h2 class="filmTitle">Film vs. Radio</h2><h3 class="filmYear">1776</h3></div><div class="reviewTextWrapper"><p class="reviewText">A letterboxd diary entry review summary would go here</p></div><h3 class="watchedDate">14/12/1776</h3><h3 class="ratingScore">☆ ☆ ☆ ☆ ☆</h3></div></a></div>
@@ -748,6 +714,9 @@
                                 <div id="letterboxdDiaryExample3" class="diaryEntry"><a class="filmUrlWrapper" href=""><img class="filmImg" src="./img/skeletonPNG.png"><div class="diaryEntryInfo"><div class="filmTitleAndYear"><h2 class="filmTitle">Film vs. Radio vs. Youtube</h2><h3 class="filmYear">1810</h3></div><div class="reviewTextWrapper"><p class="reviewText">A letterboxd diary entry review summary would also go here</p></div><h3 class="watchedDate">10/01/1810</h3><h3 class="ratingScore">★ ★ ★ ★ ★</h3></div></a></div>
                                 <div id="preEntry"></div>
                             </div>
+                        </div>
+                        <div class="box" style="display: none;">
+                            <h2><span id="h2icon">✎</span> Balatro Styled Playing Cards in pure CSS/JS/HTML</h2>
                         </div>
                     </td>
                 </tr>
@@ -817,6 +786,15 @@
 </div>  
 
 
+<!-- loading -->
+
+<div id="loading" class="loading" style="display: none;">
+    <br>
+    <p style="text-align: center;">
+        <img id="loadingGolem" src="./img/profilePictures/3200x3200_transparent.png" alt="" srcset="" style="background-color: #00000000;">
+    </p>
+</div>
+
 <!-- MOBILE AND SMALL <900px displays and such -->
 
 
@@ -826,7 +804,7 @@
         <button class="btnmobile-toggle" id="themebutton"></button>
     </div>
     <div class="title"><a href="./index.html">ARGIL</a></div>
-    <div class="subtitleMain" id="subtitleMainMobile">mobile version 1.0!</div>
+    <div class="subtitleMain" id="subtitleMainMobile">mobile version 1.2!</div>
     
 
     <br><br>
@@ -840,9 +818,9 @@
     </div>
 
     <div class="box" id="toosmallBox">
-        <h2>WARNING - ZOOM OUT</h2>
+        <h2>ZOOM OUT</h2>
         <h3 id="subtitle">THIS SITE IS MADE FOR LANDSCAPE</h3>
-        <p>Here is the mobile version of the site. Some features like the theme button will not function here. <br><br> <span style="color: var(--h3-color);"> Please try zooming out, resizing your window. </span></p>
+        <p>Here is the mobile version of the site. Some features like the theme button will not function here. <br><br> <span style="color: var(--h3-color);"> Please try zooming out or resizing your window. </span></p>
     </div>
 
     <div class="box">
@@ -850,10 +828,12 @@
         <h3 id="subtitle">Minecraft 1.20.3+</h3>
         <p>
             
-            <img src="./img/evenbettergui/cover_clear.png" alt="" srcset="" width="100%">
+            <img src="./img/evenbettergui/cover_burrled_with_text.png" alt="" srcset="" width="100%">
 
             <br>
             <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a>
+            <a href="./evenbettergui.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Wiki</a>
+            <a href="https://github.com/ArgilRants/EvenBetterGUI" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Source</a>
 
             
 
@@ -863,32 +843,62 @@
     <div class="box">
         <h2>LINKS</h2>
         <h3 id="subtitle">opens in the same tab</h3>
-            <div class="socials">
-                <a class="button" id="spotify" href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe">♫ Spotify</a>
+            <div class="iconSocials">
+
+                <a href="./credits.html" class="button">Credits</a>
+                <a href="./changelog.html" class="button">Change Log</a>
+                <a href="./evenbettergui.html" class="button">EBG Wiki</a>
+                <a href="https://github.com/ArgilRants/website" class="button">Source</a>
+
                 <br>
-                <a class="button" id="twitter" href="https://x.com/ArgilRants">✎ Twitter ✎</a> 
                 <br>
-                <a class="button" id="bluesky" href="https://bsky.app/profile/argil.dev">☀ Bluesky ☀</a>
-                <br>
-                <div class="button" id="instabtnmobile">
-                    <a class="" id="instagram" href="https://www.instagram.com/argilrants/">★ Instagram ★</a>
-                </div>
-                <br>
-                <a class="button" id="github" href="https://github.com/ArgilRants">⏻ Github ⏻</a>
-                <br>
-                <a class="button" id="modrinth" href="https://modrinth.com/user/ArgilRants">⛏ Modrinth ⛏</a>
-                <br>
-                <a class="button" id="steam" href="https://steamcommunity.com/id/argilrants/">♠ Steam ♠</a>
-                <br>
-                <div class="button" id="youtubebtnmobile">
-                    <a class="" id="youtube" href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">▶ Youtube ▶</a> 
-                </div>
-                <br>
-                <a class="button" id="letterboxd" href="https://boxd.it/aSTvn">⚡︎ Letterboxd ⚡︎</a>
-                <br>
-                <a class="button" id="twitch" href="https://www.twitch.tv/argilrants"> ⏏ Twitch ⚡︎</a>
+
+                <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=3c79f80e16b940fe">
+                    <img src="./img/simpleIcons/spotify.svg"/>
+                </a>
+
+                <a href="https://x.com/ArgilRants">
+                    <img src="./img/simpleIcons/twitter.svg"/>
+                </a>
+
+                <a href="https://bsky.app/profile/argil.dev">
+                    <img src="./img/simpleIcons/bluesky.svg"/>
+                </a>
+                
+                <a href="https://www.instagram.com/argilrants/">
+                    <img src="./img/simpleIcons/instagram.svg"/>
+                </a>
+
+                <a href="https://github.com/ArgilRants">
+                    <img src="./img/simpleIcons/github.svg"/>
+                </a>
+
+                <a href="https://modrinth.com/user/ArgilRants">
+                    <img src="./img/simpleIcons/modrinth.svg"/>
+                </a>
+
+                <a href="https://www.curseforge.com/members/argilrants/projects">
+                    <img src="./img/simpleIcons/curseforge.svg"/>
+                </a>
+
+                <a href="https://steamcommunity.com/id/argilrants/">
+                    <img src="./img/simpleIcons/steam.svg"/>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">
+                    <img src="./img/simpleIcons/youtube.svg"/>
+                </a>
+
+                <a href="https://boxd.it/aSTvn">
+                    <img src="./img/simpleIcons/letterboxd.svg"/>
+                </a>
+
+                <a href="https://www.twitch.tv/argilrants">
+                    <img src="./img/simpleIcons/twitch.svg"/>
+                </a>
 
             </div>
+
         </div>
 
         
@@ -910,12 +920,7 @@
 </div>
 
 
-<div class="tmcontianer">
-    <div class="box" style="margin-top: 25vh;">
-            <h2>⭐ This site isnt designed for vertical or smaller windows ⭐</h2>
-            <h3 id="subtitle">Please zoom out, or resize the window <br> Sorry - Argil</h3>
-    </div>
-</div>
+
 
 
 
@@ -938,5 +943,13 @@
 <script src="./js/dateEvents.js"></script>
 <script src="./js/dropdowns.js"></script>
 <script src="./js/onlinecheck.js"></script>
+<script type="module">
+    import { animate } from './js/anime.esm.js';
+</script>
+<script type="module" src="./js/animation.js"></script>
+<script src="./js/playlists.js"></script>
+<script src="https://demos.lightstreamer.com/commons/require.js"></script>
+<script src="https://demos.lightstreamer.com/commons/lightstreamer.min.js"></script>
+<script src="./js/spacestation.js"></script>
 </body>
 </html>

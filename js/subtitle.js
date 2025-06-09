@@ -16,7 +16,8 @@ const greetingsArray = [
     "thank you to beyonce for making this possible",
     "its yugeee",
     'Resident technology bastard',
-    '100% every lego game'
+    '100% every lego game',
+    'press ctrl+shift+u to make boxes draggable'
 ];
 
 

@@ -27,7 +27,7 @@ const mySetupScrollableIcon = document.getElementById("mySetupScrollableIcon")
 const mySetupDefaultSubtitle = document.getElementById("mySetupDefaultSubtitle")
 const mySetupSecondSubtitle = document.getElementById("mySetupSecondSubtitle")
 const mySetupScrollableSection = document.getElementById("mySetupScrollableSection")
-
+const onlineCheckBox = document.getElementById("onlineCheckBox")
 
 
 var dataLink = "https://online.argil.dev"
@@ -73,17 +73,27 @@ function fetchOnlineInfo(testData){
     .then(r =>  r.json().then(data => ({status: r.status, body: data})))
     .then(obj => {
         var obj = JSON.parse(JSON.stringify(obj.body))
-        var onlineStatus = obj.response.players[0].personastate; 
-        var gameStatus = obj.response.players[0].gameid;
-        var gameName = obj.response.players[0].gameextrainfo;
-        var lastLogOff = new Date(obj.response.players[0].lastlogoff);
-        var currentTime = new Date(Math.round(Date.now()/1000))
-        var timeDifference = (currentTime.getTime() - lastLogOff.getTime());
-        var differenceDate = new Date(timeDifference*1000);
-        var diffHours = differenceDate.getUTCHours();
-        var diffMinutes = differenceDate.getUTCMinutes();
-        var games = obj.response.playing[0].response.games;
-        var results = [];
+        if (obj.response.players[0].onlineStatus == "false"){
+            var onlineStatus = "rateLimited"
+        } else {
+            var onlineStatus = obj.response.players[0].personastate; 
+        }
+
+        if (obj.response.playing[0].response.playingStatus == "false"){
+            var gameStatus = false
+        } else {
+            var gameStatus = obj.response.players[0].gameid;
+            var gameName = obj.response.players[0].gameextrainfo;
+            var lastLogOff = new Date(obj.response.players[0].lastlogoff);
+            var currentTime = new Date(Math.round(Date.now()/1000))
+            var timeDifference = (currentTime.getTime() - lastLogOff.getTime());
+            var differenceDate = new Date(timeDifference*1000);
+            var diffHours = differenceDate.getUTCHours();
+            var diffMinutes = differenceDate.getUTCMinutes();
+            var games = obj.response.playing[0].response.games;
+            var results = [];
+        }
+        
         var isPlaying = obj.response.playing[0].response.listening[0].isPlaying;
         var songName = obj.response.playing[0].response.listening[0].songName;
         var artists = obj.response.playing[0].response.listening[0].artists;
@@ -113,6 +123,13 @@ function fetchOnlineInfo(testData){
                 iAmBlank.className = "away";
                 lastLoggedOff.style.display = "none";
                 
+            } else if(onlineStatus == "rateLimited"){
+                console.log("I am rate limited")
+                iAmBlank.innerText = "RATE LIMITED"
+                iAmBlank.className = '';
+                iAmBlank.className = "rateLimit";
+                lastLoggedOff.style.display = "none";
+                onlineCheckBox.style.display = "none";
             } else{
                 console.log("I am offline")
                 iAmBlank.innerText = "IM OFFLINE ❌"
@@ -130,7 +147,26 @@ function fetchOnlineInfo(testData){
             .then(r =>  r.json().then(data => ({status: r.status, body: data})))
             .then(obj => {
                 var obj = JSON.parse(JSON.stringify(obj.body))
-                if (obj.playerstats.success == false){
+                var achievementGames = obj.response.games
+                var achievementResults = [];
+                var achievementStatus = false
+                
+
+                for (var i=0; i < achievementGames.length; i++){
+                    if (achievementGames[i]["appid"] == gameStatus){
+                        achievementResults.push(achievementGames[i])
+                    }
+                }
+
+                var totalAchievements = achievementResults[0].total_achievements;
+
+                if (!totalAchievements){
+                    achievementStatus = false 
+                } else{
+                    achievementStatus = true
+                }
+
+                if (achievementStatus == false){
                     playlists[0].setAttribute("id", "doubleScrollablePlaylists")
                     mySetupScrollableSection.setAttribute("class", "scrollable")
                     mySetupDefaultSubtitle.style.display = "none";
@@ -141,16 +177,9 @@ function fetchOnlineInfo(testData){
                     achievements.style.display = "none";
                     achievementBarProgress.style.display = "none";
                 } else {
-                    for (var i=0; i < obj.playerstats.achievements.length; i++){
-                        if(obj.playerstats.achievements[i].achieved == 1){
-                            numbersOfAchievementsUnlocked += 1
-                            continue
-                        } else {
-                            continue
-                        }
-                    };
-                    var percentageOfAchievementsUnlocked = Math.round(((numbersOfAchievementsUnlocked/obj.playerstats.achievements.length)*100)*10)/10
-                    achievementsUnlocked.innerText = "I've unlocked "+numbersOfAchievementsUnlocked+"/"+obj.playerstats.achievements.length;
+                    numbersOfAchievementsUnlocked = achievementResults[0].achievements.length;
+                    var percentageOfAchievementsUnlocked = Math.round(((numbersOfAchievementsUnlocked/totalAchievements)*100)*10)/10
+                    achievementsUnlocked.innerText = "I've unlocked "+numbersOfAchievementsUnlocked+"/"+totalAchievements;
                     achievementsUnlockedPercentage.innerText = "("+percentageOfAchievementsUnlocked+"%)"
         
                     achievementBar.style.width = percentageOfAchievementsUnlocked + "%";
@@ -160,7 +189,8 @@ function fetchOnlineInfo(testData){
                     mySetupDefaultSubtitle.style.display = "none";
                     mySetupSecondSubtitle.style.display = "block";
                     mySetupScrollableIcon.style.display = "block";
-                    gameLink.href = "https://steamcommunity.com/id/argilrants/stats/" + gameStatus;
+                    // gameLink.href = "https://steamcommunity.com/id/argilrants/stats/" + gameStatus;
+                    gameLink.href = "./achievements.html"
                     amIOnlineText()
                     iAmPlaying.style.display = "block";
                 }
@@ -172,8 +202,8 @@ function fetchOnlineInfo(testData){
         if (gameStatus || testData == true){
 
             gameNameEl.innerText = gameName;
-            if (gameName.length >= 20){
-                gameNameEl.style.animation = "floatText "+(gameName.length)/5+"s infinite linear"
+            if (gameName.length >= 16){
+                gameNameEl.style.animation = "floatText "+(gameName.length)/3.5+"s infinite linear"
             } else {
                 gameNameEl.style.marginLeft = "75px"
             }
@@ -202,8 +232,16 @@ function fetchOnlineInfo(testData){
             } else{
                 onRecordHrs.innerText = Math.round(playtimeForever/60);
             }
-            achievementsGet()
-
+            // achievementsGet()
+            playlists[0].setAttribute("id", "doubleScrollablePlaylists")
+            mySetupScrollableSection.setAttribute("class", "scrollable")
+            mySetupDefaultSubtitle.style.display = "none";
+            mySetupSecondSubtitle.style.display = "block";
+            mySetupScrollableIcon.style.display = "block";
+            amIOnlineText()
+            iAmPlaying.style.display = "block";
+            achievements.style.display = "none";
+            achievementBarProgress.style.display = "none";
         } else{
             playlists[0].setAttribute("id", "doubleScrollablePlaylists")
             amIOnlineText();
@@ -258,9 +296,26 @@ function fetchOnlineInfo(testData){
             var songUrl = "https://open.spotify.com/track/"+songUri.slice(14)
             var songUriFormatted = songUri.slice(14)
 
+            if (artistsFormatted.includes("Sparks")){
+                listeningTitle.innerText = "⚡︎ SPARKING TO ⚡︎"
+                listeningTitle.className = "sparking"
+            }
+
+            if (songName.includes("remix") || songName.includes("Remix")){
+                console.log("REMIX TIME")
+                // listeningTitle.style.animation = "5s katy infinite"
+                listeningTitle.innerText = "♫ REMIXING"
+                listeningTitle.className = "remix"
+            }
+
             if (songName.includes("(feat.")){
                 console.log("Song name has a featured artist, removing now")
                 songName = songName.split('(feat.',1)[0]
+            }
+
+            if (songName.includes("[feat.")){
+                console.log("Song name has a featured artist, removing now")
+                songName = songName.split('[feat.',1)[0]
             }
 
             if (songName.includes("(with")){
@@ -278,13 +333,6 @@ function fetchOnlineInfo(testData){
                 songName = songName.split("(Taylor's Version)",1)[0]
                 songName = songName + " (TV)"
                 albumArt.className = ""
-            }
-
-            if (songName.includes("remix") || songName.includes("Remix")){
-                console.log("REMIX TIME")
-                // listeningTitle.style.animation = "5s katy infinite"
-                listeningTitle.innerText = "♫ REMIXING"
-                listeningTitle.className = "remix"
             }
             
             if (albumUri == "spotify:album:0W5woeQnfOZmVLSbggRRlR" || albumUri == "spotify:album:3ThlxfLSy4bfKzxWqmC7VN" || albumUri == "spotify:album:36P07bti6xD99o7S1acmin"){

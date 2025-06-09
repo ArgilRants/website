@@ -10,8 +10,10 @@
     <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
     <meta name="author" content="ArgilRants">
     <meta property="og:image" content="https://argil.dev/img/ogimage.png">
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
     <title>changelog.log.html</title>
 
     <link rel="stylesheet" href="./css/scanlines.css">
@@ -22,6 +24,13 @@
     </div>
     <div id="basicpage">
         <div class="basicpagetop">
+
+            <div class="fontbuttondiv" id="fontbuttondiv">
+                <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
+                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
+                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+            </div>
+
             <div class="themebuttondiv" id="themebuttondiv">
                 <span id="sideline">select theme -></span>
                 <div class="select" style="display: inline-block;">
@@ -52,16 +61,55 @@
         <br>
         <div style="text-align: center;">
             <h2>Most Recent Version(s):</h2>
-            <h3 id="subtitle">Last Updated: April 06<sup>th</sup> 2025</h3>
+            <h3 id="subtitle">Last Updated: June 09<sup>th</sup> 2025</h3>
         </div>
 
         <div class="box" id="desktop">
-            <h2 style="color: #22b143;">Version 1.2 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
-            <div id="changeLogDate">April 06<sup>th</sup> | 2025</div>
+            <h2 style="color: #22b143;">Version 1.3 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
+            <div id="changeLogDate">June 09<sup>th</sup> | 2025</div>
 
             <h3>New features / Additions:</h3>
             <ul>
-                <li>Added <a href="./evenbettergui.html">EvenBetterGUI Wiki Page</a></li>
+                <li><span class="h3totitleShine" style="font-size: 120%;"><a href="./achievements.html">Added ACHIEVEMENTS PAGE!!!</a></span></li>
+                <ul>
+                    <li>This page displays information about my <a href="https://steamcommunity.com/id/argilrants/" id="steam">Steam</a> achievements</li>
+                    <li>Currently displays:</li>
+                    <ul>
+                        <li>The amount of achievements I have in total</li>
+                        <li>The amount of games ive done all achievements for</li>
+                        <li>The avg % completed</li>
+                        <li>Cards for every game in my library with achievements avaliable to complete in catagories</li>
+                        <li>Currently playing game (if im playing one)</li>
+                    </ul>
+                    <li>Because im very very lazy im not going to be supporting mobile with the achievements page</li>
+                </ul>
+                <li>Added new live updating box to the home page</li>
+                <ul>
+                    <li>This new box, aptly named ISS info, is a box that displays the location and other info about international space station</li>
+                    <ul>
+                        <li>In an upcoming update this box will link to a page with a model and dashboard all about the iss with all of its publicly available info</li>
+                    </ul>
+                </ul>
+                <li>Added 5+ new gifs to the <a href="./index.html#gifBox">random gif box</a></li>
+                <li>Added new playlists to the <a href="./index.htmlbestPlaylists#">best playlists box</a></li>
+                <li>Added new change font toggle button in the top left</li>
+                <ul>
+                    <li>This toggles between the default (monocraft) and the slightly easier to read vector version (miracode)</li>
+                    <li>Remembers what your font was set to so when you come back it sets it correctly</li>
+                </ul>
+                <li>Added <a href="https://www.curseforge.com/members/argilrants/projects" id="curseforge">Curseforge</a> link to links box</li>
+                <li>Added draggable boxes!!</li>
+                <ul>
+                    <li>Thanks to <a href="https://animejs.com/">Anime.js</a> for making this possible so easily</li>
+                    <li>To enable press <b>Ctrl + Shift + U</b> on any page with boxes</li>
+                </ul>
+                <li>Added <a href="./evenbettergui.html">EBG Wiki</a> link to the links section</li>
+                <li>Added <a href="./achievements.html">Achievements</a> link to the links section</li>
+                <li>Added qol feature to the scrollable boxes</li>
+                <ul>
+                    <li>When you click the mouse icon in the top right the box now "dropsdown"</li>
+                    <li>check it out <a href="./index.html#letterboxdDiary">here</a></li>
+                </ul>
             </ul>
 
             <br>
@@ -69,7 +117,11 @@
             <h3>Removed features / Removals:</h3>
 
             <ul>
-                <li>N/A</li>
+                <li>Removed achievement information from "am i playing" box</li>
+                <ul>
+                    <li>this greatly improves loading times</li>
+                    <li>replaced with button to go to the new <a href="./achievements.html">achievements page</a></li>
+                </ul>
             </ul>
 
             <br>
@@ -77,7 +129,8 @@
             <h3>Work in progress features:</h3>
             <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
             <ul>
-                <li>N/A</li>
+                <li>Balatro styled playing cards for a silly little card game that i want to make</li>
+                <li>A full ISS tracker with detailed live updating information</li>
             </ul>
 
             <br>
@@ -93,7 +146,37 @@
             <h3>Fixes / Other changes:</h3>
 
             <ul>
-                <li>N/A</li>
+                <li>Updated <a href="./index.html#bestPlaylists">best playlist box</a> to be in a random order</li>
+                <li>Updated favicons and clay golem guy in general</li>
+                <ul>
+                    <li>now his shadows are clearer</li>
+                </ul>
+                <li>Favorite film and show text in the <a href="./index.html#mainbox">welcome box</a> now are clickable to rotate through my favs</li>
+                <li>Updated background API code</li>
+                <ul>
+                    <li>This should make things like the listening, am i online and letterboxd diary boxes more consistent</li>
+                    <li>This should also stop all problems with the new <a href="./achievements.html">achievements page</a></li>
+                    <li>Now if I rate limited by steam the "am i online?" box disappears and the achievement page will show old data instead of updated data</li>
+                </ul>
+                <li>Updated <a href="./credits.html">Credits page</a></li>
+                <ul>
+                    <li>Now is significancy easier to parse, as well as being in boxes for more distinction between areas</li>
+                </ul>
+                <li>Updated all "borders" to be outlines</li>
+                <ul>
+                    <li>This helps with weird resizing issues</li>
+                </ul>
+                <li>Smoothed out loading times a litte</li>
+                <ul>
+                    <li>As well as smoothing out the loading animation as well</li>
+                </ul>
+                <li>Updated feature checks for spotify box</li>
+                <ul>
+                    <li>Should be more consistent across the board</li>
+                    <li>There will still be edge cases where this doesn't work as expected</li>
+                </ul>
+                <li>Changed list bullet points to be circles</li>
+                <li>Fixed version in the footer</li>
             </ul> 
 
             <br>
@@ -101,12 +184,12 @@
         </div>
 
         <div class="box" id="mobile">
-            <h2 style="color: #22b143;">Version 1.1 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
-            <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
+            <h2 style="color: #22b143;">Version 1.2 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
+            <div id="changeLogDate">June 09<sup>th</sup> | 2025</div>
 
             <h3>New features / Additions:</h3>
             <ul>
-                <li>Tiny Download box for EvenBetterGUI</li>
+                <li>Added <a href="https://www.curseforge.com/members/argilrants/projects" id="curseforge">Curseforge</a> link to links box</li>
             </ul>
             
             <br>
@@ -114,10 +197,7 @@
             <h3>Removed features / Removals:</h3>
 
             <ul>
-                <li>Dropdown socials box</li>
-                <ul>
-                    <li>Is now just a box</li>
-                </ul>
+                <li>N/a</li>
             </ul>
             
             <br>
@@ -142,7 +222,12 @@
             <h3 id="mobileFixes">Fixes / Other changes:</h3>
 
             <ul>
-                <li>N/A</li>
+                <li>Updated links box</li>
+                <ul>
+                    <li>Now includes, <a href="./credits.html">credits</a>, <a href="./changelog.html">change log</a>, <a href="./evenbettergui.html">ebg wiki</a> and <a href="https://github.com/ArgilRants/website">source code</a> links</li>
+                    <li>Social links are now logos instead of the buttons like before</li>
+                </ul>
+                <li>Smoothed out some weird behavior</li>
             </ul>
         </div>
 
@@ -151,9 +236,105 @@
 
         <div style="text-align: center;">
             <h2>Older Version(s):</h2>
-            <h3 id="subtitle">Last Updated: April 06<sup>th</sup> 2025</h3>
+            <h3 id="subtitle">Last Updated: June 09<sup>th</sup> 2025</h3>
         </div>
 
+        <div class="box" id="desktop-prev-3">
+            <div id="drop5">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(5)"></button>
+                <h2 style="color: #22b143;">Version 1.2 [⏻ Desktop] <span id="releaseBadge">Release</span></h2>
+                <div id="changeLogDate">April 06<sup>th</sup> | 2025</div>
+                <div id="dropdown" class="dropdownContent">
+                    <h3>New features / Additions:</h3>
+                    <ul>
+                        <li>Added <a href="./evenbettergui.html">EvenBetterGUI Wiki Page</a></li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Removed features / Removals:</h3>
+
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Work in progress features:</h3>
+                    <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+
+                    <br>
+                    
+                    <h3 id="themeSelectorAutoClickSoundIssue">Known issues:</h3>
+                    <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Fixes / Other changes:</h3>
+
+                    <ul>
+                        <li>N/A</li>
+                    </ul> 
+
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="mobile-prev-3">
+            <div id="drop6">
+                <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(6)"></button>
+                <h2 style="color: #22b143;">Version 1.1 [✔ Mobile] <span id="releaseBadge">Release</span></h2>
+                    <div id="changeLogDate">March 31<sup>st</sup> | 2025</div>
+                <div id="dropdown" class="dropdownContent">
+                    <h3>New features / Additions:</h3>
+                    <ul>
+                        <li>Tiny Download box for EvenBetterGUI</li>
+                    </ul>
+                    
+                    <br>
+
+                    <h3>Removed features / Removals:</h3>
+
+                    <ul>
+                        <li>Dropdown socials box</li>
+                        <ul>
+                            <li>Is now just a box</li>
+                        </ul>
+                    </ul>
+                    
+                    <br>
+
+                    <h3>Work in progress features:</h3>
+                    <h3 id="subtitle">All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on</h3>
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Known issues:</h3>
+                    <h3 id="subtitle">If not listed in fixes than all known bugs from previous version(s) are still not fixed</h3>
+                    
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+
+                    <br>
+
+                    <h3 id="mobileFixes">Fixes / Other changes:</h3>
+
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="box" id="desktop-prev-2">
             <div id="drop3">
                 <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(3)"></button>
@@ -375,7 +556,6 @@
                 </div>
             </div>
         </div>
-
         <div class="box" id="mobile-prev-2">
             <div id="drop4">
                 <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(4)"></button>
@@ -558,7 +738,6 @@
                 </div>
             </div>
         </div>
-
         <div class="box" id="mobile-prev-1">
             <div id="drop2">
                 <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(2)"></button>
@@ -666,4 +845,8 @@
 <!-- <script src="./js/age.js"></script> -->
 <script src="./js/dateEvents.js"></script>
 <script src="./js/dropdowns.js"></script>
+<script type="module">
+    import { animate } from './js/anime.esm.js';
+</script>
+<script type="module" src="./js/animation.js"></script>
 </body>

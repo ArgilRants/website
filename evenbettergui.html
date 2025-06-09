@@ -10,10 +10,10 @@
     <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
     <meta name="author" content="ArgilRants">
     <meta property="og:image" content="https://argil.dev/img/ogimage.png">
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
-
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
     <title>EvenBetterGUI.wiki</title>
 </head>
 <body class="">
@@ -22,6 +22,13 @@
     </div>
     <div id="basicpage">
         <div class="basicpagetop">
+
+            <div class="fontbuttondiv" id="fontbuttondiv">
+                <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
+                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
+                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+            </div>
+
             <div class="themebuttondiv" id="themebuttondiv">
                 <span id="sideline">select theme -></span>
                 <div class="select" style="display: inline-block;">
@@ -64,7 +71,6 @@
                         Welcome to the EvenBetterGUI Wiki page. This is where you can learn about all customizable options, with many many images to accompany, mod support and future update plans! Updated regularly! <span style="color: red; font-weight: bold;">EBG will not be backported</span>
                         <br>
                         <a href="https://modrinth.com/project/ebg" class="modrinthDownload" onclick="buttonClick(this)"><span class="downloadIcon">↓</span> Download</a>
-                        <a href="https://modrinth.com/mod/respackopts" class="modrinthDownload" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Respackopts</a>
                         <a href="./evenbettergui.html#changelog" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Change Log</a>
                         <a href="https://github.com/ArgilRants/EvenBetterGUI" class="button" onclick="buttonClick(this)"><span class="buttonIcon sidewaysBounce">→</span> Source</a>
                     </p>
@@ -562,4 +568,8 @@
 <script src="./js/dateEvents.js"></script>
 <script src="./js/subtitle.js"></script>
 <script src="./js/dropdowns.js"></script>
+<script type="module">
+    import { animate } from './js/anime.esm.js';
+</script>
+<script type="module" src="./js/animation.js"></script>
 </body>

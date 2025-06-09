@@ -10,10 +10,10 @@
     <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels">
     <meta name="author" content="ArgilRants">
     <meta property="og:image" content="https://argil.dev/img/ogimage.png">
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
-
-    <link rel="icon" type="image/x-icon" href="./img/icon.ico">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
     <title>credits.html</title>
 </head>
 <body class="">
@@ -22,6 +22,13 @@
     </div>
     <div id="basicpage">
         <div class="basicpagetop">
+
+            <div class="fontbuttondiv" id="fontbuttondiv">
+                <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
+                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
+                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+            </div>
+
             <div class="themebuttondiv" id="themebuttondiv">
                 <span id="sideline">select theme -></span>
                 <div class="select" style="display: inline-block;">
@@ -52,54 +59,89 @@
         <br>
 
             
-        <br>
-        <h2 style="text-align: center; color: var(--title-color);">It's credit time:</h2>
-        <br>
-        
-        <h3>Font</h3>
-        <p>Thank you so much to <a href="https://github.com/IdreesInc/">@IdreesInc</a> and all the <a href="https://github.com/IdreesInc/Monocraft/graphs/contributors">contributors</a> of the <a href="https://github.com/IdreesInc/Monocraft">Monocraft</a> project!</p>
+        <div class="box">
+            <h2 style="text-align: center;">Credits</h2>
+            <h3 id="subtitle" style="text-align: center;">Thank you to everyone below for publishing code, making cool tools and inspiring me</h3>
+            <div class="box">
+                <h3>Fonts</h3>
+                <p>
+                    Monocraft is the main font I use. 
+                    <br>
+                    Miracode is the easier to read font which you can toggle in the top left!!
+                    
+                    Both Monocraft and Miracode are made by <a href="https://github.com/IdreesInc/">@IdreesInc</a>
+                    <br>
+                    <a href="https://github.com/IdreesInc/Monocraft" class="button" style="font-family: 'monocraft';">Monocraft</a>
+                    <a href="https://github.com/IdreesInc/Miracode" class="button" style="font-family: 'Miracode';">Miracode</a>
+                </p>
+            </div>
 
-        <br>
+            <div class="box">
+                <h3>Video/Gif Downloader</h3>
+                <p>
+                    Cobalt is like <b>by far</b> the best video downloader ever made. Thanks to the devs at <a href="https://github.com/imputnet">imputnet</a> for reinventing video downloading thank you!!
+                    <br>
+                    <a href="https://cobalt.tools/" class="button">Cobalt.tools</a> <span id="sideline"><- download videos without the nonsense</span>
+                </p>
+            </div>
 
-        <h3>Video/Gif Downloader</h3>
-        <p>Thanks to the devs over at <a href="https://github.com/imputnet">imputnet</a> for their continued support and work on <a href="https://cobalt.tools/">Cobalt</a>, love ya!</p>
+            <div class="box">
+                <h3>File Convertor</h3>
+                <p>
+                    Vert is the <b>BEST</b> file convertor i've ever seen, its so nice to be able to do video conversion locally! Thanks to all the devs involved with vert specifically <a href="https://github.com/not-nullptr">nullptr</a>, <a href="https://github.com/JovannMC">JovannMC</a> and the designer <a href="https://x.com/z2rMC">Liam</a>
+                    <br>
+                    <a href="https://vert.sh/" class="button">Vert.sh</a> <span id="sideline"><- convert some yourself</span>
+                </p>
+            </div>
 
-        <br>
+            <div class="box" id="soko">
+                <h3>Firefox character</h3>
+                <p>
+                    Thank you to Soko, whos website died at some point and I can't find any socials, below are the original wallpapers
+                    <br>
+                    <a href="https://web.archive.org/web/20070301105028/http://www.ferricorp.com/misc/walls/2k.and.firefox.1600.1200.jap.jpg" class="button">Original Japanese</a>
+                    <a href="https://web.archive.org/web/20070224124451/http://www.ferricorp.com/misc/walls/2k.and.firefox.1600.1200.eng.jpg" class="button">English Version</a> 
+                </p>
+            </div>
 
-        <h3 id="soko">Firefox Character</h3>
-        <p>Thanks to Soko, whos website is dead and i cannot find any social media. But thanks dude.
-            <br>
-            <a href="https://web.archive.org/web/20070301105028/http://www.ferricorp.com/misc/walls/2k.and.firefox.1600.1200.jap.jpg">Original Japanese Wallpaper</a> & 
-            <a href="https://web.archive.org/web/20070224124451/http://www.ferricorp.com/misc/walls/2k.and.firefox.1600.1200.eng.jpg">English Version of the Wallpaper</a> 
+            <div class="box" id="spotifyNowPlaying">
+                <h3>Spotify Now Playing API</h3>
+                <p>
+                    Thanks to <a href="https://www.javed.dev/">Javed Akhtar</a> for creating an easy quick to use spotify now playing api!
+                    <br>
+                    <a href="https://nowplaying.tinyrobot.co/" class="button">Use it for yourself here</a>
+                    <a href="https://github.com/akhtarja/serverless-spotify-now-playing" class="button">Source</a>
+                </p>
+            </div>
 
-        </p>
+            <div class="box" id="">
+                <h3>CRT CSS Filters & Classes</h3>
+                <p>
+                    Thanks to <a href="http://aleclownes.com">Alec Lownes</a> for publishing this code!
+                    <br>
+                    <a href="http://aleclownes.com/2017/02/01/crt-display.html" class="button">Source</a>
+                </p>
+            </div>
 
-        <br> 
+            <div class="box" id="letterboxdAPICredit">
+                <h3>Letterboxd Diary Api</h3>
+                <p>
+                    Huge thanks to <a href="https://www.timcieplowski.com/">Tim Cieplowski</a> for making this publicly available and with URl params for raw data! Helped a ton!
+                    <br>
+                    <a href="https://letterboxd-embed.timcieplowski.com/" class="button">Use it for yourself</a>
+                    <a href="https://github.com/timciep/letterboxd-diary-embed?tab=readme-ov-file#url-params-for-fetch" class="button">Source</a>
+                </p>
+            </div>
 
-        <h3 id="spotifyNowPlaying">Spotify Now Playing API</h3>
-        <p>
-            Thanks to <a href="https://www.javed.dev/">Javed Akhtar</a> for the <a href="https://nowplaying.tinyrobot.co/">Spotify Now Playing API project</a>
-            <br>
-            Check out the <a href="https://github.com/akhtarja/serverless-spotify-now-playing">The github repo</a> and his <a href="https://www.instagram.com/akhtarja" id="instagram">Instagram</a>
-        </p>
+            <div class="box" id="Inspirations">
+                <h3>Inspirations</h3>
+                <p>
+                    <a href="https://dimden.dev/" class="button">Dimden.dev</a>
+                </p>
+            </div>
 
-        <h3>CRT CSS Filters & Classes</h3>
-        <p>
-            Thanks to <a href="http://aleclownes.com">Alec Lownes</a> for publishing this code!
-            <br>
-            Link to all the code I used is: <a href="http://aleclownes.com/2017/02/01/crt-display.html">here!</a>
-        </p>
+        </div>
 
-        <h3 id="letterboxdAPICredit">Letterboxd Diary API</h3>
-        <p>
-            BIG BIG Thanks to <a href="https://www.timcieplowski.com/">Tim Cieplowski</a> for making this publicly avaliable and with URl params for raw data! Helped a ton!
-            Add your own Letterboxd Diary Embed by going <a href="https://letterboxd-embed.timcieplowski.com/">here</a>, and URL param info is <a href="https://github.com/timciep/letterboxd-diary-embed?tab=readme-ov-file#url-params-for-fetch">here</a>
-        </p>
-
-        <h3 id="insperations">Insperations</h3>
-        <p>
-            Thanks to <a href="https://dimden.dev/">Dimden</a> for having a really cool website!! I took some pretty heavy insperation from them!!
-        </p>
         <footer id="footer">
         
            

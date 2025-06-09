@@ -3,6 +3,7 @@ const btnmobile = document.querySelector(".btnmobile-toggle");
 const btnmobilewide = document.querySelector(".btnmobilewide-toggle");
 const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 const currentTheme = localStorage.getItem("theme");
+const activeFont = localStorage.getItem("font")
 const chromeShowFirefoxBox = localStorage.getItem("chromeShowFirefoxBox");
 const buttonClickSound = new Audio('./audio/touch.wav');
 const titleClickSound = new Audio('./audio/money.wav');
@@ -14,10 +15,39 @@ const debugThemeSelect = document.getElementById("debugThemeSelect");
 const themeSelectElm = document.getElementById("themeSelect")
 const debugOutlineToggleInput = document.getElementById("debugOutlineToggleInput")
 const checkIfListeningButton = document.getElementById("checkIfListeningButton")
-const themeBodyAnim = themeBody.getAnimations()[0].animationName
-const themeBodyAnimPlaybackTime = themeBody.getAnimations()[0].playbackRate
 const previousProjectH2Icon = document.getElementById("previousProjectH2Icon")
 const debugTestDataToggleInput = document.getElementById("debugTestDataToggleInput")
+
+const monocraft = document.getElementById("monocraft")
+const miracode = document.getElementById("miracode")
+
+const themeSelectFont = document.querySelector("#themeSelect")
+
+// const themeBodyAnim = themeBody.getAnimations()[0].animationName
+// const themeBodyAnimPlaybackTime = themeBody.getAnimations()[0].playbackRate
+
+
+function fullHeight(x){
+  if (x == "playlists"){
+    var el = document.getElementsByClassName(x)
+    var id = el[0].id
+    if (el[0].style.height == "100%"){
+      el[0].id = id.substring(0, id.length-8)
+      el[0].style.height = ""
+    } else {
+      el[0].id = id+"Disabled"
+      el[0].style.height = "100%"
+    }
+  } else {
+    var el = document.getElementById(x)
+    if (el.style.height == "100%"){
+      el.style.height = ""
+    } else {
+      el.style.height = "100%"
+    }
+  }
+  clickSound()
+}
 
 function debugTheme() {
   if (debugThemeSelect.value == "auto"){
@@ -158,11 +188,10 @@ function previousProjectIcon(){
 
     if (currentTheme == "sepia"){
       themeBody.style.animation = ""
-    } else if (themeBodyAnim == "bodyload"){
-      themeBody.style.animation = themeBodyAnim;
     } else {
-      themeBody.style.animation = themeBodyAnim;
+      themeBody.style.animation = "none";
     }
+
   }, 5200);
 }
 
@@ -194,6 +223,21 @@ function truncateString(yourString, maxLength) {
   // get the index of space after maxLength
   const index = yourString.indexOf(" ", maxLength);
   return index === -1 ? yourString : yourString.substring(0, index)
+}
+
+
+function changeFont(font, el){
+  themeBody.style.fontFamily = font
+
+  if (font == "monocraft"){
+    monocraft.style.display = "block"
+    miracode.style.display = "none"
+  } else {
+    miracode.style.display = "block"
+    monocraft.style.display = "none"
+  }
+  clickSound()
+  localStorage.setItem("font", font)
 }
 
 if (firefoxBox == null){
@@ -324,4 +368,14 @@ if (btnmobilewide == null) {
   });
 }
 
+
+themeBody.style.fontFamily = activeFont
+
+if (activeFont == "monocraft"){
+  monocraft.style.display = "block"
+  miracode.style.display = "none"
+} else if(activeFont == "miracode") {
+  miracode.style.display = "block"
+  monocraft.style.display = "none"
+}
 

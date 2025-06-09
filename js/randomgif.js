@@ -1,20 +1,12 @@
+const numberOfImages = 23
+
 ImageArray = new Array();
-ImageArray[0] = '1.gif';
-ImageArray[1] = '2.gif';
-ImageArray[2] = '3.gif';
-ImageArray[3] = '4.gif';
-ImageArray[4] = '5.gif';
-ImageArray[5] = '6.gif';
-ImageArray[6] = '7.gif';
-ImageArray[7] = '8.gif';
-ImageArray[8] = '9.gif';
-ImageArray[9] = '10.gif';
-ImageArray[10] = '11.gif';
-ImageArray[11] = '12.gif';
-ImageArray[12] = '13.gif';
-ImageArray[13] = '14.gif';
-ImageArray[14] = '15.gif';
-ImageArray[15] = '16.gif';
+
+
+for (var i=0; i < numberOfImages; i++){
+    ImageArray[i] = i+".gif"
+    // console.log(ImageArray)
+}
 
 let maxnumber = ImageArray.length
 const gif = document.getElementById("randGif");

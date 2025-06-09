@@ -78,22 +78,27 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'miracode';
+    src: url("../font/Miracode.ttf");
+    font-weight: inherit;
+}
+
 
 :root{
-    font-family: 'monocraft';
     scale: 1;
     text-rendering: optimizeLegibility;
 }
 
 ::selection {
-    color: #eee;
+    color: #eee !important;
     background: var(--h2-color);
 }
 
 
 html{
-    --version: "1.2";
-    --mobileVersion: "1.1"
+    --version: "1.3";
+    --mobileVersion: "1.2"
 }
 
 
@@ -230,6 +235,9 @@ body.light {
         --theme-button-text-color: #2e2e2e;
     }
 
+    body #listeningtitle{
+        filter: brightness(0.8);
+    }
 
     body .socials{
         filter: brightness(0.8);
@@ -319,8 +327,58 @@ body.light{
     position: absolute;
     transform: translateX(722px);
     /* padding-left: 735px; */
-    z-index: 1000;
+    z-index: 89;
 }
+
+.fontbuttondiv{
+    position: absolute;
+    transform: translateX(10px);
+    z-index: 99;
+}
+
+.monocraft{
+    font-family: 'monocraft';
+    box-sizing: content-box;
+    font-family: 'monocraft' !important;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 20px;
+    outline: 2px solid var(--box-border-color);
+    background-color: var(--bg-color);
+    color: var(--default-text-color);
+    border-radius: 3px;
+    text-align: center;
+    user-select: none;
+}
+
+.monocraft:hover, .miracode:hover{
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+.fontbuttonsideline{
+    position: absolute;
+    min-width: 300px;
+    text-indent: 40px;
+    transform: translateY(8px);
+    z-index: -1;
+}
+
+.miracode{
+    display: none;
+    box-sizing: content-box;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 20px;
+    outline: 2px solid var(--box-border-color);
+    background-color: var(--bg-color);
+    color: var(--default-text-color);
+    border-radius: 3px;
+    text-align: center;
+    user-select: none;
+}
+
+
 
 
 #themebutton::before {
@@ -328,14 +386,18 @@ body.light{
 }
 
 
+#themeSelect{
+}
+
 select {
+    font-family: inherit;
     box-sizing: content-box;
-    font-family: 'monocraft' !important;
     font-size: 1.2em;
     padding: 5px;
     width: 20px;
     padding-right: 10px;
-    border: 2px solid var(--box-border-color);
+    border: none;
+    outline: 2px solid var(--box-border-color);
     background-color: var(--bg-color);
     color: var(--default-text-color);
     border-radius: 3px;
@@ -387,6 +449,7 @@ body {
     animation: bodyload 1.5s ease-in-out;
     margin-top: 0px;
     filter: none;
+    transition: background-color 555ms;
     
 }
 
@@ -397,6 +460,29 @@ body {
 div {
     display: block;
     unicode-bidi: isolate;
+}
+
+
+.loading{
+    opacity: 0;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: color-mix(in srgb, var(--bg-color) 50%, transparent);
+    animation: newBodyLoad 1.8s ease-out;
+}
+
+.loading #loadingGolem{
+    height: 100vh;
+    float: right;
+}
+
+.loading svg{
+    display: block;
+    margin: auto;
+    padding-top: 100px;
 }
 
 #container{
@@ -436,6 +522,38 @@ div {
     background-size: 500% auto;
     animation: textShine 6s ease-in-out infinite alternate;
     user-select: none !important;
+}
+
+.subtitleNew {
+    background: linear-gradient(to right, var(--subtitle-color) 20%, red 30%, var(--subtitle-color) 70%, var(--subtitle-color) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: textShine 8s ease-in-out infinite alternate;
+    user-select: none !important;
+    text-decoration: none !important;
+    position: absolute;
+    float: right;
+    font-size: .7em !important;
+    transform: translate(0px, -4px);
+}
+
+.navlink:hover > .subtitleNew {
+    background: linear-gradient(to right, var(--subtitle-color) 20%, red 30%, var(--subtitle-color) 70%, var(--subtitle-color) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2s ease-in-out infinite alternate;
+    user-select: none !important;
+    text-decoration: none !important;
+    position: absolute;
+    float: right;
+    transition: all 333ms;
+    transform: translate(-6px, -4px);
 }
 
 .animationReverse{
@@ -613,6 +731,7 @@ footer {
 #playing {
     display: none;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #onlineCheckLoading{
@@ -663,6 +782,34 @@ footer {
 }
 
 
+#achievementLinkHome{
+    background-color: var(--button-color);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    margin: 3px;
+    padding: 5px;
+    font-size: .8em;
+}
+
+#achievementLinkHomeAwardLeft{
+    width: 30px;
+    outline: none !important;
+    background-color: #00000000 !important;
+    float: left;
+}
+
+#achievementLinkHomeAwardRight{
+    width: 30px;
+    outline: none !important;
+    background-color: #00000000 !important;
+    float: right;
+}
+
+.linkBox:hover > #achievementLinkHome{
+    background-color: var(--button-hover-color);
+    color: color-mix(in srgb, var(--default-text-color) 10%, var(--blur-color));
+}
+
+
 #achievementsTitle{
     font-weight: bold;
     text-decoration: underline;
@@ -684,7 +831,56 @@ footer {
     border-radius: 1px;
     
 }
+
+#onlineGame{
+    /* display: inline-block; */
+    display: none;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+#onlineGame .gameEntry > .gameUrlWrapper .gameImg{
+    outline: solid 4px var(--h2-color) !important;
+}
+
+#onlineGame .gameEntry#perfect > .gameUrlWrapper .gameImg{
+    outline: solid 4px #ffdc30 !important;
+    animation: glow .8s infinite ease-in-out alternate;
+}
+
+.currentlyPlayingH3 { 
+    min-width: 125px !important; 
+    width: 125px !important;
+    max-width: 125px !important;
+    transform: translate(5%,-235px);
+    font-size: .7em;
+    padding: 3px;
+    color: #272727;
+    background-color: #3ad449;
+    /* background-image:linear-gradient(to left, #3d4450 0% 20%, #1a9fff 20% 100%); */
+    position: absolute;
+    animation: pulse 3s infinite alternate-reverse ease-in-out;
+}
+
+
+
+#achievementOverviewBox{
+    /* margin-top: 10px */
+}
+
+
+
+.linkBox #achievementOverviewBoxes{
+    vertical-align:top;
+    /* display: inline-block; */
+}
+
+#achievementOverviewBoxes{
+    vertical-align:top;
+}
   
+
+
 #achievementBar {
     margin-top: 2px;
     width: 1%;
@@ -803,6 +999,11 @@ img {
 
 }
 
+.navlink abbr{
+    text-decoration: none;
+}
+
+
 hr {
     border: 0;
     border-top: 3px solid var(--button-color);
@@ -846,6 +1047,9 @@ td {
 
 
 
+
+
+
 table#wiki{
     margin: 0;
     padding: 0;
@@ -854,7 +1058,7 @@ table#wiki{
 }
 
 table#wiki td, th {
-    border: 1px solid #eeeeee;
+    border: 2px solid var(--subtitle-color);
     text-align: left;
     padding: 8px;
 }
@@ -871,36 +1075,39 @@ table#wiki img{
 
 .box{
     background-color: var(--box-color);
-    border: 2px solid var(--box-border-color);
+    outline: 2px solid var(--box-border-color);
     border-radius: 4px;
     color: var(--default-text-color);
     padding: 10px 15px;
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-sizing: border-box !important;
+    /* box-sizing: border-box !important; */
+    transition-property: outline, background-color;
+    transition: 333ms;
 }
 
 .box:hover{
 
-    border-color: var(--title-color);
+    outline-color: var(--title-color);
+    background-color: color-mix(in srgb, var(--box-color) 92%, var(--button-hover-color));
 
     /* box-shadow: 0 0 3px var(--title-color), -2px 0 3px var(--title-color), 2px 0 3px var(--title-color);      */
 
-    /* scale: 1.009; */
-
-    transition: border .2s;
+    /* scale: 1.; */
+    transition-property: outline, background-color;
+    transition: 333ms;
 
 }
 
 .box:target {
-    border-color: var(--title-color);
+    outline-color: var(--title-color);
     background-color: color-mix(in srgb, var(--h2-color) 10%, var(--box-color));
 }
 
 .box:target:hover{
-    border-color: color-mix(in srgb, var(--h2-color) 80%, var(--default-text-color));
-    transition: border .2s;
+    outline-color: color-mix(in srgb, var(--h2-color) 80%, var(--default-text-color));
+    transition: outline .2s;
 }
 
 
@@ -909,7 +1116,7 @@ table#wiki img{
 
 
 .box#importantbox:hover{
-    border: 2px solid #ff0000e7 !important;
+    outline: 2px solid #ff0000e7 !important;
     box-shadow: none !important;
     transition: none 0s !important;
 }
@@ -1044,7 +1251,7 @@ h2#welcome:hover #dotdots{
 
 
 #importantbox{
-    border: 2px solid #ff0000ab;
+    outline: 2px solid #ff0000ab;
 }
 
 
@@ -1076,7 +1283,7 @@ h2#welcome:hover #dotdots{
 #ytembed iframe{
     width: 384px;
     height: 216px;
-    border: 2px solid var(--default-text-color);
+    outline: 2px solid var(--default-text-color);
 }
 
 
@@ -1091,12 +1298,12 @@ h2#welcome:hover #dotdots{
     transform: scale(1);
     text-align: center;
     color: #eee;
-    border: 2px solid #eee;
+    outline: 2px solid #eee;
 }
 
 #newbadge:hover{
     color: #fff;
-    border: 2px solid #fff;
+    outline: 2px solid #fff;
 
 }
 
@@ -1125,7 +1332,34 @@ h2#welcome:hover #dotdots{
     transform: scale(1);
     text-align: center;
     color: #eee;
-    border: 2px solid #eee;
+    outline: 2px solid #eee;
+    user-select: none;
+}
+
+#iconBadge:hover{
+    cursor: pointer;
+}
+
+#setup #iconBadge{
+    transform: translateY(-15px);
+}
+
+#achievementOverviewH2 span#iconBadge{
+    float: right;
+    background: color-mix(in srgb, #66c0f4 70%, var(--box-color));;
+    padding: 5px;
+    margin: -3px;
+    border-radius: 4px;
+    color: var(--default-text-color);
+    font-size: .8em;
+    transform: scale(1);
+    text-align: center;
+    color: #eee;
+    outline: 2px solid #eee;
+}
+
+#achievementOverviewH2 span#iconBadge a{
+    color: #d7d7d7;
 }
 
 
@@ -1135,26 +1369,30 @@ h2#welcome:hover #dotdots{
     float: right;
     background: #22b143ee;
     padding: 5px;
+    padding-top: 6px;
     border-radius: 4px;
     color: var(--default-text-color);
     font-size: 1em;
+    margin-top: 3px;
     transform: scale(1);
     text-align: center;
     font-weight: normal !important;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
 #betaBadge{
     float: right;
     background: #df0000ee;
     padding: 5px;
+    padding-top: 6px;
     border-radius: 4px;
     color: var(--default-text-color);
     font-size: 1em;
+    margin-top: 3px;
     transform: scale(1);
     text-align: center;
     font-weight: normal !important;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
 
@@ -1163,8 +1401,8 @@ h2#welcome:hover #dotdots{
 }
 
 #randGif{
-    margin-top: 10px;
-    margin-left: -4px;
+    margin-top: 12px;
+    margin-left: 8px;
 }
 
 #randGif:hover{
@@ -1200,7 +1438,8 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     transform: scale(1);
     text-align: center;
     margin-top: 5px;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
+    margin-bottom: 5px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
 
@@ -1214,7 +1453,8 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     transform: scale(1);
     text-align: center;
     margin-top: 5px;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
+    margin-bottom: 5px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
 
@@ -1228,7 +1468,8 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     transform: scale(1);
     text-align: center;
     margin-top: 5px;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
+    margin-bottom: 5px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
 
@@ -1275,12 +1516,13 @@ ul{
 }
 
 li{
-    list-style-type: "▶ ";
+    list-style-type: "⏺ ";
     text-align:justify;
 }
 
 ul ul li{
     font-size: 90% !important;
+    list-style-type: "○ ";
 }
 
 #UK{
@@ -1331,10 +1573,16 @@ sup{
 }
 
 
+#achievementsSubtitle{
+    font-size: .8em;
+    color: var(--subtitle-color);
+    margin: 0;
+}
+
 
 img#logo{
-    width: 125px;
-    border: .3em dotted var(--h2-color);
+    width: 133px;
+    outline: .3em dotted var(--h2-color);
     margin: 10px 10px 5px 0px;
     float: left;
 }
@@ -1342,7 +1590,7 @@ img#logo{
 
 .box#comingsoonBox:hover{
     pointer-events: none !important;
-    border: 2px solid var(--box-border-color);
+    outline: 2px solid var(--box-border-color);
     
 }
 
@@ -1379,7 +1627,7 @@ img#logo{
 
 
 div.box img{
-    border: 4px solid var(--h2-color);
+    outline: 4px solid var(--h2-color);
     margin-left: -3px;
 }
 
@@ -1417,7 +1665,7 @@ div.box img#right{
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
 }
 
 .modrinthDownload:hover{
@@ -1436,7 +1684,7 @@ div.box img#right{
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
 }
 
 .ficsitDownload:hover{
@@ -1455,8 +1703,7 @@ div.box img#right{
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
-    border: 2px solid ;
-    border: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
 }
 
 .button:hover{
@@ -1518,15 +1765,15 @@ marquee {
 marquee#important {
     background-color: #ff0000ab;
     color: #eee;
-    border: 2px solid var(--box-border-color);
+    outline: 2px solid var(--box-border-color);
     border-radius: 2px;
-    transition: border 0s;
+    transition: outline 0s;
     
 }
 
 marquee#important:hover{
     color: #fff;
-    transition: border .4s;
+    transition: outline .4s;
 
 }
 
@@ -1536,6 +1783,10 @@ marquee#important:hover{
 
 #musicbox{
     overflow: hidden;
+}
+
+body.light #listeningtitle{
+    filter: brightness(80%);
 }
 
 #listeningtitle{
@@ -1563,6 +1814,10 @@ marquee#important:hover{
     transition: all 333ms;
 }
 
+.sparking{
+    color: rgb(242, 250, 7) !important;
+}
+
 #listeningLoading {
     font-style: normal;
     float: right;
@@ -1573,6 +1828,32 @@ marquee#important:hover{
     'wght' 700,
     'GRAD' 200,
     'opsz' 48;
+}
+
+#achievementLoading{
+    text-align: center;
+    font-size: 5em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+#achievementLoadingIcon{
+    font-size: 5em !important;
+    font-style: normal;
+    color: var(--default-text-color);
+    animation: loading .7s linear infinite;
+    font-variation-settings: 
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48;
+    height: 90vh;
+    line-height: 90vh;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
 }
 
 #letterboxdLoading {
@@ -1612,7 +1893,7 @@ marquee#important:hover{
     height: 55px;
     margin-left: 5px;
     margin-top: 2px;
-    margin-bottom: -2px;
+    margin-bottom: -5px;
     transition: all 222ms;
 }
 
@@ -1665,15 +1946,14 @@ marquee#important:hover{
     list-style-position: inside;
     float:inline-start;
     padding-left: 50px;
-    color: color-mix(in srgb, var(--h2-color) 85%, transparent) ;
+    color: color-mix(in srgb, var(--subtitle-color) 85%, transparent) ;
     font-style: italic;
 }
 
 
 #albumart {
     position: absolute;
-    outline: 2px solid #1ed760;
-    border: none !important;
+    outline: 2px solid #1ed760 !important;
     float: left;
     transform: translateX(-5px);
     width: 50px;
@@ -1699,28 +1979,30 @@ marquee#important:hover{
 } 
 
 #listening:hover > #musicbox #songlink #albumart{
-    border: 2px solid #4be982;
+    outline: 2px solid #4be982;
     filter: none !important; 
 } 
 
 #listening:hover > #musicbox #songlink #songspan #nowplaying{
     text-decoration: underline !important;
-    text-decoration-color: var(--h2-color) !important;
+    text-decoration-color: #1ed760 !important;
     text-underline-offset: 1px;  
 } 
 
 #listening:hover > #musicbox #songlink #artistspan #nowPlayingArtist{
-    color: var(--h2-color);  
+    color: color-mix(in srgb, var(--default-text-color) 50%, var(--subtitle-color));
+    text-decoration: underline !important;
+    text-decoration-color: var(--subtitle-color) !important;
 } 
     
 
 #albumart:hover{
-    border: 2px solid #4be982;
+    outline: 2px solid #4be982;
     filter: none !important;
 }
 
 #songlink:hover > #albumart {
-    border: 2px solid #4be982;
+    outline: 2px solid #4be982;
     filter: none !important;
 }
 
@@ -1731,13 +2013,15 @@ marquee#important:hover{
 }
 
 #songlink:hover > #songspan #nowplaying {
+    color: var(--default-text-color);  
     text-decoration: underline !important;
-    text-decoration-color: var(--h2-color) !important;
-    text-underline-offset: 1px;
+    text-decoration-color: #1ed760 !important;
 }
 
 #songlink:hover > #artistspan #nowPlayingArtist {
-    color: var(--h2-color);
+    color: color-mix(in srgb, var(--default-text-color) 50%, var(--subtitle-color));
+    text-decoration: underline !important;
+    text-decoration-color: var(--subtitle-color) !important;
 }
 
 
@@ -1765,7 +2049,7 @@ marquee#important:hover{
     width: 177px;
     border-width: 0px !important;
     border-radius: 6px;
-    border-color: var(--button-color) !important;
+    outline-color: var(--button-color) !important;
     margin-left: 0px !important;
     transition: all .3s ease;
     aspect-ratio: 1 / 1;
@@ -1783,7 +2067,7 @@ marquee#important:hover{
     /* margin-top: 5px; */
     margin-left: -10px;
     margin-right: -10px;
-    transition: background-color 300ms ease, border 300ms ease;
+    transition: background-color 300ms ease, outline 300ms ease;
     min-height: 238px !important;
     max-height: 238px !important;
 }
@@ -1793,19 +2077,22 @@ marquee#important:hover{
 
 .playlist:hover{
     background-color: #1c1c1c;
-    transition: background-color 300ms ease, border 300ms ease;
+    transition: background-color 300ms ease, outline 300ms ease;
 }
 
 .playlists{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 268px !important;
     /* height: 536px !important; */
     scrollbar-width: none;
     margin-right: -10px;
     margin-left: -10px;
     scroll-snap-type: y proximity;
     margin-bottom: -10px;
+}
+
+#playlistsID{
+    height: 268px !important;
 }
 
 #doubleScrollablePlaylists{
@@ -1905,12 +2192,15 @@ marquee.playlistTitle{
 .previousProjectArea{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 305px !important;
     scrollbar-width: none;
     margin-right: -10px;
     margin-left: -10px;
     scroll-snap-type: y proximity;
     margin-bottom: -10px;
+}
+
+#previousProjectAreaIDs{
+    height: 305px !important;
 }
 
 .previousProjectArea #previousProjectLink:hover{
@@ -1927,7 +2217,7 @@ marquee.playlistTitle{
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 10px;
-    transition: background-color 300ms ease, border 300ms ease;
+    transition: background-color 300ms ease, outline 300ms ease;
     min-height: 268px !important;
     max-height: 268px !important;
     display: inline-block;
@@ -1965,7 +2255,7 @@ marquee.playlistTitle{
 
 .previousProjectButtons:hover .previousProjectDownload {
     background-color: var(--button-color);
-    border-color: var(--h2-color);
+    outline-color: var(--h2-color);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -1974,7 +2264,7 @@ marquee.playlistTitle{
     background-color: var(--button-color);
     box-sizing: border-box;
     position: relative;
-    border: solid 2px var(--box-border-color);
+    outline: solid 2px var(--box-border-color);
     color: #eee;
     display: flex;
     font-size: inherit;
@@ -2018,7 +2308,7 @@ marquee.playlistTitle{
     width: 177px;
     border-width: 0px !important;
     border-radius: 3px;
-    border-color: var(--button-color) !important;
+    outline-color: var(--button-color) !important;
     margin-left: 0px !important;
     transition: all .3s ease;
     aspect-ratio: 1 / 1;
@@ -2060,6 +2350,7 @@ h2.previousProjectTitle{
 
 .previousProject div#badges div{
     float: none !important;
+    margin-right: 1px;
     display: inline-block;
     color: #eee !important;
     white-space: nowrap;
@@ -2166,8 +2457,9 @@ h2.previousProjectTitle{
 .filmImg{
     width: 230px;
     height: 345px;
-    transition: filter 500ms;
-    border: 0 !important;
+    transition: 500ms;
+    transition-property: filter;
+    outline: 0 !important;
     /* outline: solid 4px #ff8000 !important; */
 }
 
@@ -2181,6 +2473,7 @@ h2.previousProjectTitle{
     filter: brightness(50%);
     /* outline: solid 4px #00e054 !important; */
 }
+
 
 .filmUrlWrapper:hover > .diaryEntryInfo .filmTitleAndYear, .filmUrlWrapper:hover > .diaryEntryInfo .reviewTextWrapper, .filmUrlWrapper:hover > .diaryEntryInfo .watchedDate{
     opacity: 100;
@@ -2225,6 +2518,220 @@ h2.previousProjectTitle{
     color: #00ff62;
 }
 
+
+#achievementOverviewBoxes{
+    width: 27%;
+    display: inline-block;
+}
+
+#achievementOverviewBoxes h2#sideline{
+    color: var(--sideline-color);
+    font-size: 1em;
+}
+
+.gameEntry { 
+    display: inline-block;
+    margin-inline-end: 30px;
+    margin-block-start: 3px;
+    text-align: center;
+    transition: all 333ms;
+    transition-property: transform, scale, box-shadow;
+    margin-bottom: 10px;
+}
+
+.achievementGames{
+    overflow-y: scroll;
+    height: 540px;
+
+}
+
+.gameEntry:nth-child(4n+5), .gameEntry:first-child{
+    margin-left: 50px;
+}
+
+.gameName, .lastPlayed{
+    margin: 0;
+    padding: 0;
+    width: 0px !important;
+    font-size: 0px !important;
+    height: 0px !important;
+    position: absolute;
+    background-color: var(--bg-color);
+    display: none;
+}
+
+.gameImg{
+    outline: none !important;
+    width: 150px;
+    image-rendering: optimizeQuality !important;
+    transition: all 333ms;
+    box-shadow: 0 0 5px -5px #ffdc30;
+    transition-property: box-shadow, filter, outline;
+    animation: smallGlow .8s infinite ease-in-out alternate;
+    user-select: none !important;
+
+}
+
+.awardImg {
+    width: 30px;
+    outline: none !important;
+    background-color: #00000000 !important;
+    transform: translate(-145px, 206px);
+    position: absolute;
+}
+
+.percentageOfAchievements{
+    min-width: 125px !important; 
+    width: 125px !important;
+    max-width: 125px !important;
+    transform: translate(5%,-31px);
+    font-size: .8em;
+    padding: 3px;
+    color: #eee;
+    background-color: #3d4450;
+    /* background-image:linear-gradient(to left, #3d4450 0% 20%, #1a9fff 20% 100%); */
+    position: absolute;
+}
+
+.percentageOfAchievements#perfect{
+    background-color: #1a9fff;
+}
+
+.totalPlaytime {
+    opacity: 0;
+    min-width: 125px !important; 
+    width: 125px !important;
+    max-width: 125px !important;
+    transform: translate(5%,-45px);
+    font-size: .8em;
+    padding: 3px;
+    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    position: absolute;
+    transition: transform 233ms;
+}
+
+.achievementsCompleted {
+    min-width: 125px !important; 
+    width: 125px !important;
+    max-width: 125px !important;
+    transform: translate(5%,-28px);
+    font-size: .8em;
+    padding: 3px;
+    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    position: absolute;
+    transition: transform 133ms;
+}
+
+#noAchievementsPossible{
+    min-width: 125px !important; 
+    width: 125px !important;
+    max-width: 125px !important;
+    transform: translate(5%,-28px);
+    font-size: .8em;
+    padding: 3px;
+    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    position: absolute;
+    transition: transform 133ms;
+}
+
+.gameUrlWrapper:hover > .totalPlaytime{
+    opacity: 100%;
+    transform: translate(5%,-64px);
+    transition: transform 233ms;
+}
+
+.gameUrlWrapper:hover > .achievementsCompleted{
+    opacity: 100%;
+    transform: translate(5%,-48px);
+    transition: transform 133ms;
+}
+
+.gameUrlWrapper:hover> .achievementsCompleted#noAchievementsPossible{
+    opacity: 100%;
+    transform: translate(5%,-50px);
+    transition: transform 133ms;
+}
+
+.gameUrlWrapper:hover > .totalPlaytime#noAchievementsPossible{
+    opacity: 100%;
+    transform: translate(5%,-66px);
+    transition: transform 233ms;
+}
+
+.gameEntry:hover {
+    transform: perspective(500px) rotateX(15deg);
+    transition: all 333ms;
+    transition-property: transform, scale, box-shadow;
+    scale: 1.05;
+    box-shadow: 0px 30px 30px 0px var(--h2-color);
+}
+
+.gameEntry:hover > .gameUrlWrapper .gameImg{
+    outline: solid 4px var(--h2-color) !important;
+    /* animation: glow .8s infinite ease-in-out alternate; */
+    z-index: 9999;
+    transition: all 333ms;
+    transition-property: box-shadow, filter, outline;
+    /* filter: brightness(60%); */
+}
+
+.gameEntry#perfect:hover > .gameUrlWrapper .gameImg{
+    outline: solid 4px #ffdc30 !important;
+    animation: glow .8s infinite ease-in-out alternate;
+    z-index: 9999;
+    transition: all 333ms;
+    transition-property: box-shadow, filter, outline;
+    /* filter: brightness(60%); */
+}
+
+.linkBox{
+    text-decoration: none !important;
+    padding: 0;
+    height: 100%;
+}
+
+.linkBox:hover > #achievementOverviewBoxes #achievementOverviewPerfectGames, .linkBox:hover > #achievementOverviewBoxes #achievementOverviewPercentageAvg{
+    color: var(--h3-color);
+    font-weight: bold;
+    transition: all 333ms;
+    transition-property: color;
+    text-decoration: underline;
+}
+
+.linkBox:hover > #achievementOverviewBoxes .achievementOverviewSideline{
+    color: var(--default-text-color) !important;
+    font-weight: 333;
+    transition: all 333ms;
+    transition-property: color;
+    text-decoration: underline;
+}
+
+.linkBox:hover > #achievementOverviewBoxes {
+    background-color: color-mix(in srgb, var(--button-hover-color) 60%, var(--bg-color));
+}
+
+.sidewaysOverview{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: inline-block;
+    display: none;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 2%;
+    padding: 0;
+    margin-right: -8px;
+    user-select: none;
+}
+
+.achievementOverviewSideline{
+    transition: all 333ms;
+    transition-property: color;
+}
+
+#achievementOverviewPerfectGames{
+    transition: all 333ms;
+    transition-property: color;
+}
 
 .downloadIcon{
     float: left;
@@ -2297,7 +2804,81 @@ p#setuplinks br{
 }
 
 
+#map {
+    height: 100px;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 5px;
+}
 
+.leaflet-popup-content{
+    font-size: 1.1em !important;
+    width: 90px !important;
+    text-align: center;
+}
+
+
+.issBar {
+    margin-left: 3px;
+    width: calc(50% - 8px);
+    background-color: #929292;
+    display: inline-block;
+}
+
+.insideIssBar{
+    margin-top: 2px;
+    width: 1%;
+    height: 4px;
+    background-color: #4698cc;
+    border-radius: 1px;
+}
+
+#internationalSpaceStation p{
+    font-size: .7em;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+
+
+.issInfo{
+    outline: solid 2px var(--subtitle-color);
+    padding-left: 12px;
+}
+
+.issInfo div p.floatRight{
+    margin-top: 3px !important;
+}
+
+#issUnits{
+    color: var(--subtitle-color);
+    font-size: .9em;
+    margin-left: -3px;
+
+}
+
+.floatLeft { 
+    float: left;
+}
+
+.floatRight { 
+    float: right;
+}
+
+#favShow, #favFilm{
+    color: var(--h2-color);
+    transition-property: color;
+    transition: 333ms;
+}
+
+#favShow:hover, #favFilm:hover{
+    color: var(--h3-color);
+    transition-property: color;
+    transition: 333ms;
+    cursor: pointer;
+    text-decoration: underline white;
+}
 
 
 /* Link colors / Animations */
@@ -2388,6 +2969,15 @@ p#setuplinks br{
     background-clip: text; 
 }
 
+#curseforge{
+    color: #eb622b !important;
+}
+
+#curseforge:hover{
+    background: #eb4e2b  -webkit-linear-gradient(left, #3f3f3f, #eb4e2b ) no-repeat 0 0 / 30px;
+    background-clip: text; 
+}
+
 #letterboxd{
     color: #ff8000 !important;
 }
@@ -2407,6 +2997,17 @@ p#setuplinks br{
     background-clip: text; 
 }
 
+.button#steam {
+    color: #181818 !important;
+    background-color: #66c0f4;
+}
+
+.button#steam:hover{
+    color: #545454 !important;
+    background: #89d4ff;
+    background-color: #89d4ff !important;
+    background-clip: unset !important; 
+}
 
 /* end of colors */
 
@@ -2601,6 +3202,7 @@ body.invert img{
     filter: invert() !important;
 }
 
+
 /* sepia below */
 
 body.sepia{
@@ -2631,10 +3233,9 @@ body.sepia #container{
 
     #toosmallBox{
         font-size: 180%;
-        scale: 1.2;
         margin-top: 3vh;
         margin-bottom: 3vh;
-        border-color: red;
+        outline-color: red;
         display: none;
     }
 
@@ -2659,11 +3260,11 @@ body.sepia #container{
 
 
     .mobile .box:hover{
-        border: 2px solid var(--box-border-color);
+        outline: 2px solid var(--box-border-color);
     }
 
 
-    .mobile .button{
+    .mobile .socials .button{
         font-weight: 900;
         margin-top: 5px;
         padding-top: 5px;
@@ -2673,7 +3274,7 @@ body.sepia #container{
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        border: solid;
+        outline: solid;
         background-color: transparent;
         width: 52vw;
     }
@@ -2722,7 +3323,7 @@ body.sepia #container{
         font-size: 1.8em;
         padding: 7px;
         padding-right: 16px;
-        border: 2px solid var(--box-border-color);
+        outline: 2px solid var(--box-border-color);
         background-color: var(--box-color);
         color: var(--theme-button-text-color);
         border-radius: 3px;
@@ -2732,7 +3333,47 @@ body.sepia #container{
         position: absolute;
         transform: translateX(850px);
         /* padding-left: 735px; */
-        z-index: 1000;
+        z-index: 88;
+    }
+
+    .mobile .iconSocials a.button{
+        min-width: 40%;
+        font-size: .8em;
+    }
+
+
+    .mobile .iconSocials a img{
+        outline: 4px solid var(--h2-color) !important;
+        border-radius: 5%;
+        padding: 3px;
+        background-color: #eee;
+        width: 48px;
+        height: 48px;
+        transition: all 333ms;
+        margin-bottom: 10px;
+    }
+
+    .mobile .iconSocials img{
+        outline: 4px solid var(--h2-color) !important;
+        border-radius: 5%;
+        padding: 3px;
+        background-color: #eee;
+        width: 100%;
+        height: 64px;
+        transition: all 333ms;
+    }
+
+    .mobile .iconSocials img:hover{
+        outline: 4px solid var(--h2-color) !important;
+        border-radius: 5%;
+        padding: 2px;
+        background-color: #ffffff;
+        transition: all 333ms;
+    }
+
+
+    .mobile .iconSocials a:last-child > img{
+        width: calc(100% - 10px);
     }
 
     @media only screen and (hover: none){ 
@@ -2758,7 +3399,12 @@ body.sepia #container{
         .basicpagemobile{
             display: block !important;
         }
-
+        .loading{
+            display: none !important;
+        }
+        .fontbuttondiv{
+            display: none;
+        }
     }
 
 
@@ -2773,13 +3419,10 @@ body.sepia #container{
 .tmcontianer {
     display: none;
     z-index: 1000;
-    position: fixed;
-    width: 100%;
     top: 0;
 }
 
 .tmcontianer .box{
-    font-size: 200%;
     text-align: center;
     background-color: var(--bg-color);
 }

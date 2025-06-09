@@ -3,7 +3,14 @@ const letterboxdLoading = document.getElementById("letterboxdLoading")
 const letterboxdDiaryExample1 = document.getElementById("letterboxdDiaryExample1")
 const letterboxdDiaryExample2 = document.getElementById("letterboxdDiaryExample2")
 const letterboxdDiaryExample3 = document.getElementById("letterboxdDiaryExample3")
+const letterboxd = document.getElementById("letterboxd")
 
+// smooth out some behavior 
+function truncateString(yourString, maxLength) {
+    // get the index of space after maxLength
+    const index = yourString.indexOf(" ", maxLength);
+    return index === -1 ? yourString : yourString.substring(0, index)
+}
 
 setInterval(function() {
 
@@ -25,7 +32,7 @@ function fetchLetterboxdData(){
     .then(data => {
         for (var i=0; i < data.length; i++){
             var diaryEntryData = data[i]
-            if (i > 10){
+            if (i > 16){
                 letterboxdLoading.innerText = "check_circle"
                 letterboxdLoading.style.animation = "none"
                 letterboxdDiaryExample1.style.display = "none"
@@ -69,7 +76,12 @@ function dataEntryParse(diaryEntryData) {
     var urlRaw = diaryEntryData.uri;
 
     var watchedDate = new Date(watchedUnix).toLocaleDateString("en-UK");
+    var watchedDateJS = new Date(watchedUnix)
     var ratingScore = ratingScoreRaw.replaceAll("★", "★ ");
+
+    if (watchedDateJS >= Date.now() - (1000 * 60 * 60 * 24 * 14)){
+        letterboxd.innerHTML = "⚡︎ Letterboxd <span id='sideline' class='subtitleNew'>⏺</span>"
+    }
 
     if (reviewRaw.length >= 100){
         var review = truncateString(reviewRaw, 100) + " [...]"
