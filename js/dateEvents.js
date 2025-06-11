@@ -29,6 +29,19 @@ function dateEvents() {
             themebuttondivmobilewide.remove();
             themebuttondivmobile.remove();
         };
+
+        if (month == 5 & day >= 1 && day <= 30){
+            console.log("HAPPY PRIDE")
+            body.className = "";
+            body.className = "pride";
+            var themebuttondiv = document.getElementById("themebuttondiv");
+            var themebuttondivmobilewide = document.getElementById("themebuttondivmobilewide");
+            var themebuttondivmobile = document.getElementById("themebuttondivmobile");
+    
+            themebuttondiv.remove();
+            themebuttondivmobilewide.remove();
+            themebuttondivmobile.remove();
+        };
     
         if (month == 9 & day >= 24 && day <= 31){
             console.log("HALLOWEEEEEN")

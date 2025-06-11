@@ -32,7 +32,7 @@ function subtitleGenerate(){
         var randomNumber = Math.floor(Math.random() * (greetingsArray.length));
         var randomNumber2 = Math.floor(Math.random() * 11);
         if (randomNumber2 ==  10){
-            if (hrs < 12 && hrs >= 4)
+            if (hrs < 12 && hrs >= 5)
                 greet = 'Good Morning';
             else if (hrs >= 12 && hrs < 17)
                 greet = 'Good Afternoon';
