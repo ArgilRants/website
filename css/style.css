@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
-
 /* font import */
 /* @font-face {
     font-family: 'Material Symbols Sharp';
@@ -84,7 +83,6 @@
     font-weight: inherit;
 }
 
-
 :root{
     scale: 1;
     text-rendering: optimizeLegibility;
@@ -95,23 +93,18 @@
     background: var(--h2-color);
 }
 
-
 html{
     --version: "1.3";
     --mobileVersion: "1.2"
 }
 
-
 /* *{
     outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important; 
 } */
 
-
 .debug, #footerDebug{
     /* display: block; */
     display: none;
-
-
     margin-top: 15px;
 }
 
@@ -122,8 +115,6 @@ html{
 #mobileVersion::before{
     content: var(--mobileVersion);
 }
-
-
 
 /* DARK MODE COLORS */
 body{
@@ -151,9 +142,7 @@ body{
     --theme-button-text-color: #e4da6a;
 }
 
-
 /* LIGHT MODE COLORS */
-
 body.light {
     --bg-color: #eee;
     --default-text-color: #181818;
@@ -178,7 +167,6 @@ body.light {
     --theme-button-text: "☽";
     --theme-button-text-color: #2e2e2e;
 }
-
 
 @media (prefers-color-scheme: light) {
     /* DARK MODE COLORS */
@@ -206,7 +194,6 @@ body.light {
         --theme-button-text: "☀";
         --theme-button-text-color: #e4da6a;
     }
-
 
     /* LIGHT MODE COLORS */
 
@@ -243,14 +230,10 @@ body.light {
         filter: brightness(0.8);
     }
 
-
     #themebutton::before {
         content: var(--theme-button-text);
     }
-
 }
-
-
 
 body.light .socials, body.overwatch .socials{
     filter: brightness(0.75);
@@ -264,15 +247,13 @@ body.light{
     --theme-button-text: "☽";
 }
 
-
 .iconSharp{
     font-family: Material Symbols Sharp;
     font-variation-settings: 
     'FILL' 0,
     'wght' 700,
     'GRAD' 200,
-    'opsz' 48;
-    
+    'opsz' 48;    
 }
 
 .iconRounded{
@@ -293,7 +274,6 @@ body.light{
     'opsz' 48;
 }
 
-
 #bg{
     z-index: -99999;
     background-size: cover;
@@ -302,9 +282,6 @@ body.light{
     width: 100%;
     position: absolute;
 }
-
-
-
 
 #themebutton{
     font-family: 'monocraft';
@@ -378,13 +355,9 @@ body.light{
     user-select: none;
 }
 
-
-
-
 #themebutton::before {
     content: var(--theme-button-text);
 }
-
 
 #themeSelect{
 }
@@ -402,7 +375,6 @@ select {
     color: var(--default-text-color);
     border-radius: 3px;
     text-align: center;
-
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 2px;
@@ -432,7 +404,6 @@ select:has(>option[value="auto"]:checked){
     width: max-content;
 }
 
-
 body {
     display: block;
     background-color: var(--bg-color);
@@ -450,19 +421,13 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     filter: none;
-    /* transition: background-color 555ms; */
-    
+    /* transition: background-color 555ms; */    
 }
-
-
-
-
 
 div {
     display: block;
     unicode-bidi: isolate;
 }
-
 
 .loading{
     opacity: 0;
@@ -491,8 +456,6 @@ div {
     margin: 0 auto;
     padding-top: 8px;
 }
-
-
 
 #basicpage{
     margin-left: 10px;
@@ -561,7 +524,6 @@ div {
     animation-direction: reverse !important;
 }
 
-
 .bouncy {
     animation: bounce 1.2s ease-in-out infinite alternate;
     display: inline-block;
@@ -580,8 +542,6 @@ div {
     display: table-cell;
     color: var(--default-text-color);
 }
-
-
 
 td#important{
     width: 900px
@@ -614,7 +574,6 @@ td#menu{
     background-size: 100% 35px;
 }
 
-
 .title a{
     color: var(--title-color) !important;
 }
@@ -625,8 +584,6 @@ td#menu{
     filter: opacity(0.7);
     animation: flicker 0.7s linear infinite;
 }
-
-
 
 .title:hover{
     animation: flicker 0.7s linear infinite;
@@ -662,7 +619,6 @@ span#titleL{
     margin-bottom: 0px !important;
 }
 
-
 #lastLoggedOff {
     font-size: 75%;
     margin-top: -2px;
@@ -692,7 +648,6 @@ footer {
     color: #22b143;
 }
 
-
 .away {
     color: var(--h3-color);
 }
@@ -721,13 +676,11 @@ footer {
     font-style: italic;
 }
 
-
 #ebgWiki{
     /* background-image: url("../img/evenbettergui/cover_blurred.png");
     background-size: cover;
     background-repeat: no-repeat; */
 }
-
 
 #playing {
     display: none;
@@ -767,7 +720,6 @@ footer {
     transition: background-color 222ms;
     overflow-wrap: break-word;
     min-height: 95px !important;
-
 }
 
 #achievements{
@@ -781,7 +733,6 @@ footer {
     overflow-wrap: break-word;
     padding-top: 36px;
 }
-
 
 #achievementLinkHome{
     background-color: var(--button-color);
@@ -829,8 +780,7 @@ footer {
     margin-left: 3px;
     width: calc(100% - 8px);
     background-color: #929292;
-    border-radius: 1px;
-    
+    border-radius: 1px;    
 }
 
 #onlineGame{
@@ -863,13 +813,9 @@ footer {
     animation: pulse 3s infinite alternate-reverse ease-in-out;
 }
 
-
-
 #achievementOverviewBox{
     /* margin-top: 10px */
 }
-
-
 
 .linkBox #achievementOverviewBoxes{
     vertical-align:top;
@@ -879,8 +825,6 @@ footer {
 #achievementOverviewBoxes{
     vertical-align:top;
 }
-  
-
 
 #achievementBar {
     margin-top: 2px;
@@ -903,7 +847,6 @@ footer {
     font-weight: 600;
 }
 
-
 #gameLink:hover > #playingInfo span#twoWeekHrs{
     color: var(--h3-color) !important;
 }
@@ -924,7 +867,6 @@ footer {
     background-color: color-mix(in srgb, var(--button-hover-color) 50%, transparent); 
 }
 
-
 #weekHrInfo{
     display: none;
 
@@ -939,13 +881,11 @@ footer {
     font-size: .75em;
 }
 
-
 #titleLink:hover span.titleTilt {
     animation: flicker 0.4s linear infinite;
     transform: skew(-10deg);
     filter: brightness(60%);
 }
-
 
 #badgeRoll{
     margin-right: 10px;
@@ -955,7 +895,6 @@ footer {
 #badgeRoll marquee a:hover{
     filter: brightness(110%);
 }
-
 
 .subtitleMain {
     text-align: center;
@@ -970,7 +909,6 @@ footer {
     transition: all 1s;
 }
 
-
 img {
     background-color: color-mix(in srgb, var(--button-color), transparent);
 }
@@ -981,8 +919,6 @@ img {
     writing-mode: vertical-rl;
     transform: translateX(1200%);
 }
-
-
 
 .navlink{
     display: inline-block;
@@ -997,13 +933,11 @@ img {
     -webkit-text-fill-color: var(--navlink-hover-color);
     animation: links 1.3s ease;
     animation-fill-mode: both;
-
 }
 
 .navlink abbr{
     text-decoration: none;
 }
-
 
 hr {
     border: 0;
@@ -1020,7 +954,6 @@ table{
     unicode-bidi: isolate;
     border-spacing: 10px;
 }
-
 
 table#tabletop{
     margin-bottom: -25px;
@@ -1046,11 +979,6 @@ td {
     unicode-bidi: isolate;
 }
 
-
-
-
-
-
 table#wiki{
     margin: 0;
     padding: 0;
@@ -1073,7 +1001,6 @@ table#wiki img{
     image-rendering: auto !important;
 }
 
-
 .box{
     background-color: var(--box-color);
     outline: 2px solid var(--box-border-color);
@@ -1089,16 +1016,12 @@ table#wiki img{
 }
 
 .box:hover{
-
     outline-color: var(--title-color);
     background-color: color-mix(in srgb, var(--box-color) 92%, var(--button-hover-color));
-
     /* box-shadow: 0 0 3px var(--title-color), -2px 0 3px var(--title-color), 2px 0 3px var(--title-color);      */
-
     /* scale: 1.; */
     transition-property: outline, background-color;
     transition: 333ms;
-
 }
 
 .box:target {
@@ -1111,17 +1034,11 @@ table#wiki img{
     transition: outline .2s;
 }
 
-
-
-
-
-
 .box#importantbox:hover{
     outline: 2px solid #ff0000e7 !important;
     box-shadow: none !important;
     transition: none 0s !important;
 }
-
 
 .scrollable{
     overflow-y: scroll;
@@ -1144,15 +1061,11 @@ table#wiki img{
     font-weight: 600;
 }
 
-
 /* drop downs */
-
-
 
 .dropdownContent {
     display: none;
 }
-
 
 .showDropdown {
     display: block;
@@ -1192,11 +1105,9 @@ table#wiki img{
     animation: dropdownBtnAnim 2s infinite;
 }
 
-
 #centerbox{
     text-align: center;
 }
-
 
 h2{
     color: var(--h2-color);
@@ -1211,8 +1122,6 @@ h2{
 #menu .box h2{
     font-size: 1.2em;
 }
-
-
 
 #h2icon:hover, #previousProjectH2Icon:hover{
     color: var(--h2icon-color);
@@ -1232,8 +1141,6 @@ h2{
     font-size: 1em;
 }
 
-
-
 h2#welcome #dotdev{
     display: inline;
 }
@@ -1250,11 +1157,9 @@ h2#welcome:hover #dotdots{
     display: inline;
 }
 
-
 #importantbox{
     outline: 2px solid #ff0000ab;
 }
-
 
 #importantbox #importanth2:hover{
     background: linear-gradient(to right, var(--h2-color) 20%, #ff0000 30%, var(--title-color) 70%, var(--h2-color) 80%);
@@ -1267,12 +1172,9 @@ h2#welcome:hover #dotdots{
     user-select: none !important;
 }
 
-
 #importantbox p{
     font-size: 1.05em;
 }
-
-
 
 #ytembed{
     width: 384px;
@@ -1286,7 +1188,6 @@ h2#welcome:hover #dotdots{
     height: 216px;
     outline: 2px solid var(--default-text-color);
 }
-
 
 #newbadge{
     float: right;
@@ -1320,7 +1221,6 @@ h2#welcome:hover #dotdots{
     white-space: nowrap;
     overflow: hidden;
 }
-
 
 #iconBadge{
     float: right;
@@ -1363,9 +1263,6 @@ h2#welcome:hover #dotdots{
     color: #d7d7d7;
 }
 
-
-
-
 #releaseBadge{
     float: right;
     background: #22b143ee;
@@ -1396,7 +1293,6 @@ h2#welcome:hover #dotdots{
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
-
 #gifBox:hover > div#randGif{
     filter: brightness(110%);
 }
@@ -1414,7 +1310,6 @@ h2#welcome:hover #dotdots{
     filter: none !important;
 }
 
-
 div#badges{
     position: relative;
     float: right;
@@ -1426,8 +1321,6 @@ div#badges{
 td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #releaseBadge, td#menu .box h2 #newbadge {
     margin-right: 17%;
 }
-
-
 
 #mcbadge{
     float: right;
@@ -1443,7 +1336,6 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
-
 #sfbadge{
     float: right;
     background: color-mix(in srgb, #fa9549ee 70%, var(--box-color));
@@ -1457,7 +1349,6 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     margin-bottom: 5px;
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
-
 
 #infobadge{
     float: right;
@@ -1473,7 +1364,6 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 40%, transparent);
 }
 
-
 .chromeBadge {
     background: rgb(26,115,232);
     background: linear-gradient(90deg, rgba(26,115,232,.80) 0%, rgba(26,115,232,.80) 25%, rgba(226,58,46,.80) 25%, rgba(226,58,46,.80) 41%, rgba(226,58,46,.80) 50%, rgba(251,191,18,.80) 50%, rgba(251,191,18,.80) 76%, rgba(39,152,71,.80) 76%, rgba(39,152,71,.80) 100%) !important; 
@@ -1482,11 +1372,6 @@ td#menu .box h2 #iconBadge, td#menu .box h2 #betaBadge, td#menu .box h2 #release
 .firefoxBadge {
     background: color-mix(in srgb, #e66000ee 70%, var(--box-color)) !important;
 }
-
-
-
-
-
 
 h3{
     font-size: 1.1em;
@@ -1502,7 +1387,6 @@ p {
     color: var(--default-text-color);
     margin-bottom: 0;
 }
-
 
 ul{
     margin-block-start: 3px;
@@ -1533,13 +1417,10 @@ ul ul li{
     color: var(--uk-color);
 }
 
-
 #sideline{
     color: var(--sideline-color);
     font-size: 80%;
 }
-
-
 
 #censored{
     filter: blur(1.4px);
@@ -1573,13 +1454,11 @@ sup{
     margin-top: 0px;
 }
 
-
 #achievementsSubtitle{
     font-size: .8em;
     color: var(--subtitle-color);
     margin: 0;
 }
-
 
 img#logo{
     width: 133px;
@@ -1587,7 +1466,6 @@ img#logo{
     margin: 10px 10px 5px 0px;
     float: left;
 }
-
 
 .box#comingsoonBox:hover{
     pointer-events: none !important;
@@ -1601,7 +1479,6 @@ img#logo{
     filter: grayscale();
     pointer-events: none !important;
 }
-
 
 .comingsoonText {
     user-select: none !important;
@@ -1626,7 +1503,6 @@ img#logo{
     transform: translateY(500%);
 }
 
-
 div.box img{
     outline: 4px solid var(--h2-color);
     margin-left: -3px;
@@ -1635,7 +1511,6 @@ div.box img{
 div.box img:hover{
     filter: brightness(110%);
 }
-
 
 .viewerjs img{
 
@@ -1654,7 +1529,6 @@ div.box img#right{
     float: right;
     margin: 5px 10px 5px 0px;
 }
-
 
 .modrinthDownload{
     background-color: var(--modrinth-button-color);
@@ -1713,7 +1587,6 @@ div.box img#right{
     background-color: var(--button-hover-color);
 }
 
-
 #scrollingTextHome {
     color: var(--scrollingtexthome-color);
 }
@@ -1721,10 +1594,7 @@ div.box img#right{
 #scrollingTextHome:hover{
     color: #a3a3a3;
     color: var(--scrollingtexthome-hover-color);
-
 }
-
-
 
 a {
     text-decoration: none;
@@ -1741,10 +1611,6 @@ a[target=_blank]:hover{
     
 }
 
-
-
-
-
 a[class^="openstab"]:not(:has(img)) {
 	background-image: url(./img/external-link.svg);
 	background-repeat: no-repeat;
@@ -1752,16 +1618,11 @@ a[class^="openstab"]:not(:has(img)) {
 	padding-right: 0.8em;
 }
 
-
-
-
-
 marquee {
     display: inline-block;
     width: auto;
     user-select: none;
 }
-
 
 marquee#important {
     background-color: #ff0000ab;
@@ -1769,18 +1630,12 @@ marquee#important {
     outline: 2px solid var(--box-border-color);
     border-radius: 2px;
     transition: outline 0s;
-    
 }
 
 marquee#important:hover{
     color: #fff;
     transition: outline .4s;
-
 }
-
-
-
-
 
 #musicbox{
     overflow: hidden;
@@ -1838,7 +1693,6 @@ body.light #listeningtitle{
     overflow-x: hidden;
 }
 
-
 #achievementLoadingIcon{
     font-size: 5em !important;
     font-style: normal;
@@ -1885,7 +1739,6 @@ body.light #listeningtitle{
     float: right;
 }
 
-
 #songlink{
     margin-top: -10px;
     display: inline-block;
@@ -1902,10 +1755,6 @@ body.light #listeningtitle{
     text-decoration: none;
 }
 
-
-
-
-
 #songspan{
     padding-top:11px;
     width: 120px;
@@ -1915,7 +1764,6 @@ body.light #listeningtitle{
     z-index: -1;
     transition: all 333ms;
 }
-
 
 #artistspan{
     width: 120px;
@@ -1938,7 +1786,6 @@ body.light #listeningtitle{
     font-weight: 600;
 }
 
-
 #nowPlayingArtist{
     display: table-cell;
     text-align: justify;
@@ -1951,7 +1798,6 @@ body.light #listeningtitle{
     font-style: italic;
 }
 
-
 #albumart {
     position: absolute;
     outline: 2px solid #1ed760 !important;
@@ -1963,8 +1809,6 @@ body.light #listeningtitle{
     transition: all 333ms;
     image-rendering: auto !important;
 }
-
-
 
 #listening:hover{
     cursor: pointer;
@@ -1996,7 +1840,6 @@ body.light #listeningtitle{
     text-decoration-color: var(--subtitle-color) !important;
 } 
     
-
 #albumart:hover{
     outline: 2px solid #4be982;
     filter: none !important;
@@ -2006,7 +1849,6 @@ body.light #listeningtitle{
     outline: 2px solid #4be982;
     filter: none !important;
 }
-
 
 #songlink:hover {
     background-color: color-mix(in srgb, var(--button-hover-color) 50%, transparent); 
@@ -2025,11 +1867,9 @@ body.light #listeningtitle{
     text-decoration-color: var(--subtitle-color) !important;
 }
 
-
 .linkWrapper:hover{
     text-decoration: none !important;
 }
-
 
 #playlistLink{
     width: 177px;
@@ -2072,9 +1912,6 @@ body.light #listeningtitle{
     min-height: 238px !important;
     max-height: 238px !important;
 }
-
-
-
 
 .playlist:hover{
     background-color: #1c1c1c;
@@ -2148,7 +1985,6 @@ body.light #listeningtitle{
     transition: all .3s ease;
 }
 
-
 .playlistPlayIconBackground{
     background-color: #1ed760;
     box-sizing: border-box;
@@ -2167,7 +2003,6 @@ body.light #listeningtitle{
     font-size: 1.8em;
 }
 
-
 marquee.playlistTitle{
     color: #eee !important;
     white-space: nowrap;
@@ -2185,10 +2020,6 @@ marquee.playlistTitle{
     padding-right: 0px !important;
     height: 43px !important;
 }
-
-
-
-
 
 .previousProjectArea{
     overflow-y: scroll;
@@ -2319,7 +2150,6 @@ marquee.playlistTitle{
     filter: none;
 }
 
-
 h2.previousProjectTitle{
     /* white-space: nowrap; */
     font-size: 1em;
@@ -2348,7 +2178,6 @@ h2.previousProjectTitle{
     transition: all .5s ease;
 }
 
-
 .previousProject div#badges div{
     float: none !important;
     margin-right: 1px;
@@ -2362,7 +2191,6 @@ h2.previousProjectTitle{
     min-width: 25%;
     max-width: 90%;
 }
-
 
 #letterboxdDiaryEntries{
     height: 355px;
@@ -2433,7 +2261,6 @@ h2.previousProjectTitle{
     /* border-bottom: solid #646464 4px; */
 }
 
-
 .watchedDate{
     height: 19px !important;
     transform: translateY(-45px);
@@ -2475,12 +2302,10 @@ h2.previousProjectTitle{
     /* outline: solid 4px #00e054 !important; */
 }
 
-
 .filmUrlWrapper:hover > .diaryEntryInfo .filmTitleAndYear, .filmUrlWrapper:hover > .diaryEntryInfo .reviewTextWrapper, .filmUrlWrapper:hover > .diaryEntryInfo .watchedDate{
     opacity: 100;
     transition: all 222ms;
 }
-
 
 #letterboxdDiaryEntries div:last-child > .filmUrlWrapper .diaryEntryInfo .filmTitleAndYear, #letterboxdDiaryEntries div:last-child > .filmUrlWrapper .diaryEntryInfo .reviewTextWrapper, #letterboxdDiaryEntries div:last-child > .filmUrlWrapper .diaryEntryInfo .watchedDate{
     opacity: 100;
@@ -2499,8 +2324,6 @@ h2.previousProjectTitle{
     transform: translateY(-45px);
 }
 
-
-
 .filmUrlWrapper:hover > .diaryEntryInfo .filmTitleAndYear{
     transform: translateY(-362px);
 }
@@ -2512,7 +2335,6 @@ h2.previousProjectTitle{
 .filmUrlWrapper:hover > .diaryEntryInfo .watchedDate{
     transform: translateY(-55px);
 }
-
 
 .filmUrlWrapper:hover > .diaryEntryInfo .ratingScore{
     transition: all 333ms;
@@ -2543,7 +2365,6 @@ h2.previousProjectTitle{
 .achievementGames{
     overflow-y: scroll;
     height: 540px;
-
 }
 
 .gameEntry:nth-child(4n+5), .gameEntry:first-child{
@@ -2570,7 +2391,6 @@ h2.previousProjectTitle{
     transition-property: box-shadow, filter, outline;
     animation: smallGlow .8s infinite ease-in-out alternate;
     user-select: none !important;
-
 }
 
 .awardImg {
@@ -2751,11 +2571,9 @@ h2.previousProjectTitle{
     animation: sidewaysBounce .8s infinite !important;
 }
 
-
 .ficsitDownload:hover .downloadIcon{
     animation: bounce .8s infinite;
 }
-
 
 .buttonIcon{
     float: left;
@@ -2804,7 +2622,6 @@ p#setuplinks br{
     font-size: .5em;
 }
 
-
 #map {
     height: 100px;
     width: 100%;
@@ -2817,7 +2634,6 @@ p#setuplinks br{
     width: 90px !important;
     text-align: center;
 }
-
 
 .issBar {
     margin-left: 3px;
@@ -2841,8 +2657,6 @@ p#setuplinks br{
     margin-top: 0;
 }
 
-
-
 .issInfo{
     outline: solid 2px var(--subtitle-color);
     padding-left: 12px;
@@ -2856,7 +2670,6 @@ p#setuplinks br{
     color: var(--subtitle-color);
     font-size: .9em;
     margin-left: -3px;
-
 }
 
 .floatLeft { 
@@ -2881,14 +2694,11 @@ p#setuplinks br{
     text-decoration: underline white;
 }
 
-
 /* Link colors / Animations */
 
 #spotify{
     color: #1ed760 !important;
-
 }
-
 
 #spotify:hover{
     background: #1ed760 -webkit-linear-gradient(left, #3f3f3f, #1ed760) no-repeat 0 0 / 30px;
@@ -2920,7 +2730,6 @@ p#setuplinks br{
     color: #ffffff00;
 }
 
-
 #instagram:hover{
     background:  #d7264c -webkit-linear-gradient(left, #3f3f3f, #833ab4,#fd1d1d,#fcb045) no-repeat 0 0 / 60px ;
     background-clip: text;   
@@ -2937,13 +2746,10 @@ p#setuplinks br{
 
 #youtube{
     /* color: #ff1c30 !important; */
-
-
     background-color: black;
     background:  -webkit-linear-gradient(left, #EE2d38,#ED348f) no-repeat ;
     background-clip: text;
     color: #ffffff00;
-
 }
 
 #youtube:hover{
@@ -2959,7 +2765,6 @@ p#setuplinks br{
     background: #6441a5  -webkit-linear-gradient(left, #3f3f3f, #6441a5 ) no-repeat 0 0 / 30px;
     background-clip: text; 
 }
-
 
 #modrinth{
     color: #00af5c !important;
@@ -2988,7 +2793,6 @@ p#setuplinks br{
     background-clip: text; 
 }
 
-
 #steam{
     color: #66c0f4 !important;
 }
@@ -3012,9 +2816,7 @@ p#setuplinks br{
 
 /* end of colors */
 
-
 /* confetti */
-
 .confetti{
     width: 100%;
     height: 100%;
@@ -3032,7 +2834,6 @@ p#setuplinks br{
 }
 
 /* HALLOWEEN */
-
 body.halloween {
     --bg-color: #0a0201;
     --default-text-color: #cccccc;
@@ -3059,7 +2860,6 @@ body.halloween {
 }
 
 /* pride */
-
 body.pride {
     --bg-color: #000204;
     --default-text-color: #eee;
@@ -3094,10 +2894,7 @@ body.pride #container, body.pride #basicpage{
     margin-bottom: 0px !important;
 }
 
-
-
 /* holidays */
-
 body.holidays {
     --bg-color: rgb(0, 7, 0);
     --default-text-color: #ffffff;
@@ -3168,8 +2965,6 @@ body.valentine #randGif:hover{
     filter: brightness(110%) !important;
 }
 
-
-
 body.valentine #titleLink:hover span#titleA{
     animation: flicker 0.4s linear infinite;
     transform: skew(-10deg);
@@ -3225,7 +3020,6 @@ body.overwatch{
     background-size: cover;
 }
 
-
 /* invert below */
 
 body.invert{
@@ -3241,7 +3035,6 @@ body.invert img{
     filter: invert() !important;
 }
 
-
 /* sepia below */
 
 body.sepia{
@@ -3252,8 +3045,6 @@ body.sepia{
 body.sepia #container{
     animation: textShadow 2s infinite;
 }
-
-
 
 /* mobile below */
 
@@ -3290,18 +3081,13 @@ body.sepia #container{
         margin-bottom: 15px;
     }
 
-
-
-
     .mobile .box#importantbox p{
         font-size: .7em;
     }
 
-
     .mobile .box:hover{
         outline: 2px solid var(--box-border-color);
     }
-
 
     .mobile .socials .button{
         font-weight: 900;
@@ -3326,7 +3112,6 @@ body.sepia #container{
         background: none !important;
     }
 
-
     .mobile .button#instabtnmobile {
         border-image: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045)1;
         border-style: solid;
@@ -3349,7 +3134,7 @@ body.sepia #container{
         background:  -webkit-linear-gradient(left, #EE2d38,#ED348f) no-repeat !important ;
         background-clip: text !important;
         color: #ffffff00;
-}
+    }
 
     .mobile .themebuttondivmobile {
         position: absolute;
@@ -3379,7 +3164,6 @@ body.sepia #container{
         min-width: 40%;
         font-size: .8em;
     }
-
 
     .mobile .iconSocials a img{
         outline: 4px solid var(--h2-color) !important;
@@ -3446,12 +3230,7 @@ body.sepia #container{
         }
     }
 
-
-    
-
-    
 /* mobile above */
-
 
 /* too small */
 
@@ -3469,7 +3248,6 @@ body.sepia #container{
 .tmcontianer .box h2{
     color: #bb0000 !important;
 }
-
 
 @media only screen and (max-width:900px){
 
@@ -3530,7 +3308,6 @@ body.sepia #container{
 
 }
 
-
 @media screen and (min-width:901px) {
     .mobile {
         display: none;
@@ -3586,17 +3363,3 @@ body.sepia #container{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
