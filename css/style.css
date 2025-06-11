@@ -450,7 +450,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     filter: none;
-    transition: background-color 555ms;
+    /* transition: background-color 555ms; */
     
 }
 
