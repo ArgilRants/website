@@ -65,6 +65,12 @@
         },
         "2" : {
             "title" : "Fixed darkness on social links when using light mode"
+        },
+        "3" : {
+            "title" : "Optimized random gif box",
+            "description" : {
+                "0": "the total file size of almost 40 gifs is down from ~180mb to around 30mb"
+            }
         }
     }
 }
