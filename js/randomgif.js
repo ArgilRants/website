@@ -4,7 +4,7 @@ ImageArray = new Array();
 
 
 for (var i=0; i < numberOfImages; i++){
-    ImageArray[i] = i+".gif"
+    ImageArray[i] = i+".webp"
     // console.log(ImageArray)
 }
 
