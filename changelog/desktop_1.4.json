@@ -1,0 +1,70 @@
+{
+    "version": "1.4",
+    "type": "desktop",
+    "date": {
+        "day": "24",
+        "month": "July",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "Added new [timer box](./index.html#timerBox)",
+            "description": {
+                "0" : "this box currently has a persistent timer counting down to v2.0 mobile",
+                "1" : "you can create your own timers with date, time, custom background color and timezone",
+                "2" : "each non persistent timer can be deleted and all timers can be cleared with a button in the options area"
+            }
+        },
+        "1": {
+            "title": "Added 14 new gifs to the [random gif box](./index.html#gifBox)"
+        },
+        "2": {
+            "title": "Helped create my [girlfriends site](./yuqingtangs.html) <span id='sideline'>check it outt</span>"
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "[Teenage Engineering](https://teenage.engineering/store/tx-6) theme",
+            "description": {
+                "0" : "check out progress on this on [the github issue](https://github.com/ArgilRants/website/issues/18)"
+            }
+        },
+        "1": {
+            "title": "Migrate all previous changelogs to the new format",
+            "description": {
+                "0" : "this requires a lot of work should be done for v1.5"
+            }
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Updated light and dark mode colors",
+            "description": {
+                "0": "colors are clearer, brighter and not as random",
+                "1": "lots of small changes to colors across the entire site for better readability"
+            }
+        },
+        "1" : {
+            "title" : "Gave change log page a new look / far better functionality",
+            "description" : {
+                "0": "now has a 'terminal-like' look",
+                "1": "now loads the logs from json files"
+            }
+        },
+        "2" : {
+            "title" : "Fixed darkness on social links when using light mode"
+        }
+    }
+}

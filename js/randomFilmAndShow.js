@@ -8,7 +8,8 @@ const showArray = [
     'American Dad',
     "Grey's Anatomy",
     "Abbot Elementary",
-    'Only Murders in the Building'
+    'Only Murders in the Building',
+    'House MD'
 ];
 
 const filmArray = [
@@ -29,7 +30,23 @@ function favShowFunc(){
 function favFilmFunc(){
     var randFilmNum = Math.floor(Math.random() * (filmArray.length));
     var film = filmArray[Math.round(randFilmNum)];
-    favFilm.innerText = film;
+    applyFavFilmFunc(film)
+}
+
+function applyFavShowFunc(show){
+    if (show == favShow.innerText){
+        favShowFunc()
+    } else{
+        favShow.innerText = show;
+    }
+}
+
+function applyFavFilmFunc(film){
+    if (film == favFilm.innerText){
+        favFilmFunc()
+    } else{
+        favFilm.innerText = film;
+    }
 }
 
 function favFilmAndShow(){

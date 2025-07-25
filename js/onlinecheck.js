@@ -161,13 +161,13 @@ function fetchOnlineInfo(testData){
                 var totalAchievements = achievementResults[0].total_achievements;
 
                 if (!totalAchievements){
-                    achievementStatus = false 
+                    achievementStatus = false
                 } else{
                     achievementStatus = true
                 }
 
                 if (achievementStatus == false){
-                    playlists[0].setAttribute("id", "doubleScrollablePlaylists")
+                    playlists[0].setAttribute("id", "tripleScrollablePlaylists")
                     mySetupScrollableSection.setAttribute("class", "scrollable")
                     mySetupDefaultSubtitle.style.display = "none";
                     mySetupSecondSubtitle.style.display = "block";
@@ -233,7 +233,7 @@ function fetchOnlineInfo(testData){
                 onRecordHrs.innerText = Math.round(playtimeForever/60);
             }
             // achievementsGet()
-            playlists[0].setAttribute("id", "doubleScrollablePlaylists")
+            playlists[0].setAttribute("id", "tripleScrollablePlaylists")
             mySetupScrollableSection.setAttribute("class", "scrollable")
             mySetupDefaultSubtitle.style.display = "none";
             mySetupSecondSubtitle.style.display = "block";
@@ -243,7 +243,7 @@ function fetchOnlineInfo(testData){
             achievements.style.display = "none";
             achievementBarProgress.style.display = "none";
         } else{
-            playlists[0].setAttribute("id", "doubleScrollablePlaylists")
+            playlists[0].setAttribute("id", "tripleScrollablePlaylists")
             amIOnlineText();
             iAmPlaying.style.display = "none";
         }

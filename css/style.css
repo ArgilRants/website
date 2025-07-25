@@ -22,6 +22,13 @@
 } */
 
 @font-face {
+    font-family: 'DSEG';
+    src: url("../font/DSEG7Classic-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'monocraft';
     src: url("../font/Monocraft.ttf");
     font-weight: normal;
@@ -94,7 +101,7 @@
 }
 
 html{
-    --version: "1.3";
+    --version: "1.4";
     --mobileVersion: "1.2"
 }
 
@@ -118,10 +125,10 @@ html{
 
 /* DARK MODE COLORS */
 body{
-    --bg-color: #000204;
+    --bg-color: #0e0e0e;
     --default-text-color: #eee;
-    --box-color: #070a0fc6;
-    --box-border-color: #232323;
+    --box-color: #11151dc6;
+    --box-border-color: #3a3a3a;
     --title-color: #58bfffba;
     --navlink-hover-color: #eeeeee4d;
     --h2-color: #4698cc;
@@ -144,17 +151,17 @@ body{
 
 /* LIGHT MODE COLORS */
 body.light {
-    --bg-color: #eee;
+    --bg-color: #f2f2f2;
     --default-text-color: #181818;
-    --box-color: #a3a3a34b;
-    --box-border-color: #a3a3a3;
-    --title-color: #2f78a5ba;
+    --box-color: #e4e5ebc6;
+    --box-border-color: #5a5a5a;
+    --title-color: #58bfffba;
     --navlink-hover-color: #eeeeee4d;
-    --h2-color: #010841;
-    --h3-color: #ff5100;
-    --h2icon-color: #ff5100;
+    --h2-color: #4698cc;
+    --h3-color: #ee940e;
+    --h2icon-color: #ee940e;
     --a-color: #3636b8;
-    --a-hover: #5858d1;
+    --a-hover: #8a8ad8;
     --sideline-color: #313131;
     --subtitle-color: #464646;
     --scrollingtexthome-color: #303030;
@@ -171,10 +178,10 @@ body.light {
 @media (prefers-color-scheme: light) {
     /* DARK MODE COLORS */
     body.dark{
-        --bg-color: #000204;
+        --bg-color: #0e0e0e;
         --default-text-color: #eee;
-        --box-color: #070a0fc6;
-        --box-border-color: #232323;
+        --box-color: #11151dc6;
+        --box-border-color: #3a3a3a;
         --title-color: #58bfffba;
         --navlink-hover-color: #eeeeee4d;
         --h2-color: #4698cc;
@@ -198,17 +205,17 @@ body.light {
     /* LIGHT MODE COLORS */
 
     body {
-        --bg-color: #eee;
+        --bg-color: #f2f2f2;
         --default-text-color: #181818;
-        --box-color: #a3a3a34b;
-        --box-border-color: #a3a3a3;
-        --title-color: #2f78a5ba;
+        --box-color: #e4e5ebc6;
+        --box-border-color: #5a5a5a;
+        --title-color: #58bfffba;
         --navlink-hover-color: #eeeeee4d;
-        --h2-color: #010841;
-        --h3-color: #ff5100;
-        --h2icon-color: #ff5100;
+        --h2-color: #4698cc;
+        --h3-color: #ee940e;
+        --h2icon-color: #ee940e;
         --a-color: #3636b8;
-        --a-hover: #5858d1;
+        --a-hover: #8a8ad8;
         --sideline-color: #313131;
         --subtitle-color: #464646;
         --scrollingtexthome-color: #303030;
@@ -226,6 +233,11 @@ body.light {
         filter: brightness(0.8);
     }
 
+    body #listeningtitle.sparking{
+        color: var(--h3-color) !important;
+        filter: brightness(1);
+    }
+
     body .socials{
         filter: brightness(0.8);
     }
@@ -233,11 +245,35 @@ body.light {
     #themebutton::before {
         content: var(--theme-button-text);
     }
+    
+    body.dark #steam, #letterboxd, #curseforge, #modrinth, #twitch, #youtube, #github, #spotify, #twitter, #bluesky, #instagram{
+        filter: brightness(1) !important;
+    }
+
+    #steam, #github, #spotify, #twitter, #bluesky{
+        filter: brightness(.95) !important;
+    }
+    
+    body #listeningtitle {
+        filter: brightness(80%);
+    }
+
+    body #listeningtitle.sparking{
+        color: var(--h3-color) !important;
+        filter: brightness(1);
+    }
+
+    body.dark .terminalStyle h3#subtitle{
+        color: black !important;
+    }
+
+    .terminalStyle h3#subtitle{
+        color: white !important;
+    }
 }
 
-body.light .socials, body.overwatch .socials{
-    filter: brightness(0.75);
-}
+
+
 
 body.dark{
     --theme-button-text: "☀";
@@ -362,7 +398,7 @@ body.light{
 #themeSelect{
 }
 
-select {
+select#themeSelect {
     font-family: inherit;
     box-sizing: content-box;
     font-size: 1.2em;
@@ -381,18 +417,18 @@ select {
     text-overflow: '';
 }
 
-select:hover{
+select#themeSelect:hover{
     background-color: var(--button-hover-color);
     cursor: pointer;
 }
 
-option{
+#themeSelect option{
     font-family: 'monocraft' !important;
     background-color: var(--bg-color) !important;
     text-align: center;
 }
 
-option:hover{
+#themeSelect option:hover{
     background-color: var(--button-color) !important;
 }
 
@@ -401,7 +437,7 @@ option:hover{
 }
 
 select:has(>option[value="auto"]:checked){
-    width: max-content;
+    width: max-content !important;
 }
 
 body {
@@ -421,7 +457,8 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     filter: none;
-    /* transition: background-color 555ms; */    
+    /* transition: background-color 555ms; */  
+  
 }
 
 div {
@@ -539,7 +576,13 @@ div {
 
 #changeLogDate {
     vertical-align: middle;
-    display: table-cell;
+    /* display: table-cell; */
+    color: var(--default-text-color);
+}
+
+.changeLogDate{
+    vertical-align: middle;
+    /* display: table-cell; */
     color: var(--default-text-color);
 }
 
@@ -737,6 +780,7 @@ footer {
 #achievementLinkHome{
     background-color: var(--button-color);
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    color: #eee;
     margin: 3px;
     padding: 5px;
     font-size: .8em;
@@ -758,7 +802,8 @@ footer {
 
 .linkBox:hover > #achievementLinkHome{
     background-color: var(--button-hover-color);
-    color: color-mix(in srgb, var(--default-text-color) 10%, var(--blur-color));
+    /* color: color-mix(in srgb, var(--default-text-color) 10%, var(--blur-color)); */
+    color: #eee;
 }
 
 
@@ -864,7 +909,7 @@ footer {
 }
 
 #gameLink:hover > #playingInfo{
-    background-color: color-mix(in srgb, var(--button-hover-color) 50%, transparent); 
+    background-color: color-mix(in srgb, var(--button-hover-color) 30%, transparent); 
 }
 
 #weekHrInfo{
@@ -1045,6 +1090,13 @@ table#wiki img{
     height: 200px;
 }
 
+.scrollable#myScrollableTimersSection{
+    overflow-y: scroll;
+    min-height: 0px;
+    height: auto;
+    max-height: 114px;
+}
+
 .textCentered {
     text-align: center;
 }
@@ -1105,6 +1157,35 @@ table#wiki img{
     animation: dropdownBtnAnim 2s infinite;
 }
 
+#timerInputsButton{
+    height: 5px;
+}
+
+#timerInputsButton .dropdownBtn{
+    width: 100%;
+    height: 20px;
+    font-size: .7em;
+    padding: 2px;
+}
+
+#timerInputsButton .dropdownBtnText{
+    --dropdownBtn-text: "↓ show timer options ↓";
+}
+
+#timerInputsButton .dropdownBtnTextUp{
+    --dropdownBtn-text: "↑ hide timer options ↑";
+}
+
+#timerInputsButton #dropdownBtnId:hover{
+    font-weight: 900;
+    animation: none 2s infinite;
+}
+
+#timerInputsButton .dropdownBtn::before{
+    content: var(--dropdownBtn-text);
+}
+
+
 #centerbox{
     text-align: center;
 }
@@ -1130,6 +1211,10 @@ h2{
 
 .box#scnd h2 {
     /* font-size: 1.2em; */
+    width: 225px;
+}
+
+.box#timerBox h2{
     width: 225px;
 }
 
@@ -1267,6 +1352,7 @@ h2#welcome:hover #dotdots{
     float: right;
     background: #22b143ee;
     padding: 5px;
+    margin-inline-end: 5px;
     padding-top: 6px;
     border-radius: 4px;
     color: var(--default-text-color);
@@ -1450,6 +1536,7 @@ sup{
     font-size: .8em;
     color: var(--subtitle-color);
     margin: 5px;
+    margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
 }
@@ -1587,6 +1674,90 @@ div.box img#right{
     background-color: var(--button-hover-color);
 }
 
+#timerBox input{
+    background-color: var(--button-color);
+    color: #cccccc;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    width: 165px;
+    margin-left: 5px;
+}
+
+#timerBox button{
+    background-color: var(--button-color);
+    color: #cccccc;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block ;
+    border-radius: 3px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    margin-left: 5px;
+    margin-right: -10px;
+    width: 83px;
+}
+
+#timerBox select{
+    background-color: var(--button-color);
+    color: #cccccc;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    margin-left: 5px;
+    width: 175px;
+}
+
+
+
+.timerButton{
+    background-color: var(--button-color);
+    color: #cccccc;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    width: 90%;
+    margin-left: 5px;
+}
+
+.timerButton:hover{
+    color: #eee;
+    text-decoration: underline;
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+#clearTimers{
+    background-color: color-mix(in srgb, var(--button-color), red 60%);
+}
+
+#timerBox select:hover, #timerBox button:hover{
+    color: #eee;
+    text-decoration: underline;
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+.timerBox{
+}
+
 #scrollingTextHome {
     color: var(--scrollingtexthome-color);
 }
@@ -1645,6 +1816,11 @@ body.light #listeningtitle{
     filter: brightness(80%);
 }
 
+body.light #listeningtitle.sparking{
+    color: var(--h3-color) !important;
+    filter: brightness(1);
+}
+
 #listeningtitle{
     color: #1ed760;
     margin-bottom: 0px;
@@ -1671,7 +1847,7 @@ body.light #listeningtitle{
 }
 
 .sparking{
-    color: rgb(242, 250, 7) !important;
+    color: rgb(246, 255, 0) !important;
 }
 
 #listeningLoading {
@@ -1819,7 +1995,7 @@ body.light #listeningtitle{
 }
 
 #listening:hover > #musicbox #songlink{
-    background-color: color-mix(in srgb, var(--button-hover-color) 50%, transparent); 
+    background-color: color-mix(in srgb, var(--button-hover-color) 30%, transparent);  
     border-radius: 3px;   
 } 
 
@@ -1902,7 +2078,7 @@ body.light #listeningtitle{
 
 .playlist{
     width: 177px !important;
-    background-color: #121212;
+    background-color: #121212d5;
     border-radius: 6px;
     padding: 10px;
     /* margin-top: 5px; */
@@ -1935,6 +2111,10 @@ body.light #listeningtitle{
 
 #doubleScrollablePlaylists{
     height: 536px !important;
+}
+
+#tripleScrollablePlaylists{
+    height: 804px !important;
 }
 
 .playlists a{
@@ -2042,7 +2222,7 @@ marquee.playlistTitle{
 
 .previousProject{
     width: 177px !important;
-    background-color:   color-mix(in srgb, var(--scrollingtexthome-color) 20%, var(--box-color));
+    background-color:   color-mix(in srgb, var(--scrollingtexthome-color) 10%, var(--box-color));
     border-radius: 3px;
     padding: 10px;
     /* margin-top: 5px; */
@@ -2154,6 +2334,7 @@ h2.previousProjectTitle{
     /* white-space: nowrap; */
     font-size: 1em;
     margin-bottom: 2px !important;
+    margin-top: 3px;
 }
 
 .previousProjectDescription{
@@ -2426,7 +2607,7 @@ h2.previousProjectTitle{
     transform: translate(5%,-45px);
     font-size: .8em;
     padding: 3px;
-    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    background-color: var(--bg-color);
     position: absolute;
     transition: transform 233ms;
 }
@@ -2438,7 +2619,7 @@ h2.previousProjectTitle{
     transform: translate(5%,-28px);
     font-size: .8em;
     padding: 3px;
-    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    background-color: var(--bg-color);
     position: absolute;
     transition: transform 133ms;
 }
@@ -2450,7 +2631,7 @@ h2.previousProjectTitle{
     transform: translate(5%,-28px);
     font-size: .8em;
     padding: 3px;
-    background-color: color-mix(in srgb, var(--bg-color) 85%, transparent);
+    background-color: var(--bg-color);
     position: absolute;
     transition: transform 133ms;
 }
@@ -2672,6 +2853,178 @@ p#setuplinks br{
     margin-left: -3px;
 }
 
+input[type="date"] {
+    /* width: 20px; */
+}
+
+#timeZoneSelect{
+    width: 100%;
+}
+
+#timerTime{
+    /* width: 100px; */
+}
+
+.timerDeleteButton{
+    float: right;
+    font-size: 1.1em;
+    margin-right: 2px;
+    font-weight: 200;
+    /* background-color: color-mix(in srgb, var(--bg-color), transparent 50%);   */
+}
+
+.timerDeleteButton:hover{
+    font-weight: 400;
+    opacity: 60%;
+    cursor: pointer;
+}
+
+#createNewTimerButton{
+    width: 100%;
+}
+
+input{
+    user-select: none;
+}
+
+.countdownDiv{
+    font-family: 'DSEG' !important;
+    font-size: 1.5em;
+    /* text-indent: 5px; */
+    margin-left: 5px;
+}
+
+.countdownBackgroundDiv{
+    position: relative;
+    opacity: 30%;
+    user-select: none;
+}
+
+.countdownBackgroundText{
+    position: absolute;
+    /* transform: translateX(-5px); */
+}
+
+#timers .timer:not(:first-child) .countdownBelowDiv{
+    display: none;
+}
+
+.timer{
+    user-select: none !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    outline: 2px black solid;
+}
+
+.timerTitleH2{
+    margin-left: 5px;
+}
+
+.countdownBelowDiv{
+    font-family: 'monocraft';
+    font-size: .6em;
+}
+
+
+
+.countdownBelowDays{
+    margin-left: 4px;
+    margin-right: 3px;
+}
+
+.countdownBelowHours{
+    margin-left: 4px;
+    margin-right: 3px;
+}
+
+.countdownBelowMinutes{
+    margin-left: 6px;
+    margin-right: 3px;
+}
+
+.countdownBelowSeconds{
+    margin-left: 4px;
+    margin-right: 3px;
+}
+
+.terminalStyle h2{
+    color: var(--default-text-color);
+    background-color: var(--h2-color);
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.terminalStyle h3{
+    color: #121212;
+    background-color: var(--h3-color);
+    margin-left: -1px !important;
+    margin-right: -1px;
+    margin-top: 0px;
+}
+
+.terminalStyle h3#subtitle{
+    color: black;
+    background-color: var(--subtitle-color);
+    font-weight: 400;
+}
+
+body.light .terminalStyle h3#subtitle{
+    color: white;
+}
+
+.terminalStyle .box h2{
+    color: black !important;
+    background-color: #22b143;
+    height: 37px;
+    text-indent: 3px;
+}
+
+.terminalStyle .box h3{
+    margin-top: 0px;
+    text-indent: 3px;
+    margin-bottom: 0px;
+}
+
+.terminalStyle #dropdownBtnId{
+    background-color: transparent;
+    border: 2px solid black;
+    transition: 133ms;
+    transition-property: color, border, background-color;
+}
+
+.terminalStyle #dropdownBtnId:hover{
+    background-color: color-mix(in srgb, var(--button-hover-color) 30%, transparent);
+    color: white;
+    border: 2px solid white;
+    animation: none;
+}
+
+.terminalStyle #releaseBadge, .terminalStyle #betaBadge{
+    outline: 2px solid black;
+    background-color: transparent;
+}
+
+.terminalStyle #changeLogDate{
+    margin-top: -23px;
+    color: black;
+}
+
+.terminalStyle .changeLogDate{
+    color: black;
+    margin-top: -23px;
+}
+
+.terminalStyle .box{
+    border-radius: 0px;
+    margin: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+}
+
 .floatLeft { 
     float: left;
 }
@@ -2802,6 +3155,23 @@ p#setuplinks br{
     background-clip: text; 
 }
 
+#imogen{
+    color: rgb(240, 107, 232);
+    transition: 333ms;
+    background-clip: text; 
+    transition-property: color;
+}
+
+#imogen:hover{
+    background: rgb(240, 107, 232)  -webkit-linear-gradient(left, #3f3f3f, #f68700 ) no-repeat 0 0 / 30px;
+    background-clip: text; 
+}
+
+body.light #steam, body.light #github, body.light #spotify, body.light #twitter, body.light #bluesky{
+    filter: brightness(.95);
+}
+
+
 .button#steam {
     color: #181818 !important;
     background-color: #66c0f4;
@@ -2812,6 +3182,30 @@ p#setuplinks br{
     background: #89d4ff;
     background-color: #89d4ff !important;
     background-clip: unset !important; 
+}
+
+.button#twitter {
+    color: #000000 !important;
+    background-color: #1ca1f2;
+}
+
+.button#twitter:hover{
+    color: #1b1b1b !important;
+    background: #1ca1f2;
+    background-color: #1ca1f2 !important;
+    background-clip: unset !important; 
+}
+
+
+#imogenButton{
+    color: #272727 !important;
+    background-color: #eec6e0;
+    transition: 1333ms;
+    transition-property: background-color;
+}
+
+#imogenButton:hover{
+    background-color: #fef072;
 }
 
 /* end of colors */
