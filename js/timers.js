@@ -331,7 +331,7 @@ function addPersistentTimer(newTimerTitle, newTimerDate, newTimerColor, newTimer
 }
 
 function addAllPersistentTimers(){
-  addPersistentTimer("Mobile V2.0", "2025-08-22", "#4698cc", "20:00", "60")
+  addPersistentTimer("Mobile V2.0", "2025-09-18", "#4698cc", "20:00", "60")
 }
 
 
