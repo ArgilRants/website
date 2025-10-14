@@ -7,7 +7,7 @@ const container = document.getElementById("container")
 
 var DateTime = luxon.DateTime;
 
-
+createRecentlyReadEntry("./img/yuqingtangs/THYOL.png", "Three Hundred Years of Longing", "", "")
 createRecentlyReadEntry("./img/yuqingtangs/jyif.png", "jun you ji fou", "", "")
 createRecentlyReadEntry("./img/yuqingtangs/mtsf.png", "mtsf", "married thrice to salted fish", "")
 createRecentlyReadEntry("./img/yuqingtangs/yuwuv4.png", "yuwu vol. 4", "", "")
