@@ -1,0 +1,47 @@
+{
+    "version": "1.2",
+    "platform": "mobile",
+    "type": "release",
+    "dropdown" : "9",
+    "date": {
+        "day": "06",
+        "month": "June",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "Added [Curseforge](https://www.curseforge.com/members/argilrants/projects) link to socials"
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Updated links box",
+            "description": {
+                "0" : "Now includes credits, changelog, ebg wiki and source code links",
+                "1" : "Socials links are now logos instead of buttons"
+            }
+        },
+        "1": {
+            "title": "Smoothed out some weird behavior",
+            "description": ""
+        }
+    }
+}

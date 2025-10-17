@@ -2,7 +2,6 @@ const greetingsArray = [
     'Listening to <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=d84d6163c890491d">music</a> constantly',
     'Automating a 5 minute task',
     'Watching the same shows on repeat',
-    'Watching the same shows in repeat',
     'Writing scripts and playlist titles',
     'Probably eating something',
     'Stressed and constantly overdressed',
@@ -16,8 +15,12 @@ const greetingsArray = [
     "thank you to beyonce for making this possible",
     "its yugeee",
     'Resident technology bastard',
-    '100% every lego game',
-    'press ctrl+shift+u to make boxes draggable'
+    '100%ing every lego game',
+    'press ctrl+shift+u to make boxes draggable',
+    'buying another lego set',
+    'playing balatro gold stake',
+    'obsessing over sparks (the band)',
+    'thinking about making a game..'
 ];
 
 

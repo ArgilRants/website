@@ -1,4 +1,4 @@
-const numberOfImages = 39
+const numberOfImages = 56
 
 ImageArray = new Array();
 

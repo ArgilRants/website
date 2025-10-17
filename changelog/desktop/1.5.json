@@ -1,0 +1,99 @@
+{
+    "version": "1.5",
+    "platform": "desktop",
+    "type": "release",
+    "dropdown" : "10",
+    "date": {
+        "day": "18",
+        "month": "October",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "Added Teenage Engineering Theme [🔩]",
+            "description": {
+                "0": "this is a celebration of a year since v1.0"
+            }
+        },
+        "1": {
+            "title": "Added [TikTok](https://www.tiktok.com/@argilrants) link to socials"
+        },
+        "2": {
+            "title": "Added 16 new gifs to the random gif box"
+        },
+        "3": {
+            "title": "New persistent timer",
+            "description": {
+                "0": "Mobile beta v2.1 @ 8pm [UTC] November 18th",
+                "1": "Hopefully mobile release v2.2 should release around 2 weeks after that",
+                "2": "A very large update for desktop is coming spring next year, adding a TON of new stuff"
+            }
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "Removed Miracode from font selector in the top left",
+            "description": {
+                "0": "Replaced with [TikTok Sans](https://tiktok.com/font) for better readability and accessability"
+            }
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "Balatro theme",
+            "description": ""
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "TikTok Sans sometimes resizes things weirdly when in use",
+            "description": {
+                "0": "I don't know if i'll fix this"
+            }
+        },
+        "1": {
+            "title": "Previous changelogs are not ordered by date, version or platform",
+            "description": {
+                "0": "It should be in most recent update first, with desktop at top if a mobile and desktop release were on the same date",
+                "1": "This will be fixed during mobile beta v2.1 and noted at a later date"
+            }
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Buttons now press in when clicked ",
+            "description": ""
+        },
+        "1": {
+            "title": "Updated changelog page to auto add previous versions to the previous version section",
+            "description": {
+                "0": "there is known issues about this change, will be fixed with mobile beta v2.1 and noted in desktop v1.6 "
+            }
+        },
+        "2": {
+            "title": "Fixed hovering on title on Chrome or other Chromium browsers",
+            "description": {
+                "0": "Now tilts and darkens like Firefox",
+                "1": "As I have become chromium scum.. because I'm trying out [helium](https://helium.computer) the browser made by the people behind cobalt"
+            }
+        },
+        "3": {
+            "title": "'Fixed' 'iPhone 16 Pro' link in setup box",
+            "description": {
+                "0": "Now links to the tech specs support page like other outdated apple products I own"
+            }
+        },
+        "4": {
+            "title": "Fixed timers only showing when timer options dropdown was clicked",
+            "description": {
+                "0": "Now shows all the time"
+            }
+        },
+        "5": {
+            "title": "Fixed currently playing box",
+            "description": {
+                "0": "Wasn't able to show f2p games previously"
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ const previousProjectH2Icon = document.getElementById("previousProjectH2Icon")
 const debugTestDataToggleInput = document.getElementById("debugTestDataToggleInput")
 
 const monocraft = document.getElementById("monocraft")
-const miracode = document.getElementById("miracode")
+const tiktok = document.getElementById("tiktok")
 
 const themeSelectFont = document.querySelector("#themeSelect")
 
@@ -231,9 +231,9 @@ function changeFont(font, el){
 
   if (font == "monocraft"){
     monocraft.style.display = "block"
-    miracode.style.display = "none"
+    tiktok.style.display = "none"
   } else {
-    miracode.style.display = "block"
+    tiktok.style.display = "block"
     monocraft.style.display = "none"
   }
   clickSound()
@@ -373,9 +373,9 @@ themeBody.style.fontFamily = activeFont
 
 if (activeFont == "monocraft"){
   monocraft.style.display = "block"
-  miracode.style.display = "none"
-} else if(activeFont == "miracode") {
-  miracode.style.display = "block"
+  tiktok.style.display = "none"
+} else if(activeFont == "TikTok Sans") {
+  tiktok.style.display = "block"
   monocraft.style.display = "none"
 }
 

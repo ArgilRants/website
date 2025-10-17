@@ -1,0 +1,135 @@
+{
+    "version": "2.0",
+    "platform": "mobile",
+    "type": "beta",
+    "dropdown" : "11",
+    "date": {
+        "day": "18",
+        "month": "October",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "Fully redid the mobile site, [out now in beta](https://argil.dev/mobile)",
+            "description": {
+                "0": "Due to this being in beta, v2.1 will also be a beta update for bug fixing and v2.2 will be release which should add all wip features",
+                "1": "Also due to this being a very large rewrite there will be some things missing in this changelog",
+                "2": "This new mobile optimized and mobile-y site has been built from the ground up using considerably less javascript",
+                "3": "Has been moved from the main unoptimized desktop site to its own page: [argil.dev/mobile](https://argil.dev/mobile)",
+                "4": "When accessing the desktop site from a mobile device it should redirect to the mobile site"
+            }
+        },
+        "1": {
+            "title": "Added 7 new themes - slightly updated from the desktop variants",
+            "description": {
+                "0": "Added Valentines Theme [💝]",
+                "1": "Added Pride Theme [🌈]",
+                "2": "Added Halloween Theme [🎃]",
+                "3": "Added Holidays Theme [❄️]",
+                "4": "Added Invert Theme [🙃]",
+                "5": "Added Sepia Theme [🗝️]",
+                "6": "Added Teenage Engineering Theme [🔩] in celebration of a year since beta v0.1"
+            }
+        },
+        "2": {
+            "title": "Added top navbar",
+            "description": {
+                "0": "Added theme button",
+                "1": "Added menu button"
+            }
+        },
+        "3": {
+            "title": "Added menu",
+            "description": {
+                "0": "When button is pressed it opens showing all social links",
+                "1": "Also shows other page links",
+                "2": "If I'm currently playing a game on steam it now shows up in the menu",
+                "3": "In release v2.2 there will be options and more details added"
+            }
+        },
+        "4": {
+            "title": "Added live updating Spotify spinning vinyl in top navbar",
+            "description": {
+                "0": "Shows only if im actively listening to a song",
+                "1": "Shows the album/ep/single cover of the song im listening to, as a spinning vinyl"
+            }
+        },
+        "5": {
+            "title": "Added favorite playlist box",
+            "description": {
+                "0": "Randomly ordered box of my favorite Spotify playlists in a carousel"
+            }
+        },
+        "6": {
+            "title": "Added Letterboxd diary",
+            "description": {
+                "0": "Letterboxd diary in a carousel"
+            }
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "Removed all sound effects",
+            "description": {
+                "0": "Until new sound system in v2.2"
+            }
+        },
+        "1": {
+            "title": "Removed all hover effects",
+            "description": ""
+        },
+        "2": {
+            "title": "Letterboxd diary box no longer updates entries every 30 mins",
+            "description": {
+                "0": "now only updates on page reload"
+            }
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "Menu additions",
+            "description": {
+                "0": "Sound options",
+                "1": "Add reduced motion option"
+            }
+        },
+        "1": {
+            "title": "Balatro theme",
+            "description": ""
+        },
+        "2": {
+            "title": "Mobile timers",
+            "description": {
+                "0": "Probably going to be placed in the top navbar"
+            }
+        },
+        "3": {
+            "title": "Add sound effects"
+        },
+        "4": {
+            "title": "Dynamic project box"
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "Larger widths are not accounted for",
+            "description": {
+                "0": "iPads, tablets, desktop and landscape phone orientations are not currently accounted for",
+                "1": "should be fixed by v2.1 the big bug fix update just before full release"
+            }
+        },
+        "1": {
+            "title": "If you scroll up too far on Safari or Firefox navbar disappears",
+            "description": {
+                "0": "This seems to be something with overflow-x: clip",
+                "1": "Might be fixed in Beta v2.1"
+            }
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "N/A",
+            "description": ""
+        }
+    }
+}

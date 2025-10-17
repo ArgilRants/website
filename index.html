@@ -29,8 +29,8 @@
 
             <div class="fontbuttondiv" id="fontbuttondiv">
                 <div id="sideline" class="fontbuttonsideline"><- Change Font</div>
-                <div class="monocraft" onclick="changeFont('miracode')" id="monocraft">A</div>
-                <div class="miracode" onclick="changeFont('monocraft')" id="miracode">A</div>
+                <div class="monocraft" onclick="changeFont('TikTok Sans')" id="monocraft">A</div>
+                <div class="tiktok" onclick="changeFont('monocraft')" id="tiktok">A</div>
             </div>
 
             <div class="themebuttondiv" id="themebuttondiv">
@@ -46,6 +46,7 @@
                         <option value="holidays">❄ </option>
                         <option value="invert">⯪ </option>
                         <option value="sepia">♬ </option>
+                        <option value="te">🔩 </option>
                 
                     </select>
                 </div>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="title">
-                <a href="./index.html" onclick="buttonClick(this)" id="titleLink"><span id="titleA">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI" class="titleTilt">I</span><span id="titleL">L</span></a>
+                <a href="" onclick="buttonClick(this)" id="titleLink"><span id="titleA">A</span><span id="titleR">R</span><span id="titleG">G</span><span id="titleI" class="titleTilt">I</span><span id="titleL">L</span></a>
             </div>
             <div class="subtitleMain" id="subtitleMain" onclick="subtitleGenerate()">subtitle goes here</div>
         </div> 
@@ -94,24 +95,18 @@
             <tbody>
                 <tr>
                     <td id="important">
-                        <marquee id="important" scrollamount="6" hspace="5px" onmouseover="marqueeStop(this)" onmouseout="this.start()">A new hot timer box has hit the villa, updated changelog page, wow so terminal!! updated light mode, new project updates, general smoothness and MORE!</marquee>
+                        <marquee id="important" scrollamount="6" hspace="5px" onmouseover="marqueeStop(this)" onmouseout="this.start()">A new separate mobile site, fixed colors, better chromium compatibility, new accessible font available</marquee>
                         <div class="box" id="importantbox">
-                            <h2><span id="h2icon">⭐</span> <span id="importanth2">Updated changelog, timers </span> <span id="subtitle">..and more</span> <span id="newbadge">UPDATE</span></h2>
-                            <h3 id="subtitle">Updated to v<span id="version"></span>: <span id="latestDesktopDate"></span></h3>
+                            <h2><span id="h2icon">⭐</span> <span id="importanth2">NEW MOBILE SITE IN BETA NOW </span> <span id="subtitle">..and more</span> <span id="newbadge">UPDATE</span></h2>
+                            <h3 id="subtitle">Updated to desktop v<span id="version"></span>: <span id="latestDesktopDate"></span></h3>
                             <p>
-                                The <a href="./changelog.html">changelog page</a> has had a glowup, it's been given a new terminal-like look.
+                                The new, and very much improved <a href="./mobile">mobile site</a> is out NOW in beta!!!
                                 <br>
-                                <span style="color: red;">NEW</span> <a href="./index.html#myScrollableTimersSection">timer box</a>, you can create your own timers that stay around, they look neat, they work in every timezone, they are wonderful!
+                                On the desktop side, we got a new more accessible font available in the top left, fixed colors in some places, better chromium compatibility, lots of smaller fixes and more!!
                                 <br>
-                                Updated light mode colors, most colors have been slightly altered and things are just generally brighter than before, as recently I have become a light mode scum
+                                <a href="./mobile" class="button" onclick="buttonClick(this)"><span class="buttonIcon">✔</span> Mobile site</a> <span id="sideline">← check out the beta site here</span>
                                 <br>
-                                And a new addition, my <a href="./yuqingtangs.html">girfriends site</a> that I helped make! Check it out!
-                                <br>
-                                <a href="./yuqingtangs.html" class="button" onclick="buttonClick(this)" id="imogenButton"><span class="buttonIcon">☺</span> Imogen's Site</a>
-                                <a href="https://x.com/yuqingtangs" class="button" onclick="buttonClick(this)" id="twitter"><span class="buttonIcon">✎</span> Her twitter</a> 
-                                <br>
-                                <a href="./changelog.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon">☴</span> Change Log</a> <span id="sideline">← check out the new look and all the new changes here</span>
-                                
+                                <a href="./changelog.html" class="button" onclick="buttonClick(this)"><span class="buttonIcon">☴</span> Change Log</a> <span id="sideline">← check out the rest of the changes here</span>
                             </p>
                         </div>
                     </td>
@@ -207,7 +202,7 @@
 
                         <div class="box" id="EvenBetterGUI">
                             <div class="">
-                                <h2><span id="h2icon">⛏</span> EvenBetterGUI <span id="newbadge">NEW UPDATE</span></h2>
+                                <h2><span id="h2icon">⛏</span> EvenBetterGUI</h2>
                                 <img src="./img/ebg.png" alt="" id="left" style="width: 100px;">
                                 <p>
                                     <div id="badges">
@@ -373,6 +368,7 @@
                                 <a class="navlink" href="./achievements.html">⭐ Achievements</a>
                                 <br>
                                 <a class="navlink" href="./yuqingtangs.html" id="imogen">❤ My gf's site<span id='sideline' class='subtitleNew'>⏺</span></a>
+                                <br>
                                 <a class="navlink" href="./credits.html">✔ Credits</a>
                                 <br>
                                 <a class="navlink" href="./changelog.html">☴ Change Log</a>
@@ -391,6 +387,8 @@
                                 <a class="navlink" id="bluesky" href="https://bsky.app/profile/argil.dev" target="_blank">☀ Bluesky</a>
                                 <br>
                                 <a class="navlink" id="instagram" href="https://www.instagram.com/argilrants/" target="_blank">★ Instagram</a>
+                                <br>
+                                <a class="navlink" id="tiktok" href="https://www.tiktok.com/@argilrants" target="_blank">★ <span id="tikofTok">Tik</span><span id="tokofTik">Tok</span></a>
                                 <br>
                                 <a class="navlink" id="github" href="https://github.com/ArgilRants" target="_blank"> ⏻ Github</a>
                                 <br>
@@ -544,8 +542,8 @@
                         </div>
 
                         <div class="box" id="gifBox" onclick="getRandomImage()" style="cursor: pointer;">
-                            <h2><span id="h2icon">☽</span> Some Gifs</h2>
-                            <div style="position: absolute !important; transform: translate(145px, -22px) rotate(30deg); ">
+                            <h2><span id="h2icon">☽</span> Some <span id="gifs">gifs</span> <span id="webp">webp</span></h2>
+                            <div style="position: absolute !important; transform: translate(150px, -20px) rotate(25deg); ">
                                 <span id="sideline">click!</span>
                             </div>
                             <div id="randGif">
@@ -627,13 +625,13 @@
                                         <p id="setuplinks">
                                             Phone
                                             <br>
-                                            <a href="https://www.apple.com/iphone-16-pro/">iPhone 16 Pro [Desert]</a>
+                                            <a href="https://support.apple.com/121031">iPhone 16 Pro [Desert]</a>
                                         </p>
 
                                         <p id="setuplinks">
                                             The prized iPad
                                             <br>
-                                            <a href="https://support.apple.com/en-gb/111886">iPad Mini 6th gen [2021]</a>
+                                            <a href="https://support.apple.com/111886">iPad Mini 6th gen [2021]</a>
                                         </p>
 
                                         <p id="setuplinks">
@@ -693,11 +691,11 @@
                             </div>
 
                             <div class="box" id="scnd">
-                                <div id="drop5">
+                                <div id="drop55">
                                     <h2 id="setup"><span id="h2icon">⌚</span> Timers <span id="" style="display: block;"><span id="iconBadge" onclick="fullHeight('myScrollableTimersSection')"><span class="iconSharp">mouse</span></span></span></h2>
                                     <h3 id="subtitle">Add timers below!</h3>
                                     <div id="timerInputsButton">
-                                        <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(5)"></button>
+                                        <button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown(55)"></button>
                                     </div>
                                     
                                     <div id="dropdown" class="dropdownContent">
@@ -715,8 +713,8 @@
                                             <div class="timerButton" onclick="clearTimers()" id="clearTimers">Clear Timers</div>
                                         </div>
                                     </div>
-
-                                    <div class="scrollable" style="scrollbar-width: none;" id="myScrollableTimersSection">
+                                </div>
+                                <div class="scrollable" style="scrollbar-width: none;" id="myScrollableTimersSection">
                                     <div>
                                         
 
@@ -725,7 +723,6 @@
                                         </div>
                                         
                                     </div>
-                                </div>
                             </div>
                             
                         
@@ -933,6 +930,10 @@
                 
                 <a href="https://www.instagram.com/argilrants/">
                     <img src="./img/simpleIcons/instagram.svg"/>
+                </a>
+
+                <a href="https://www.tiktok.com/@argilrants">
+                    <img src="./img/simpleIcons/tiktok.svg"/>
                 </a>
 
                 <a href="https://github.com/ArgilRants">

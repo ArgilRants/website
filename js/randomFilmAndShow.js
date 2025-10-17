@@ -9,7 +9,8 @@ const showArray = [
     "Grey's Anatomy",
     "Abbot Elementary",
     'Only Murders in the Building',
-    'House MD'
+    'House MD',
+    'Modern Family'
 ];
 
 const filmArray = [

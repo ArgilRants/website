@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 
 /* font import */
 /* @font-face {
@@ -90,6 +91,7 @@
     font-weight: inherit;
 }
 
+
 :root{
     scale: 1;
     text-rendering: optimizeLegibility;
@@ -101,8 +103,8 @@
 }
 
 html{
-    --version: "1.4";
-    --mobileVersion: "1.2"
+    --version: "1.5";
+    --mobileVersion: "2.0"
 }
 
 /* *{
@@ -167,8 +169,8 @@ body.light {
     --scrollingtexthome-color: #303030;
     --scrollingtexthome-hover-color: #535353;
     --uk-color: #08080879;
-    --button-color: #6d6d6d;
-    --button-hover-color: #1b1b1b74;
+    --button-color: #303030;
+    --button-hover-color: #30303074;
     --modrinth-button-color: #413e3e;
     --blur-color: #000000;
     --theme-button-text: "☽";
@@ -221,8 +223,8 @@ body.light {
         --scrollingtexthome-color: #303030;
         --scrollingtexthome-hover-color: #535353;
         --uk-color: #08080879;
-        --button-color: #6d6d6d;
-        --button-hover-color: #1b1b1b74;
+        --button-color: #303030;
+        --button-hover-color: #30303074;
         --modrinth-button-color: #413e3e;
         --blur-color: #000000;
         --theme-button-text: "☽";
@@ -364,7 +366,7 @@ body.light{
     user-select: none;
 }
 
-.monocraft:hover, .miracode:hover{
+.monocraft:hover, .tiktok:hover{
     background-color: var(--button-hover-color);
     cursor: pointer;
 }
@@ -377,7 +379,7 @@ body.light{
     z-index: -1;
 }
 
-.miracode{
+.tiktok{
     display: none;
     box-sizing: content-box;
     font-size: 1.2em;
@@ -385,10 +387,11 @@ body.light{
     width: 20px;
     outline: 2px solid var(--box-border-color);
     background-color: var(--bg-color);
-    color: var(--default-text-color);
+    color: var(--default-text-color) !important;
     border-radius: 3px;
     text-align: center;
     user-select: none;
+    font-family: 'TikTok Sans' !important;
 }
 
 #themebutton::before {
@@ -624,7 +627,7 @@ td#menu{
 .title a:hover{
     text-decoration: none;
     color: var(--title-color) !important;
-    filter: opacity(0.7);
+    /* filter: opacity(0.7); */
     animation: flicker 0.7s linear infinite;
 }
 
@@ -929,7 +932,11 @@ footer {
 #titleLink:hover span.titleTilt {
     animation: flicker 0.4s linear infinite;
     transform: skew(-10deg);
-    filter: brightness(60%);
+    filter: brightness(75%);
+    background: linear-gradient( to bottom, #000, #000 60%, #ccc 60%, #ccc );
+    background-color: black;
+    background-clip: text;
+    background-size: 100% 35px;
 }
 
 #badgeRoll{
@@ -1095,6 +1102,7 @@ table#wiki img{
     min-height: 0px;
     height: auto;
     max-height: 114px;
+    width: 100%;
 }
 
 .textCentered {
@@ -1158,7 +1166,7 @@ table#wiki img{
 }
 
 #timerInputsButton{
-    height: 5px;
+    height: 15px;
 }
 
 #timerInputsButton .dropdownBtn{
@@ -1381,6 +1389,18 @@ h2#welcome:hover #dotdots{
 
 #gifBox:hover > div#randGif{
     filter: brightness(110%);
+}
+
+#gifBox:hover > h2 span#gifs{
+    display: none;
+}
+
+#gifBox:hover > h2 span#webp{
+    display: inline-block;
+}
+
+#webp{
+    display: none;
 }
 
 #randGif{
@@ -1636,6 +1656,12 @@ div.box img#right{
     background-color: var(--button-hover-color);
 }
 
+.modrinthDownload:active{
+    scale: 0.97;
+    transition: 150ms;
+    transition-property: scale;
+}
+
 .ficsitDownload{
     background-color: var(--modrinth-button-color);
     color: #ff6f00;
@@ -1666,12 +1692,19 @@ div.box img#right{
     display: inline-block;
     border-radius: 3px;
     outline: 2px solid color-mix(in srgb, var(--default-text-color) 60%, transparent);
+    transition-property: scale;
 }
 
 .button:hover{
     color: #eee;
     text-decoration: underline;
     background-color: var(--button-hover-color);
+}
+
+.button:active{
+    scale: 0.97;
+    transition: 150ms;
+    transition-property: scale;
 }
 
 #timerBox input{
@@ -2222,17 +2255,24 @@ marquee.playlistTitle{
 
 .previousProject{
     width: 177px !important;
-    background-color:   color-mix(in srgb, var(--scrollingtexthome-color) 10%, var(--box-color));
+    background-color:   color-mix(in srgb, var(--scrollingtexthome) 10%, var(--box-color));
     border-radius: 3px;
     padding: 10px;
     /* margin-top: 5px; */
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     transition: background-color 300ms ease, outline 300ms ease;
     min-height: 268px !important;
     max-height: 268px !important;
     display: inline-block;
+    outline: solid 2px var(--box-border-color);
+}
+
+.previousProject:hover{
+    background-color:   color-mix(in srgb, var(--scrollingtexthome-color) 20%, var(--box-color));
+    outline: solid 2px var(--h2-color);
 }
 
 .previousProjectArea #previousProjectLink{
@@ -3025,6 +3065,10 @@ body.light .terminalStyle h3#subtitle{
     margin-bottom: 10px;
 }
 
+.terminalStyle ul{
+    margin-right: 12px;
+}
+
 .floatLeft { 
     float: left;
 }
@@ -3086,6 +3130,22 @@ body.light .terminalStyle h3#subtitle{
 #instagram:hover{
     background:  #d7264c -webkit-linear-gradient(left, #3f3f3f, #833ab4,#fd1d1d,#fcb045) no-repeat 0 0 / 60px ;
     background-clip: text;   
+}
+
+#tiktok {
+   color: #00f2ea; 
+}
+
+#tiktok:hover{
+    background:  #00f2ea -webkit-linear-gradient(left, #ff0050) no-repeat 0 0 / 30px ;
+    background-clip: text; 
+}
+
+#tikofTok{
+    color: #00f2ea;
+}
+#tokofTik{
+    color: #ff0050;
 }
 
 #github{
@@ -3374,7 +3434,6 @@ body.valentine #titleLink:hover span#titleL{
 body.valentine #titleLink:hover span.titleTilt {
     animation: flicker 0.4s linear infinite !important;
     transform: skew(0deg) !important;
-    filter: brightness(100%) !important;
 }
 
 body.valentine .title span#titleA::before{
@@ -3438,6 +3497,32 @@ body.sepia{
 
 body.sepia #container{
     animation: textShadow 2s infinite;
+}
+
+/* teenage engineering */
+body.te {
+    --bg-color: #e6e6e6;
+    --default-text-color: #393d40;
+    --box-color: #d2d2d2c6;
+    --box-border-color: #5a5a5a;
+    --title-color: #f65d04e2;
+    --navlink-hover-color: #eeeeee4d;
+    --h2-color: #f65d04;
+    --h3-color: #fd3b11;
+    --h2icon-color: #fd3b11;
+    --a-color: #2d8fc4;
+    --a-hover: #5db3de;
+    --sideline-color: #313131;
+    --subtitle-color: #464646;
+    --scrollingtexthome-color: #393d40;
+    --scrollingtexthome-hover-color: #393d40;
+    --uk-color: #08080879;
+    --button-color: #212121;
+    --button-hover-color: #21212180;
+    --modrinth-button-color: #413e3e;
+    --blur-color: #000000;
+    --theme-button-text: "☽";
+    --theme-button-text-color: #2e2e2e;
 }
 
 /* mobile below */
@@ -3586,11 +3671,6 @@ body.sepia #container{
         padding: 2px;
         background-color: #ffffff;
         transition: all 333ms;
-    }
-
-
-    .mobile .iconSocials a:last-child > img{
-        width: calc(100% - 10px);
     }
 
     @media only screen and (hover: none){ 

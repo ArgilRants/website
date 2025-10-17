@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobileKeyframes.css">
+    <link rel="stylesheet" href="../css/atKeyframes.css">
+    <meta name="description" content="@ArgilRants website, hosting projects, social links and more">
+    <meta name="keywords" content="argil, argilrants, argildevs, mc, satisfactory, pixelated, pixels, minecraft, resourcepacks, mods, modding, mod">
+    <meta name="author" content="ArgilRants">
+    <meta property="og:image" content="https://argil.dev/img/ogimage.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+
+
+    <title>Argil's Kiln | Mobile</title>
+
+    <link rel="stylesheet" href="../css/scanlines.css">
+</head>
+<body>
+    <header class="fixed center-align">
+        <div class="margin">
+            <nav id="nav" style="backdrop-filter: blur(3px);">
+
+                <div class="topNav">
+                    <div class="titleMargin">
+                        <div class="title">
+                            <a href="./index.html" id="titleLink">ARGIL</a>
+                        </div>
+                        <div class="titleSubtitle" id="titleSubtitle">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topNav" id="vinyl">
+                    <div>
+                        <a href="" id="songLink">
+                            <img src="../img/simpleIcons/spotify.svg" alt="" class="albumArt" id="albumArt">
+                            <div class="dot" id="spotifyDot"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topNav">
+                    <div class="select" style="display: inline-block;">
+                        <select id="themeSelect" onchange="themeSelect()" required>
+                            <option value="auto">⚙️</option>
+                            <option value="dark">🌙</option>
+                            <option value="light">☀️</option>
+                            <option value="valentine">💝</option>
+                            <option value="pride">🌈</option>
+                            <option value="halloween">🎃</option>
+                            <option value="holidays">❄️</option>
+                            <option value="invert">🙃</option>
+                            <option value="sepia">🗝️</option>
+                            <option value="te">🔩 </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="topNav">
+                    <div class="iconOutlined" onclick="menu()" id="menu">menu</div>
+                </div>
+
+                <div class="hiddenMenu" id="hiddenMenu">
+                    <div class="break"></div>
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov">
+                                <img src="../img/simpleIcons/spotify.svg" alt="" srcset="" width="25px">
+                                <p>Spotify</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://x.com/ArgilRants">
+                                <img src="../img/simpleIcons/twitter.svg" alt="" srcset="" width="25px">
+                                <p>Twitter</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://www.instagram.com/argilrants/">
+                                <img src="../img/simpleIcons/instagram.svg" alt="" srcset="" width="25px">
+                                <p>Instagram</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://modrinth.com/user/ArgilRants">
+                                <img src="../img/simpleIcons/modrinth.svg" alt="" srcset="" width="25px">
+                                <p>Modrinth</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">
+                                <img src="../img/simpleIcons/youtube.svg" alt="" srcset="" width="25px">
+                                <p>Youtube</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://letterboxd.com/argilrants/">
+                                <img src="../img/simpleIcons/letterboxd.svg" alt="" srcset="" width="25px">
+                                <p>Letterboxd</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://bsky.app/profile/argil.dev">
+                                <img src="../img/simpleIcons/bluesky.svg" alt="" srcset="" width="25px">
+                                <p>Bluesky</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://www.tiktok.com/@argilrants">
+                                <img src="../img/simpleIcons/tiktok.svg" alt="" srcset="" width="25px">
+                                <p>Tiktok</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://github.com/ArgilRants">
+                                <img src="../img/simpleIcons/github.svg" alt="" srcset="" width="25px">
+                                <p>Github</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://www.curseforge.com/members/argilrants/projects">
+                                <img src="../img/simpleIcons/curseforge.svg" alt="" srcset="" width="25px">
+                                <p>Curseforge</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://steamcommunity.com/id/argilrants/">
+                                <img src="../img/simpleIcons/steam.svg" alt="" srcset="" width="25px">
+                                <p>Steam</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="https://www.twitch.tv/argilrants">
+                                <img src="../img/simpleIcons/twitch.svg" alt="" srcset="" width="25px">
+                                <p>Twitch</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="break"></div>
+
+                    
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="../yuqingtangs.html">
+                                <p>My gf's site</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="../credits.html">
+                                <p>Credits</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="../changelog.html">
+                                <p>Change log</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="topNav social">
+                        <div class="socialMargin">
+                            <a href="../evenbettergui.html">
+                                <p>EBG wiki</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="playing" id="playing">
+                        <div class="break"></div>
+                        <a href="" class="gameLink" id="gameLink">
+                            <div class="gameDiv">
+                                <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2379780/library_600x900.jpg" alt="" class="gameImg" id="gameImg">
+                                <div class="column">
+                                    <span class="gameName" id="gameName">Balatro</span>
+                                    <span class="twoWeekHrs" id="weekHrInfo"><span id="twoWeekHrs"></span> hrs Past 2 Weeks</span>
+                                    <span class="onRecordHrs"><span id="onRecordHrs"></span> hrs On Record</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    
+    <div class="center" id="container">
+        <nav class="socials">
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov">
+                        <img src="../img/simpleIcons/spotify.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://x.com/ArgilRants">
+                        <img src="../img/simpleIcons/twitter.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://www.instagram.com/argilrants/">
+                        <img src="../img/simpleIcons/instagram.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://modrinth.com/user/ArgilRants">
+                        <img src="../img/simpleIcons/modrinth.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://www.youtube.com/channel/UCy-0d5rgN8evNW5mkZtbX2A">
+                        <img src="../img/simpleIcons/youtube.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="topNav social">
+                <div class="socialMargin">
+                    <a href="https://letterboxd.com/argilrants/">
+                        <img src="../img/simpleIcons/letterboxd.svg" alt="" srcset="" width="25px">
+                    </a>
+                </div>
+            </div>
+
+                
+        </nav>
+
+        <div class="box important">
+            <h2>Beta v2.0 <span class="h2Badge">Update</span></h2>
+            <h3 class="subtitle">v2.1 will be a bug fix update</h3>
+            <p>
+                Welcome to the mobile version of my site, now in beta!! Now supporting all themes, live updating sections and with a beautiful mobile centered redesign
+                <br>
+                <a href="../changelog.html" class="button">changelog</a>
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Welcome to Argil.Dev</h2>
+            <p>
+                Hello, I'm Liam <sup>(he/him)</sup>, I go by Argil/ArgilRants online, and I'm your resident technology bastard developing silly little sites like these, random other projects and more coming soon!
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>EvenBetterGUI <span class="h2Badge">1.20.3+</span></h2>
+            <p>
+                EBG has the goal of making Minecraft's GUI even better! With support for mods, optional settings through <a href="https://modrinth.com/mod/respackopts">Respackopts</a> and more!
+                <br>
+                <a href="https://modrinth.com/project/ebg" class="button">download</a>
+                <a href="../evenbettergui.html" class="button">wiki</a>
+                <a href="https://github.com/ArgilRants/EvenBetterGUI" class="button">source</a>
+            </p>
+        </div>
+
+        <div class="box">
+            <h2 class="letterboxd">
+                <a href="https://letterboxd.com/argilrants/"><img src="../img/simpleIcons/letterboxd.svg" alt="" class="h2Img"></a>
+                Letterboxd Diary
+            </h2>
+            <h3 class="subtitle">wow so carousel</h3>
+            <div class="carousel" id="diary">
+            </div>
+        </div>
+
+        <div class="box">
+            <h2 class="spotify">
+                <a href="https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov
+                "><img src="../img/simpleIcons/spotify.svg" alt="" class="h2Img"></a>
+                Favorite Playlists
+            </h2>
+            <h3 class="subtitle">i have a problem..</h3>
+            <div class="carousel" id="playlistsID">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/mobile.js"></script>
+</html>

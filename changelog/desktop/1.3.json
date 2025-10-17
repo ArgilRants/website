@@ -1,0 +1,138 @@
+{
+    "version": "1.3",
+    "platform": "desktop",
+    "type": "release",
+    "date": {
+        "day": "09",
+        "month": "June",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "Added [Achievements Page](./achievements.html)",
+            "description": {
+                "0": "This page displays information about my [Steam](https://steamcommunity.com/id/argilrants/) achievements",
+                "1": "Currently displays; amount of achievements total, the amount of games, the avg completed %, cards for each game and more"
+            }
+        },
+        "1": {
+            "title": "Added new live updating box to the home page",
+            "description": {
+                "0": "This new box, aptly named ISS info, is a box that displays the location and other info about international space station"
+            }
+        },
+        "2": {
+            "title": "Added 5+ new gifs to the [random gif box](./index.html#gifBox)"
+        },
+        "3": {
+            "title": "Added new playlists to the [best playlists box](./index.html#bestPlaylists)"
+        },
+        "4": {
+            "title": "Added new change font toggle button in the top left",
+            "description": {
+                "0": "This toggles between the default (monocraft) and the slightly easier to read vector version (miracode)",
+                "1": "Remembers what your font was set to so when you come back it sets it correctly"
+            }
+        },
+        "5": {
+            "title": "Added [Curseforge](https://www.curseforge.com/members/argilrants/projects) link to links box"
+        },
+        "6": {
+            "title": "Added draggable boxes!!",
+            "description": {
+                "0": "Thanks to [Anime.js](https://animejs.com/ for making this possible so easily",
+                "1": "To enable press Ctrl + Shift + U on any page with boxes"
+            }
+        },
+        "7": {
+            "title": "Added [EBG Wiki](./evenbettergui.html) link to links section"
+        },
+        "8": {
+            "title": "Added [Achievements](./achievements.html) link to links section"
+        },
+        "9": {
+            "title": "Added qol feature to the scrollable boxes",
+            "description": {
+                "0": "When you click the mouse icon in the top right the box now 'dropsdown'"
+            }
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "Removed achievement information from 'am i playing' box",
+            "description": {
+                "0": "this greatly improves loading times",
+                "1": "replaced with button to go to the [new achievements page](./achievements.html)"
+            }
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "Balatro styled playing cards for a silly little card game that i want to make"
+        },
+        "1": {
+            "title": "A full ISS tracker with detailed live updating information"
+        },
+        "2": {
+            "title": "If I get rate limited by steam the achievement page should show old data instead, as a backup"
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "N/A"
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Updated [best playlist box](./index.html#bestPlaylists) to be in a random order"
+        },
+        "1": {
+            "title": "Updated favicons and clay golem guy in general",
+            "description": {
+                "0": "now his shadows are clear"
+            }
+        },
+        "2": {
+            "title": "Favorite film and show text in the [welcome box](./index.html#mainbox) now are clickable to rotate through my favs"
+        },
+        "3": {
+            "title": "Updated background API code",
+            "description": {
+                "0": "This should make things like the listening, am i online and letterboxd diary boxes more consistent",
+                "1": "This should also stop all problems with the new [achievements page](./achievements.html)",
+                "2": "Now if I get rate limited by steam the 'am i online?' box disappears"
+            }
+        },
+        "4": {
+            "title": "Updated [Credits page](./credits.html)",
+            "description": {
+                "0": "Now is significancy easier to parse, as well as being in boxes for more distinction between areas"
+            }
+        },
+        "5": {
+            "title": "Updated all 'borders' to be outlines",
+            "description": {
+                "0": "This helps with weird resizing issues"
+            }
+        },
+        "6": {
+            "title": "Smoothed out loading times a litte",
+            "description": {
+                "0": "As well as smoothing out the loading animation as well"
+            }
+        },
+        "7": {
+            "title": "Updated feature checks for spotify box",
+            "description": {
+                "0": "Should be more consistent across the board",
+                "1": "There will still be edge cases where this doesn't work as expected"
+            }
+        },
+        "8": {
+            "title": "Changed list bullet points to be circles"
+        },
+        "9": {
+            "title": "Fixed version in the footer"
+        }
+    }
+}

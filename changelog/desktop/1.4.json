@@ -1,6 +1,8 @@
 {
     "version": "1.4",
-    "type": "desktop",
+    "platform": "desktop",
+    "type": "release",
+    "dropdown" : "8",
     "date": {
         "day": "25",
         "month": "July",
@@ -69,7 +71,8 @@
         "3" : {
             "title" : "Optimized random gif box",
             "description" : {
-                "0": "the total file size of almost 40 gifs is down from ~180mb to around 30mb"
+                "0": "the total file size of almost 40 gifs is down from ~180mb to around 30mb",
+                "1": "this was accomplished with .webp thank you webp i love you"
             }
         }
     }

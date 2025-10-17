@@ -1,6 +1,7 @@
-const desktopVersions = ["1.4"]
-const mobileVersions = []
-const directory = "./changelog/"
+const desktopVersions = ["1.5","1.4"]
+const mobileVersions = ["2.0", "1.2"]
+const desktopDirectory = "./changelog/desktop/"
+const mobileDirectory = "./changelog/mobile/"
 const desktopFiles = []
 const mobileFIles = []
 
@@ -19,6 +20,24 @@ const latestDesktopWIPUl = document.getElementById("latestDesktopWIPUl")
 const latestDesktopIssuesUl = document.getElementById("latestDesktopIssuesUl")
 const latestDesktopFixesUl = document.getElementById("latestDesktopFixesUl")
 
+const latestMobile = document.getElementById("latestMobile")
+const latestMobileH2 = document.getElementById("latestMobileH2")
+const latestMobileDate = document.getElementById("latestMobileDate")
+const latestMobileAdditions = document.getElementById("latestMobileAdditions")
+const latestMobileRemovals = document.getElementById("latestMobileRemovals")
+const latestMobileWIP = document.getElementById("latestMobileWIP")
+const latestMobileIssues = document.getElementById("latestMobileIssues")
+const latestMobileFixes = document.getElementById("latestMobileFixes")
+
+const latestMobileAdditionsUl = document.getElementById("latestMobileAdditionsUl")
+const latestMobileRemovalsUl = document.getElementById("latestMobileRemovalsUl")
+const latestMobileWIPUl = document.getElementById("latestMobileWIPUl")
+const latestMobileIssuesUl = document.getElementById("latestMobileIssuesUl")
+const latestMobileFixesUl = document.getElementById("latestMobileFixesUl")
+
+
+const previousChangeLogs = document.getElementById("previousChangeLogs")
+
 const linkRegex = /\[([^\]]+)\]\(([^\)]+)\)/
 const footerVersion = document.getElementById("version")
 const footerVersionMobile = document.getElementById("mobileVersion")
@@ -29,7 +48,7 @@ const changelogToday = new Date().toLocaleDateString("en-GB")
 
 
 for (var i=0; i < desktopVersions.length; i++){
-    file = directory + "desktop_" + desktopVersions[i] + ".json"
+    file = desktopDirectory + desktopVersions[i] + ".json"
 
     if (i == 0){
         if (latestDesktop == undefined){
@@ -44,12 +63,19 @@ for (var i=0; i < desktopVersions.length; i++){
     }
 }
 
-for (var i=0; i < mobileVersions; i++){
-    file = directory + "desktop_" + mobileVersions[i] + ".json"
+for (var i=0; i < mobileVersions.length; i++){
+    file = mobileDirectory + mobileVersions[i] + ".json"
+
     if (i == 0){
-        parse(file, true, true)
+        if (latestMobile == undefined){
+            date(file)
+        } else {
+            parse(file, true, true)
+        }
     } else {
-        parse(file, true, false)
+        if (latestMobile != undefined){
+            parse(file, true, false)
+        }
     }
 }
 
@@ -59,10 +85,12 @@ function parse(file, mobile, latest){
     .then(obj => { 
         var changeLog = obj.body
         var version = changeLog.version
+        var platform = changeLog.platform
         var date = changeLog.date
         var day = changeLog.date.day
         var month = changeLog.date.month
         var year = changeLog.date.year
+        var type = changeLog.type
 
         var additions = changeLog.additions
         var removals = changeLog.removals
@@ -74,12 +102,48 @@ function parse(file, mobile, latest){
         var dateFormatted = month + " " + ordinal(day) + " " + year
         var dateFormattedForJava = new Date(day + "/" + month + "/" + year).toLocaleDateString("en-GB")
 
+        var dropdown = changeLog.dropdown
+
+        var release = ""
+
         if (latest == true){
             if(mobile == true){
-                latestMobileH2.innerText = "Version " + version + ' [✔ Mobile] <span id="releaseBadge">Latest</span>' 
-                html.setProperty("--mobileVersion", version)
+                if(type == "beta"){
+                    release = "betaBadge"
+                    latestMobileH2.style.backgroundColor = "#df0000"
+                } else {
+                    release = "releaseBadge" 
+                }
+                latestMobileH2.innerHTML = "Version " + version + ' [✔ Mobile] <span id="'+release+'">Latest</span>' 
+
+                latestMobileDate.innerHTML = latestDateFormatted
+
+                if (changelogToday == dateFormattedForJava){
+                    olderLastUpdatedDate.innerHTML = "today!"
+                    lastUpdatedDate.innerHTML = "today!"
+                } else{ 
+                    olderLastUpdatedDate.innerHTML = dateFormatted
+                    lastUpdatedDate.innerHTML = dateFormatted
+                }
+
+                
+
+                forItem(additions, latestMobileAdditionsUl)
+                forItem(removals, latestMobileRemovalsUl)
+                forItem(wip, latestMobileWIPUl)
+                forItem(issues, latestMobileIssuesUl)
+                forItem(fixes, latestMobileFixesUl)
+
+
+
             } else {
-                latestDesktopH2.innerHTML = "Version " + version + ' [⏻ Desktop] ' + '<span id="releaseBadge">Latest</span>'
+                if(type == "beta"){
+                    release = "betaBadge"
+                    latestDesktopH2.style.backgroundColor = "#df0000"
+                } else {
+                    release = "releaseBadge" 
+                }
+                latestDesktopH2.innerHTML = "Version " + version + ' [⏻ Desktop] ' + '<span id="'+release+'">Latest</span>'
                 latestDesktopDate.innerHTML = latestDateFormatted
 
                 if (changelogToday == dateFormattedForJava){
@@ -103,7 +167,26 @@ function parse(file, mobile, latest){
                 
             }
         } else {
-           
+            addPreviousBox(platform, version, dropdown, type, latestDateFormatted)
+            var additionsUl = version + "_" + platform + "_additions"
+            var removalsUl = version + "_" + platform + "_removals"
+            var wipUl = version + "_" + platform + "_wip"
+            var issuesUl = version + "_" + platform + "_issues"
+            var fixesUl = version + "_" + platform + "_fixes"
+
+            additionsUl = document.getElementById(additionsUl)
+            removalsUl = document.getElementById(removalsUl)
+            wipUl = document.getElementById(wipUl)
+            issuesUl = document.getElementById(issuesUl)
+            fixesUl = document.getElementById(fixesUl)
+
+            forItem(additions, additionsUl)
+            forItem(removals, removalsUl)
+            forItem(wip, wipUl)
+            forItem(issues, issuesUl)
+            forItem(fixes, fixesUl)
+            
+
         }
         
 
@@ -172,7 +255,6 @@ function forItem(items, location){
     var itemsLength = Object.keys(items).length
     for (var i=0; i < itemsLength; i++){
         var title = items[i].title
-
         title = getLinks(title)
         addLi(location, title)
 
@@ -188,12 +270,105 @@ function descriptionAdd(location, title, items, i){
     var ul = document.getElementById(title)
     var description = items[i].description
     var descriptionLength = Object.keys(items[i].description).length
-    
 
     for (var i=0; i < descriptionLength; i++){
         description[i] = getLinks(description[i])
         addLi(ul, description[i])
     }
+}
+
+function addPreviousBox(platform, id, dropdown, type, date){
+    var version = id    
+    var id = id + "_" + platform
+    var release = ""
+    var badgeText = ""
+    var previousChangeLogBox = document.createElement("div")
+    var previousChangeLogDrop = document.createElement("div")
+    var previousChangeLogButton = '<button class="dropdownBtn dropdownBtnText" id="dropdownBtnId" onclick="dropdown('+dropdown+')"></button>'
+    var previousChangeLogH2 = document.createElement("h2")
+    var previousChangeLogDate = document.createElement("div")
+    var previousChangeLogDropdown = document.createElement("div")
+
+    var previousChangeLogAdditionsH3 = document.createElement("h3")
+    var previousChangeLogRemovalsH3 = document.createElement("h3")
+    var previousChangeLogWipH3 = document.createElement("h3")
+    var previousChangeLogWipSubtitleH3 = document.createElement("h3")
+    var previousChangeLogIssuesH3 = document.createElement("h3")
+    var previousChangeLogIssuesSubtitleH3 = document.createElement("h3")
+    var previousChangeLogFixesH3 = document.createElement("h3")
+
+    var previousChangeLogAdditionsUl = document.createElement("ul")
+    var previousChangeLogRemovalsUl = document.createElement("ul")
+    var previousChangeLogWipUl = document.createElement("ul")
+    var previousChangeLogIssuesUl = document.createElement("ul")
+    var previousChangeLogFixesUl = document.createElement("ul")
+
+    previousChangeLogDrop.id = "drop"+dropdown
+    previousChangeLogBox.className = "box"
+    previousChangeLogBox.id = id
+    if(type == "beta"){
+        release = "betaBadge"
+        badgeText = "Beta"
+        previousChangeLogH2.style.backgroundColor = "#df0000"
+    } else {
+        release = "releaseBadge" 
+        badgeText = "Release"
+    }
+    if (platform == "mobile"){
+        previousChangeLogH2.innerHTML = "Version " + version + ' [✔ Mobile]'+ '<span id="'+release+'">'+badgeText+'</span>'
+    }else {
+        previousChangeLogH2.innerHTML = "Version " + version + ' [⏻ Desktop]'+ '<span id="'+release+'">'+badgeText+'</span>'
+    }
+
+    previousChangeLogDate.id = "changeLogDate"
+    previousChangeLogDate.innerHTML = date
+
+    previousChangeLogDropdown.id = "dropdown"
+    previousChangeLogDropdown.className = "dropdownContent"
+
+    previousChangeLogAdditionsH3.innerText = "New features / Additions:" 
+    previousChangeLogRemovalsH3.innerText = "Removed features / Removals:"
+    previousChangeLogWipH3.innerText = "Work in progress features:" 
+    previousChangeLogWipSubtitleH3.innerText = "All WIPs from the previous version(s) that aren't listed in new features / additions are still being worked on" 
+    previousChangeLogWipSubtitleH3.id = "subtitle"
+    previousChangeLogIssuesH3.innerText = "Known issues:" 
+    previousChangeLogIssuesSubtitleH3.innerText = "If not listed in fixes than all known bugs from previous version(s) are still not fixed" 
+    previousChangeLogIssuesSubtitleH3.id = "subtitle"
+    previousChangeLogFixesH3.innerText = "Fixes / Other changes:" 
+
+    previousChangeLogAdditionsUl.id = id + "_additions" 
+    previousChangeLogRemovalsUl.id = id + "_removals" 
+    previousChangeLogWipUl.id = id + "_wip" 
+    previousChangeLogIssuesUl.id = id + "_issues" 
+    previousChangeLogFixesUl.id = id + "_fixes" 
+
+
+    previousChangeLogBox.appendChild(previousChangeLogDrop)
+    previousChangeLogDrop.innerHTML = previousChangeLogButton
+    previousChangeLogDrop.appendChild(previousChangeLogH2)
+    previousChangeLogDrop.appendChild(previousChangeLogDate)
+
+    previousChangeLogDropdown.appendChild(previousChangeLogAdditionsH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogAdditionsUl)
+    previousChangeLogDropdown.appendChild(previousChangeLogRemovalsH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogRemovalsUl)
+    previousChangeLogDropdown.appendChild(previousChangeLogWipH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogWipSubtitleH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogWipUl)
+    previousChangeLogDropdown.appendChild(previousChangeLogIssuesH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogIssuesSubtitleH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogIssuesUl)
+    previousChangeLogDropdown.appendChild(previousChangeLogFixesH3)
+    previousChangeLogDropdown.appendChild(previousChangeLogFixesUl)
+
+    previousChangeLogDrop.appendChild(previousChangeLogDropdown)
+
+
+    
+    previousChangeLogs.prepend(previousChangeLogBox)
+
+
+
 }
 
 function ordinal(i) {
