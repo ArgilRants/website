@@ -1,0 +1,80 @@
+{
+    "version": "2.1",
+    "platform": "mobile",
+    "type": "release",
+    "date": {
+        "day": "10",
+        "month": "May",
+        "year": "2026"
+    },
+    "additions": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "On mobile browsers 'marquee' elements stutter",
+            "description": {
+            }
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Some things might be missing here",
+            "description": {
+                "0": "Due to this being a pretty large update some details might be missing in this changelog"
+            }
+        },
+        "1": {
+            "title": "Fixed api endpoints not working",
+            "description": {
+                "0": "Now the Spotify now listening vinyl work",
+                "1": "Now the currently playing information in the menu work",
+                "2": "Now the letterboxd diary box works"
+            }
+        },
+        "2": {
+            "title": "Fixed redirecting not working on certain browsers",
+            "description": {
+                "0": "Now on all mobile devices and in app webviews argil.dev should redirect to argil.dev/mobile, this is now done via javascript instead of cloudflare redirects"
+            }
+        },
+        "3": {
+            "title": "Updated sizing across the board",
+            "description": {
+                "0": "Now has better scaling and sizing for mobile; with smaller text, less padding, smaller images and less whitespace"
+            }
+        },
+        "4": {
+            "title": "Updated currently playing info in the menu",
+            "description": {
+                "0": "It's now properly styled, with bolder colors, borders and more"
+            }
+        },
+        "5": {
+            "title": "Some themes now have dark/light mode variants",
+            "description": {
+                "0": "Automatically swaps between the two depending on device settings",
+                "1": "Valentine, Pride, Holidays, Sepia currently have dark and now light mode variants",
+                "2": "Halloween, Invert and Teenage Engineering don't"
+            }
+        }
+    }
+}

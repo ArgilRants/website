@@ -14,3 +14,17 @@
         box-shadow: 0 0 0 0 transparent
     }
 }
+
+@keyframes mobileload {
+    0%{
+        opacity: 0;
+        transform: translateY(-10vh);
+    }
+    30%{
+        opacity: 80%;
+        transform: translateY(0vh);
+    }
+    100%{
+        opacity: 100%;
+    }
+}

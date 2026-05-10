@@ -1,0 +1,45 @@
+{
+    "version": "1.6",
+    "platform": "desktop",
+    "type": "release",
+    "date": {
+        "day": "00",
+        "month": "June",
+        "year": "2025"
+    },
+    "additions": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "removals": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "wip": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "issues": {
+        "0": {
+            "title": "N/A",
+            "description": {
+            }
+        }
+    },
+    "fixes": {
+        "0": {
+            "title": "Fixed issue where 'updated to [version]: [date] was showing the wrong date",
+            "description": {
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 const desktopVersions = ["1.5","1.4"]
-const mobileVersions = ["2.0", "1.2"]
+const mobileVersions = ["2.1","2.0", "1.2"]
 const desktopDirectory = "./changelog/desktop/"
 const mobileDirectory = "./changelog/mobile/"
 const desktopFiles = []
@@ -68,7 +68,7 @@ for (var i=0; i < mobileVersions.length; i++){
 
     if (i == 0){
         if (latestMobile == undefined){
-            date(file)
+            // date(file)
         } else {
             parse(file, true, true)
         }

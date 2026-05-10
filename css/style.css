@@ -1499,6 +1499,7 @@ ul{
     list-style-position: outside;
     padding-inline-start: 30px;
     margin-bottom: 0;
+    margin-left: -5px;
 }
 
 .devNotes{
@@ -1509,11 +1510,14 @@ ul{
 li{
     list-style-type: "⏺ ";
     text-align:justify;
+    width: 100%;
+    margin-block-end: 5px;
 }
 
 ul ul li{
     font-size: 90% !important;
     list-style-type: "○ ";
+    margin-left: -15px;
 }
 
 #UK{
