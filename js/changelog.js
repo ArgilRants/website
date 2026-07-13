@@ -1,4 +1,4 @@
-const desktopVersions = ["1.5","1.4"]
+const desktopVersions = ["1.6","1.5","1.4"]
 const mobileVersions = ["2.1","2.0", "1.2"]
 const desktopDirectory = "./changelog/desktop/"
 const mobileDirectory = "./changelog/mobile/"

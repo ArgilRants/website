@@ -9,8 +9,7 @@ function dropdown(x) {
         // touchscreen
     }else{
         dropdownRun(x);
-        var sound = new Audio('./audio/click.wav');
-        sound.play()
+        clickSound();
     }
 }
 

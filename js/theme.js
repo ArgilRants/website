@@ -5,8 +5,6 @@ const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 const currentTheme = localStorage.getItem("theme");
 const activeFont = localStorage.getItem("font")
 const chromeShowFirefoxBox = localStorage.getItem("chromeShowFirefoxBox");
-const buttonClickSound = new Audio('./audio/touch.wav');
-const titleClickSound = new Audio('./audio/money.wav');
 const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 const firefoxBox = document.getElementById("firefoxBox");
 const themeBody = document.body;
@@ -25,6 +23,33 @@ const themeSelectFont = document.querySelector("#themeSelect")
 
 // const themeBodyAnim = themeBody.getAnimations()[0].animationName
 // const themeBodyAnimPlaybackTime = themeBody.getAnimations()[0].playbackRate
+
+initStrudel({
+  // prebake: () => samples('github:tidalcycles/uzu-drumkit')
+});
+
+function titleClick(){ 
+  s("triangle*16").n(irand(5)).scale('B:major').room(.5).roomsize(.1).play()
+  setTimeout(function() {
+      hush();
+  }, 100);
+}
+
+function randomGifSound(){
+  var randomGifNumber = Math.floor(Math.random() * (32 - 24 + 1)) + 24; 
+  s("triangle*16").n(irand(randomGifNumber)).scale('C:major').room(.5).roomsize(.1).play()
+  setTimeout(function() {
+      hush();
+  }, 50);
+}
+
+function buttonClickSound(){
+  var randomButtonNumber = Math.floor(Math.random() * (8 - 4 + 1)) + 4; 
+  s("triangle*16").n(irand(randomButtonNumber)).scale('C:major').room(.5).roomsize(.1).play()
+  setTimeout(function() {
+      hush();
+  }, 50);
+}
 
 
 function fullHeight(x){
@@ -114,23 +139,30 @@ function selectElement(id, valueToSelect) {
 }
 
 function clickSound(){
-  var sound = new Audio('./audio/click.wav');
-  sound.play();
+  // var sound = new Audio('./audio/click.wav');
+  // sound.play();
+  var randomClickNumber = Math.floor(Math.random() * (24 - 8 + 1)) + 8; 
+  s("triangle*16").n(irand(randomClickNumber)).scale('E:minor').room(.5).roomsize(.1).play()
+  setTimeout(function() {
+      hush();
+  }, 75);
 }
 
 function buttonClick(obj) {
   event.preventDefault();
 
   if (obj.getAttribute("id") == "titleLink"){
-    titleClickSound.play();
+    // titleClickSound.play();
+    titleClick();
     setTimeout(function() {
       window.location.href = obj.getAttribute("href");
    }, 250);
   }else{
-    buttonClickSound.play();
+    // buttonClickSound.play();
+    buttonClickSound();
     setTimeout(function() {
       window.location.href = obj.getAttribute("href");
-   }, 200);
+   }, 250);
   }
 }
 

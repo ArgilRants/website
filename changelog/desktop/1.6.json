@@ -3,14 +3,16 @@
     "platform": "desktop",
     "type": "release",
     "date": {
-        "day": "00",
-        "month": "June",
-        "year": "2025"
+        "day": "13",
+        "month": "July",
+        "year": "2026"
     },
     "additions": {
         "0": {
-            "title": "N/A",
+            "title": "Updated sounds",
             "description": {
+                "0": "Created by me using [Strudel](https://strudel.cc/)",
+                "1": "This does require a lot more work, and making them more reactive and unique but that will happen some other time"
             }
         }
     },
@@ -20,7 +22,7 @@
             "description": {
             }
         }
-    },
+    },    
     "wip": {
         "0": {
             "title": "N/A",

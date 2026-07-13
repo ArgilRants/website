@@ -12,8 +12,7 @@ let maxnumber = ImageArray.length
 const gif = document.getElementById("randGif");
 
 function getRandomImage() {
-    var sound = new Audio('./audio/randgif.wav');
-    sound.play();
+    randomGifSound();
     var num = Math.floor(Math.random() * maxnumber);
     var img = ImageArray[num];
     var preImg = document.getElementById("randGifSrc").src.split("/").pop().split(".")[0];
