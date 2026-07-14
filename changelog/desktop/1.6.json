@@ -14,12 +14,25 @@
                 "0": "Created by me using [Strudel](https://strudel.cc/)",
                 "1": "This does require a lot more work, and making them more reactive and unique but that will happen some other time"
             }
+        },
+        "1": {
+            "title": "Updated 'My setup' section on home page",
+            "description": {
+                "0": "Added my macbook and my thunderbolt dock"
+            }
         }
     },
     "removals": {
         "0": {
-            "title": "N/A",
+            "title": "Removed Crusefordge link from links section",
             "description": {
+                "0": "any future projects for Minecraft will be on [Modrinth](https://modrinth.com/user/ArgilRants)"
+            }
+        },
+        "1": {
+            "title": "Removed mobile beta update section from home page",
+            "description": {
+                "0": "this should've been removed back in may... woops"
             }
         }
     },    
@@ -40,6 +53,16 @@
     "fixes": {
         "0": {
             "title": "Fixed issue where 'updated to [version]: [date] was showing the wrong date",
+            "description": {
+            }
+        },
+        "1": {
+            "title": "Fixed some issues with light mode contrast",
+            "description": {
+            }
+        },
+        "2": {
+            "title": "Updated about section on home page, for better formatting",
             "description": {
             }
         }

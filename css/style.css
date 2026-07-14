@@ -155,7 +155,7 @@ body{
 body.light {
     --bg-color: #f2f2f2;
     --default-text-color: #181818;
-    --box-color: #e4e5ebc6;
+    --box-color: #f4f5fbc6;
     --box-border-color: #5a5a5a;
     --title-color: #58bfffba;
     --navlink-hover-color: #eeeeee4d;
@@ -272,7 +272,12 @@ body.light {
     .terminalStyle h3#subtitle{
         color: white !important;
     }
+
+    .terminalStyle h2{
+        color: #fff !important;
+    }
 }
+
 
 
 
@@ -2999,6 +3004,10 @@ input{
     background-color: var(--h2-color);
     margin-left: -1px;
     margin-right: -1px;
+}
+
+body.light .terminalStyle h2{
+    color: #fff !important;
 }
 
 .terminalStyle h3{
