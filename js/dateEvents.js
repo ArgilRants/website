@@ -8,7 +8,7 @@ const debugShow = document.getElementById("footerDebug")
 
 function dateEvents() {
     if (debugShow.scrollHeight > 0){
-        console.log("Debug on")
+        // console.log("Debug on")
     } else {
         if (month == 6 & day == 29){
             confetti.style.display = 'block';
@@ -17,7 +17,7 @@ function dateEvents() {
         };
 
         if (month == 1 & day >= 9 && day <= 16){
-            console.log("HAPPY VALENTINES")
+            // console.log("HAPPY VALENTINES")
             body.className = "";
             body.className = "valentine";
             subtitle.innerText = "happy valentines everyone :3";
@@ -31,7 +31,7 @@ function dateEvents() {
         };
 
         if (month == 5 & day >= 1 && day <= 30){
-            console.log("HAPPY PRIDE")
+            // console.log("HAPPY PRIDE")
             body.className = "";
             body.className = "pride";
             var themebuttondiv = document.getElementById("themebuttondiv");
@@ -44,7 +44,7 @@ function dateEvents() {
         };
     
         if (month == 9 & day >= 24 && day <= 31){
-            console.log("HALLOWEEEEEN")
+            // console.log("HALLOWEEEEEN")
             body.className = "";
             body.className = "halloween";
             subtitle.innerText = "happy halloween everyone!! its treat time :3";
@@ -58,7 +58,7 @@ function dateEvents() {
         };
     
         if (month == 11 & day >= 19 && day <= 31){
-            console.log("HAPPY HOLIDAYS")
+            // console.log("HAPPY HOLIDAYS")
             body.className = "";
             body.className = "holidays";
             subtitle.innerText = "HAPPY HOLIDAYYSSSS EVERYONE!!";

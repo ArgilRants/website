@@ -112,26 +112,26 @@ function fetchOnlineInfo(testData){
         function amIOnlineText(){
             onlineCheckLoading.style.display = "none";
             if (onlineStatus == 1){
-                console.log("I am online");
+                // console.log("I am online");
                 iAmBlank.innerText = "IM ONLINE ✔"
                 iAmBlank.className = '';
                 iAmBlank.className = "online";
             } else if(onlineStatus == 2 || onlineStatus == 3){
-                console.log("I am away")
+                // console.log("I am away")
                 iAmBlank.innerText = "IM AWAY ⌚"
                 iAmBlank.className = '';
                 iAmBlank.className = "away";
                 lastLoggedOff.style.display = "none";
                 
             } else if(onlineStatus == "rateLimited"){
-                console.log("I am rate limited")
+                // console.log("I am rate limited")
                 iAmBlank.innerText = "RATE LIMITED"
                 iAmBlank.className = '';
                 iAmBlank.className = "rateLimit";
                 lastLoggedOff.style.display = "none";
                 onlineCheckBox.style.display = "none";
             } else{
-                console.log("I am offline")
+                // console.log("I am offline")
                 iAmBlank.innerText = "IM OFFLINE ❌"
                 iAmBlank.className = '';
                 iAmBlank.className = "offline";
@@ -223,6 +223,7 @@ function fetchOnlineInfo(testData){
 
             if (gameStatus == "2357570"){
                 playtimeForever = playtimeForever + 156000
+                // this is adding onto my ow playtime - cause i played a ton pre steam release
             }
 
             if (playtimeTwoWeeks != null){
@@ -273,7 +274,7 @@ function fetchOnlineInfo(testData){
                 }, 400)
             }, 1000)
             
-            console.log("Not listening to anything at the moment")
+            // console.log("Not listening to anything at the moment")
         } else {
             listeningLoader.innerText = "progress_activity"
             listeningLoader.style.animation = "loading .7s linear infinite"
@@ -302,34 +303,34 @@ function fetchOnlineInfo(testData){
             }
 
             if (songName.includes("remix") || songName.includes("Remix")){
-                console.log("REMIX TIME")
+                // console.log("REMIX TIME")
                 // listeningTitle.style.animation = "5s katy infinite"
                 listeningTitle.innerText = "♫ REMIXING"
                 listeningTitle.className = "remix"
             }
 
             if (songName.includes("(feat.")){
-                console.log("Song name has a featured artist, removing now")
+                // console.log("Song name has a featured artist, removing now")
                 songName = songName.split('(feat.',1)[0]
             }
 
             if (songName.includes("[feat.")){
-                console.log("Song name has a featured artist, removing now")
+                // console.log("Song name has a featured artist, removing now")
                 songName = songName.split('[feat.',1)[0]
             }
 
             if (songName.includes("(with")){
-                console.log("Song name has a featured artist, removing now")
+                // console.log("Song name has a featured artist, removing now")
                 songName = songName.split('(with',1)[0]
             }
 
             if (songName.includes("(w/")){
-                console.log("Song name has a featured artist, removing now")
+                // console.log("Song name has a featured artist, removing now")
                 songName = songName.split('(w/',1)[0]
             }
 
             if (songName.includes("(Taylor's Version)")){
-                console.log("Taylors Version detected, abbrivating")
+                // console.log("Taylors Version detected, abbrivating")
                 songName = songName.split("(Taylor's Version)",1)[0]
                 songName = songName + " (TV)"
                 albumArt.className = ""
@@ -337,7 +338,7 @@ function fetchOnlineInfo(testData){
             
             if (albumUri == "spotify:album:0W5woeQnfOZmVLSbggRRlR" || albumUri == "spotify:album:3ThlxfLSy4bfKzxWqmC7VN" || albumUri == "spotify:album:36P07bti6xD99o7S1acmin"){
                 if (songName.includes("featuring")){
-                    console.log("Song name has a featured artist, removing now")
+                    // console.log("Song name has a featured artist, removing now")
                     songName = songName.split('featuring',1)[0]
                 }
             }
@@ -351,7 +352,7 @@ function fetchOnlineInfo(testData){
 
 
             if (songName.length >= 15){
-                console.log("Song name too long, animating")
+                // console.log("Song name too long, animating")
                 var songAnimLength = Math.round((songName.split(' ').length))
                 if (songAnimLength > 12 || songName.length > 30){
                     songAnimLength = 12;
@@ -363,7 +364,7 @@ function fetchOnlineInfo(testData){
             };
 
             if (artistsFormatted.length >= 15){
-                console.log("Artist name too long, animating")
+                // console.log("Artist name too long, animating")
                 var artistAnimLength = Math.round((artists.length))
                 if (artistAnimLength > 12 || artistsFormatted.length > 30){
                     artistAnimLength = 12;

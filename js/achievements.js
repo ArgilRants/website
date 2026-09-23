@@ -126,6 +126,7 @@ function fetchAchievementData(){
                     
                     if (game.appid == "2357570"){
                         playtimeMins = playtimeMins + 156000
+                        // this is adding onto my ow playtime - cause i played a ton pre steam release
                     }
 
                     var playtime = Math.round(playtimeMins/60)
@@ -213,6 +214,7 @@ function fetchAchievementData(){
 
                     if (gameid == "2357570"){
                         playtimeMins = playtimeMins + 156000
+                        // this is adding onto my ow playtime - cause i played a ton pre steam release
                     }
 
                     var playtime = Math.round(playtimeMins/60)

@@ -2127,8 +2127,8 @@ body.light #listeningtitle.sparking{
     margin-left: -10px;
     margin-right: -10px;
     transition: background-color 300ms ease, outline 300ms ease;
-    min-height: 238px !important;
-    max-height: 238px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
 }
 
 .playlist:hover{
@@ -2273,8 +2273,8 @@ marquee.playlistTitle{
     margin-bottom: 10px;
     margin-top: 10px;
     transition: background-color 300ms ease, outline 300ms ease;
-    min-height: 268px !important;
-    max-height: 268px !important;
+    min-height: 290px !important;
+    max-height: 290px !important;
     display: inline-block;
     outline: solid 2px var(--box-border-color);
 }

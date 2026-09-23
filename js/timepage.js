@@ -54,7 +54,7 @@ function checkTimezone(time){
 
 }
 
-console.log(timeZones)
+// console.log(timeZones)
 
 function parseValue(e){
     var timeFromStr = e.target.value

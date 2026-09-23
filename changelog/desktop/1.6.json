@@ -3,8 +3,8 @@
     "platform": "desktop",
     "type": "release",
     "date": {
-        "day": "13",
-        "month": "July",
+        "day": "23",
+        "month": "September",
         "year": "2026"
     },
     "additions": {
@@ -20,6 +20,17 @@
             "description": {
                 "0": "Added my macbook and my thunderbolt dock"
             }
+        },
+        "2": {
+            "title": "Added [Strudel](https://strudel.cc/) to credits page",
+            "description": {
+                "0": "[Here](./credits.html)"
+            }
+        },
+        "3": {
+            "title": "Added [Classic Neagives](https://github.com/ArgilRants/Classic-Negatives) project to home page",
+            "description": {
+            }
         }
     },
     "removals": {
@@ -33,6 +44,12 @@
             "title": "Removed mobile beta update section from home page",
             "description": {
                 "0": "this should've been removed back in may... woops"
+            }
+        },
+        "2": {
+            "title": "Removed a lot of console logs, still working on cleaning a lot of this up",
+            "description": {
+                "0": "I am looking at removing the strudel ones"
             }
         }
     },    
@@ -63,6 +80,11 @@
         },
         "2": {
             "title": "Updated about section on home page, for better formatting",
+            "description": {
+            }
+        },
+        "3": {
+            "title": "Fixed some height issues with playlists and previous projects",
             "description": {
             }
         }

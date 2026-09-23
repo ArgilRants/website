@@ -58,15 +58,15 @@ function fetchOnlineInfo(){
         } else {
             var onlineStatus = obj.response.players[0].personastate; 
             if (onlineStatus == 1){
-                console.log("I am online");
+                // console.log("I am online");
                 titleSubtitle.innerText = "I'm Online!"
             } else if(onlineStatus == 2 || onlineStatus == 3){
-                console.log("I am away")
+                // console.log("I am away")
                 titleSubtitle.innerText = "I'm Away!"
             } else if(onlineStatus == "rateLimited"){
                 titleSubtitle.style.display = ""
             } else{
-                console.log("I am offline")
+                // console.log("I am offline")
                 titleSubtitle.innerText = "I'm Offline!"
             };
         }
@@ -94,6 +94,7 @@ function fetchOnlineInfo(){
                 gameName.innerText = currentGameName
                 if (gameStatus == "2357570"){
                     playtimeForever = playtimeForever + 156000
+                    // this is adding onto my ow playtime - cause i played a ton pre steam release
                 }
                 if (playtimeTwoWeeks != null){
                     weekHrInfo.style.display = "block";

@@ -234,11 +234,11 @@ function debugKeybind(e){
     if(e.shiftKey == true && e.ctrlKey == true){
       if (document.getElementById("footerDebug").offsetTop == 0){
         document.getElementById("footerDebug").style.display = "block";
-        console.log("Debug Enabled");
+        // console.log("Debug Enabled");
         easyAlert('Debug option enabled', 'Ctrl+Shift+L to disable', 'success', '1500', 'var(--h2-color)')
       } else {
         document.getElementById("footerDebug").style.display = "none";
-        console.log("Debug disabled");
+        // console.log("Debug disabled");
         easyAlert('Debug option disabled', 'Ctrl+Shift+L to enable', 'error', '1500', 'var(--h3-color)')
       }
     }
@@ -273,7 +273,7 @@ function changeFont(font, el){
 }
 
 if (firefoxBox == null){
-  console.log("firefox box not found")
+  // console.log("firefox box not found")
 } else {
   function chromeHideFirefoxBox() {
     firefoxBox.style.display = "none";
@@ -301,7 +301,7 @@ if (currentTheme == null){
   themeBody.className = currentTheme;
 };
 
-console.log("Current theme is: "+currentTheme)
+// console.log("Current theme is: "+currentTheme)
 
 if (btn == null) {
   // console.log("btn returned null")
