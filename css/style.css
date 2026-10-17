@@ -1820,10 +1820,6 @@ a:hover{
     color: var(--a-hover);
 }
 
-a[target=_blank]:hover{
-    
-}
-
 a[class^="openstab"]:not(:has(img)) {
 	background-image: url(./img/external-link.svg);
 	background-repeat: no-repeat;
