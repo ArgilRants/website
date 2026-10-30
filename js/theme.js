@@ -4,9 +4,6 @@ const btnmobilewide = document.querySelector(".btnmobilewide-toggle");
 const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 const currentTheme = localStorage.getItem("theme");
 const activeFont = localStorage.getItem("font")
-const chromeShowFirefoxBox = localStorage.getItem("chromeShowFirefoxBox");
-const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
-const firefoxBox = document.getElementById("firefoxBox");
 const themeBody = document.body;
 const debugOn = document.getElementById("footerDebug").offsetTop;
 const debugThemeSelect = document.getElementById("debugThemeSelect");
@@ -174,14 +171,6 @@ function gifToImg(obj) {
   obj.src = "./img/5200Trans.png"
 }
 
-function marqueeStop(obj){
-  if (isFirefox){
-    return
-  }else{
-    obj.stop();
-  }
-}
-
 function easyAlert(title, text, icon, timer, iconColor){
   Swal.fire({
     position: 'top',
@@ -270,24 +259,6 @@ function changeFont(font, el){
   }
   clickSound()
   localStorage.setItem("font", font)
-}
-
-if (firefoxBox == null){
-  // console.log("firefox box not found")
-} else {
-  function chromeHideFirefoxBox() {
-    firefoxBox.style.display = "none";
-  }
-  
-  if (isFirefox == false){
-    if (chromeShowFirefoxBox == "Yes"){
-      firefoxBox.style.display = "none";
-    } else {
-      firefoxBox.style.display = "block";
-      localStorage.setItem("chromeShowFirefoxBox", "Yes");
-    }
-    
-  }
 }
 
 themeBody.id = "";
